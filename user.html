@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- 网站信息 -->
+    <meta name="keywoords" contect="" />
+    <meta name="description" contect="" />
+    <meta name="Copyright" content="AntsNet" />
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" contect="index,follow" />
+    <!-- sns 社交标签 begin -->
+    <meta property="og:title" content="Pack is for people who love their dogs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pack" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://packdog.com/" />
+    <meta property="og:image" content="http://packdog.com/static/facebook.jpg" />
+    <meta property="og:description" content="Pack is the new home to capture and share the everyday moments in your dog’s life." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chrome 浏览器" />
+    <meta name="twitter:description" content="Google Chrome 是一款快速、简单且安全的网络浏览器，能很好地满足新型网页对浏览器的要求。" />
+    <meta name="twitter:image" content="https://www.google.com/chrome/static/images/thank-you-hero.png" />
+    <meta name="twitter:url" content="https://www.google.com/intl/zh-CN_ALL/chrome/thank-you.html" />
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/n.css" />
+
+    <title>user</title>
+    <style>
+        body{
+        	background-color: #261f1c;
+        }
+        main p{
+          font-size: 1.25rem;
+        }
+        /* card */
+        .main-user{
+          margin-bottom: 3rem;
+        }
+        .main-user .col-lg-6{
+          margin-bottom: 1rem;
+        }
+        .user-card{
+          height: 20rem;
+        }
+        .a-to:hover{
+          text-decoration: underline !important;
+        }
+        .a-to i{
+          margin-left: .5rem;
+        }
+        .user-card .sp1{
+          color: #dfb45f;
+          font-size: 3.5rem;
+          font-weight: 600;
+          letter-spacing: 2px;
+          margin-left: .5rem;
+        }
+        /* table */
+        .table1 td{
+          font-size: 1.375rem;
+          border: none;
+          padding: .5rem 0;
+          color: #cfcfcf;
+        }
+        .table1 td a{
+            float: right;
+        }
+        .table2 td{
+          font-size: 1.25rem;
+          text-align: center;
+          border: none;
+          padding: .5rem .5rem;
+          color: #dfb45f;
+        }
+        .table2 tbody> :first-child{
+	        border: solid 1px #52443c;
+        }
+        .table2 tbody> :last-child td{
+          font-size: 1rem;
+        }
+        /* vip */
+        .user-card-vip{
+          border: solid 1px #52443c;
+          padding: 1rem 2rem;
+        }
+        .user-card-vip .a-to{
+          margin: 0;
+        }
+        .user-card-vip p{
+          color: #fae4b6;
+          line-height: 2rem;
+          font-style: italic;
+          font-size: 1rem;
+          font-weight: lighter;
+        }
+        .vip-logo{
+          color: black;
+          width: 40%;
+          text-align: center;
+          font-size: 2.4rem;
+          font-weight: bold;
+          background-color: #dfb45f;
+          border-radius: 2px;
+          padding: 0;
+        }
+        .track{
+          height: auto;
+          margin: 1rem 0;
+        }
+        .track input{
+          min-height: 2.5rem;
+        }
+        .track button{
+          padding: 0 1.5rem;
+        }
+      @media screen and (max-width: 768px) {
+        .track input{
+          width: 100%;
+          margin: 0 0 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="head-box">
+      <div class="head-bg">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- logo -->
+          <a class="navbar-brand" href="javascript:void(0)"> <img src="./img/logo.png" alt="Logo" /> </a>
+          <!-- 伸缩按钮 -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 下拉选项栏 -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="javascript:void(0)" id="navbardrop" data-toggle="dropdown">CLASSIFICATION <i class="fa fa-bars"></i></a>
+                <div class="dropdown-menu dropdown-max">
+                  <div class="flex-container">
+                    <div class="flex-item-build">
+                      <h4><a>POE Builds</a> <i class="fa fa-angle-down"></i></h4>
+                      <!-- <div class="" > -->
+                      <ul>
+                        <li>
+                          <h5 class="build-ti">Templar <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="javascript:void(0)">Inquisitor</a></li>
+                            <li><a href="">Hierophant</a></li>
+                            <li><a href="">Guardian</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Ranger <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Deadeye</a></li>
+                            <li><a href="">Raider</a></li>
+                            <li><a href="">Pathfinder</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Witch <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Necromancer</a></li>
+                            <li><a href="">Elementalist</a></li>
+                            <li><a href="">Elementalist</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Duelist <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Slayer</a></li>
+                            <li><a href="">Gladiator</a></li>
+                            <li><a href="">Champion</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Shadow <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Assassin</a></li>
+                            <li><a href="">Saboteur</a></li>
+                            <li><a href="">Trickster</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Marauder <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Juggernaut</a></li>
+                            <li><a href="">Berserker</a></li>
+                            <li><a href="">Chieftain</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Scion <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Ascendant</a></li>
+                          </ul>
+                        </li>
+                        <li class="clearfix"></li>
+                      </ul>
+                      <!-- </div> -->
+                    </div>
+                    <div class="flex-item">
+                      <h4>OURPOE Goods <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Currency</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Fragments</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Fossils</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Resonators</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Essences</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Divination Cards</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Prophecies</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Skill Gems</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>POE Map <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">POE Lab</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">POE Map</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>POE News and Data <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">News and Guide</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Update</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Video</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Gallery</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>About Us <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">About Us</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Why choose us</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">VIP and Discount</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>OURPOE Help <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Shopping Guide</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Qrder Tracker</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">POE FAQ</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Unable To Login</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 搜索框 -->
+            <form class="nav-search search-form flex-grow-1">
+              <div class="input-group">
+                <input type="text" name="search" class="search-input" placeholder="" />
+                <button tabindex="0" class="btn" type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+              </div>
+            </form>
+            <!-- 向右对齐 登录 购物车 -->
+            <ul class="navbar-nav">
+              <!-- 购物车 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link " data-toggle="dropdown">
+                  <i class="fa fa-shopping-cart" style="font-size:2.0rem;"></i>
+                </a>
+                <div class="dropdown-menu dropdown-cart">
+                  <form action="">
+                    <!-- 商品 -->
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><i class="shops-del fa fa-trash"></i></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><i></i></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><i class="shops-del fa fa-trash"></i></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <h5>TOTAL PRICE:$41.10</h5>
+                    <!-- 跳转购物车 & 提交订单 -->
+                    <button class="btn-w">
+                      <a href="shopping_cart.html"><i class="fa fa-shopping-cart"></i> VIEW CART</a>
+                    </button>
+                    <button class="btn-w" type="submit"><i class="fa fa-credit-card"></i> CHECKOUT</button>
+                  </form>
+                </div>
+              </li>
+              <!-- EUR -->
+              <li class="nav-item dropdown eur-li">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">EUR <i class="fa fa-eur" aria-hidden="true"></i></a>
+                <div class="dropdown-menu dropdown-eur">
+                  <a class="dropdown-item act" href="javascript:void(0)">EUR <i class="fa fa-eur" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">USD <i class="fa fa-usd" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">GBP <i class="fa fa-gbp" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">CAD <i class="fa fa-cad" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">AUD <i class="fa fa-aud" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">SEK <i class="fa fa-sek" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">RUB <i class="fa fa-rub" aria-hidden="true"></i></a>
+                </div>
+              </li>
+              <!-- 登录 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"> LOGIN <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-login">
+                  <form action="">
+                    <input type="text" name="" placeholder="Email Address" style="background-image: url('./img/email.svg')" />
+                    <input type="password" name="" placeholder="Password" style="background-image: url('./img/password.svg')" />
+                    <h5 style="text-align:right;"><a href="javascript:void(0)">Forget your password?</a></h5>
+                    <button class="btn-w" type="submit"><i class="fa fa-sign-in-alt"></i> SIGN IN</button>
+                    <p><a href="./login.html">Sign in with social network site account</a></p>
+                    <div class="other-login">
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><i class="fa fa-facebook-f"></i> Facebook</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><i class="fa fa-twitter"></i> Twitter</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><i class="fa fa-google-plus"></i> Google</a>
+                      </button>
+                    </div>
+                    <p><a href="./reg.html">Registration of new accounts</a></p>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main class="user-bg" style="background-image: url(./img/bg_user.jpg);">
+      <!-- nav左侧导航栏 -->
+      <ul class="user-menu">
+          <li class="li-act">
+            <a href=""><i class="fa fa-home"></i><br>
+              OVERVIEW
+            </a></li>
+          <li>
+              <a href=""><i class="fa fa-file-text-o" aria-hidden="true"></i><br>
+                MY ORDERS
+              </a></li>
+          <li>
+              <a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i><br>
+                MY GAMES
+              </a></li>
+          <li>
+              <a href=""><i class="fa fa-database" aria-hidden="true"></i><br>
+                MY POINTS
+              </a></li>
+          <li>
+              <a href=""><i class="fa fa-commenting-o" aria-hidden="true"></i><br>
+                MY REVIEWS
+              </a></li>
+          <li>
+              <a href=""><i class="fa fa-sliders" aria-hidden="true"></i><br>
+                ACCOUNT SETTINGS
+              </a></li>
+          <li>
+              <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i><br>
+                MY MESSAGES
+              </a></li>
+      </ul>
+      <div class="main-user">
+        <h1>ACCOUNT OVERVIEW</h1>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card-ti">
+              <h3 >Your information</h3>
+            </div>
+            <div class="user-card">
+              <div class="table-responsive-lg">
+                  <table class="table table1">
+                  <tbody>
+                    <tr>
+                      <td>Your email:</td>
+                      <td><span>rsdffsf@fdhsd.com</span></td>
+                    </tr>
+                    <tr>
+                      <td>Your social:</td>
+                      <td><span>rsdffsf</span></td>
+                    </tr>
+                    <tr>
+                      <td>Play role name:</td>
+                      <td><span>AJHJHJ,LKjjn</span></td>
+                    </tr>
+                  </tbody>
+                  </table>
+              </div>
+              <a class="a-to" href="">TO REVISE<i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+              <p> <span></span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-ti">
+              <h3>Latest purchase</h3>
+            </div>
+            <div class="user-card">
+              <div class="table-responsive-xl">
+                <table class="table table2">
+                    <tbody>
+                      <tr>
+                        <td>Order number</td>
+                        <td>Date</td>
+                        <td>Status</td>
+                        <td>Total price</td>
+                      </tr>
+                      <tr>
+                        <td>POEB1811230463</td>
+                        <td>2018/11/25</td>
+                        <td>In processing</td>
+                        <td>$300</td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+              <p>We are delivering the goods. Please keep the login status of the game.</p>
+              <a class="a-to" href="">ORDER TRACK<i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-ti">
+              <h3>Current points</h3>
+            </div>
+            <div class="user-card">
+              <p> The current points is <span class="sp1">1000</span>.</p>
+              <a class="a-to" href="">Check your points details<i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-ti">
+              <h3>Your VIP level</h3>
+            </div>
+            <div class="user-card">
+              <p>Now your level is</p>
+              <div class="user-card-vip d-flex align-items-center justify-content-around">
+                  <div class="vip-logo">VIP2</div>
+                  <div>
+                      <a class="a-to" href="vip.html">Learn more<i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+                      <hr style="background-color:#c4b393; height:.2rem; margin: .6rem 0;" />
+                      <p>√ Get 200+ Shop Points</p>
+                      <p>√ Enjoy 2% discount</p>
+                      <p>√ All goods</p>
+                      <p>√ Every time</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+              <div class="card-ti">
+                <h3>Use discount codes</h3>
+              </div>
+              <div class="user-card">
+                <div class="d-flex  flex-wrap track">
+                    <input class="flex-grow-1" type="text" name="" id="">
+                    <button type="button">Submit</button>
+                </div>
+                <p>Enter a discount code to get a discount on your 
+                    purchase.</p>
+                <a class="a-to" href="">Please consult customer service for details.<i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card-ti">
+                <h3>Use discount codes</h3>
+              </div>
+              <div class="user-card">
+                <p>Very good products, very thoughtful service, customer service efficiency is very fast, things are very cheap, news strategy is very much.</p>
+                <p class="text-right mt-3" style="font-size:1rem; color: #cfcfcf;">- Sep/18/2018 01:22:27</p>
+                <a class="a-to" href="">Learn more<i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="follow text-center">
+        <a class="" href="javascript:void(0)">FOLLOW OURPOE</a> <a href="javascript:void(0)"><i class="fa fa-facebook-f"></i></a>
+        <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a> <a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a>
+        <a href="javascript:void(0)"><i class="	fa fa-youtube"></i></a>
+      </div>
+      <div class=" footer-b">
+        <div class="mx-auto" style="max-width:24rem; padding: 4% 0"><img class="w-100" src="./img/logo.png" alt="" /></div>
+        <p>
+          <a href="javascript:void(0)">AbOUT US</a> | <a href="javascript:void(0)">TERMS OF SERVICES</a> |
+          <a href="javascript:void(0)">REFUND POLICY</a> | <a href="javascript:void(0)">SELL TO US</a> |
+          <a href="javascript:void(0)">POE POWER lEVELING</a> | <a href="javascript:void(0)">POE CURRENCY GUIDES</a> |
+          <a href="javascript:void(0)">POE FAQ</a> | <a href="javascript:void(0)">POE BEASTCRAFTING</a>
+        </p>
+        <p>Copyright 2009-2018 <span>PoeCurrencyBuy.com</span>.All rights reserved. <span>Sitemaps</span></p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- header.js -->
+    <script src="./js/head.js"></script>
+  </body>
+</html>

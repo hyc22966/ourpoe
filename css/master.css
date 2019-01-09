@@ -1,0 +1,178 @@
+main{
+    /* font-family:"yahei"; */
+}
+.masters-box{
+    padding-bottom: 3rem;
+}
+.masters-box .row{
+    width: 98%;
+    padding:0 20%;
+    margin: 0;
+}
+.masters-one{
+    width: 25%;
+    float: left;
+}
+.master-info-box{
+    margin-bottom:10%;
+}
+/* 标题 */
+.poe-title{
+    width: 100%;
+    background-image: url('../img/master/master-title.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+.poe-title-font{
+    color: #f59656;
+    text-align: center;
+    width:100%; height: 50%; margin: auto;  position: absolute;  top: 0; left: 0; bottom: 0; right: 0;
+}
+.poe-title .poe-title-h::before{
+    content: "";
+    display: block;
+    padding-top: 6%;
+}
+/* 背景图区域 */
+.poe-info {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+/* 内容1 */
+.poe-info-sm{
+    float: right;
+    font-size: 1.5625rem ;
+    /* left: auto; */
+    /* right: 6%; */
+    position: unset;
+    padding-top: 9.6%;
+    margin-right: 6%;
+}
+.poe-info-sm p{
+    float: right;
+    display: block;
+    width: 51%;
+}
+.poe-info-sm p{
+    color: #ecd2aa;
+    line-height: 2.0625rem ;
+}
+    /* 表格 */
+.info-tab{
+    width: 51%;
+    float: right;
+    font-weight: 600;
+    line-height: 2.75rem ;
+    color: #d7a574;
+    margin-top: 8%;
+}
+.info-tab .row div{
+    width: 68%;
+    border: #504137 1px solid;
+    border-radius: 1px;
+    background: #20231f88;
+    margin:0 1% 1% 0;
+    padding-left: 4%;
+}
+.info-tab .row .col-left{
+    color: #91b4d9;
+    width: 30%;
+}
+/* ps */
+.info-ps{
+    width: 100%;
+    padding: 0 8%;
+}
+.mb-left ul li{
+    list-style: inside;
+}
+/* @media screen and (min-width: 2600px) {
+    .poe-title-font{
+        font-size:500%;
+    }
+} */
+@media screen and (min-width: 1920px) {
+    .poe-title-font{
+        font-size: 2.9rem;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .poe-title-font{
+        font-size: 2.6rem;
+    }
+    .poe-info-sm{
+        min-height: 68rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    /* 渐变左边框 */
+    .left-tborder{
+        display: block;
+        box-sizing:border-box;
+        border-left:.25rem solid;
+        border-image: linear-gradient( #68432a00, #68432a) 30 30;
+    }
+}
+
+/* 小于一定值时 */
+@media screen and (max-width: 1600px) {
+    .masters-box .row{
+        width: 98%;
+        padding:0 10%;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .poe-title-font{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .poe-title-font{
+        font-size: 1.6rem;
+    }
+    .poe-info-sm {
+        padding-top: 3%;
+        font-size: 1.2rem;
+    }
+    .info-tab{
+        line-height: 2.0rem;
+    }
+    .poe-info-sm .info-tab{
+        margin-top: 4%;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .poe-title-font{
+        font-size: 1.4rem;
+    }
+    .masters-box{
+        padding-bottom: 1rem;
+    }
+    .poe-info-sm {
+        padding-top: 6%;
+        font-size: 1.1rem;
+    }
+    .info-tab{
+        line-height: 1.4rem;
+    }
+    .poe-info-sm .info-tab{
+        margin-top: 4%;
+        width: 90%;
+    }
+    .poe-info-sm p{
+        width: 90%;
+        line-height: 1.4rem ;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .poe-title-font{
+        font-size: 1.0rem;
+    }
+}

@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- 网站信息 -->
+    <meta name="keywoords" contect="" />
+    <meta name="description" contect="" />
+    <meta name="Copyright" content="AntsNet" />
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" contect="index,follow" />
+    <!-- sns 社交标签 begin -->
+    <meta property="og:title" content="Pack is for people who love their dogs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pack" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://packdog.com/" />
+    <meta property="og:image" content="http://packdog.com/static/facebook.jpg" />
+    <meta property="og:description" content="Pack is the new home to capture and share the everyday moments in your dog’s life." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chrome 浏览器" />
+    <meta name="twitter:description" content="Google Chrome 是一款快速、简单且安全的网络浏览器，能很好地满足新型网页对浏览器的要求。" />
+    <meta name="twitter:image" content="https://www.google.com/chrome/static/images/thank-you-hero.png" />
+    <meta name="twitter:url" content="https://www.google.com/intl/zh-CN_ALL/chrome/thank-you.html" />
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/public.css" />
+
+    <style>
+      body {
+        background: #17110f !important;
+      }
+      .class-news {
+        border: none;
+        border-radius: unset;
+        margin: 0 0 1rem;
+        padding: 0 0.8%;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .thumb-container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      /* 手风琴展开效果 */
+      .click-show-btn {
+        color: #e8d8b2 !important;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        font-size: 1rem;
+        border: #c4b595 1px solid;
+        padding: 0 1rem;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        user-select: none;
+        cursor: pointer;
+      }
+      .click-show-btn img {
+        height: 90%;
+        border: unset;
+      }
+      .click-show-btn:hover {
+        color: #e1ad47 !important;
+        border: #e1ad47 1px solid;
+        background-color: #17110f55;
+        transition: 0.2s;
+      }
+      .click-show {
+        background-position: center top;
+        background-repeat: no-repeat;
+        /* background-size: auto 100%; */
+        border: #77553f 1px solid;
+        padding: 0 1.8rem;
+        position: relative;
+      }
+      .click-show .d-flex {
+        padding: 0 1.5rem;
+      }
+      .click-show .build-show-left,
+      .build-show-right {
+        width: 35%;
+        width: 33.3%;
+        padding-top: 1rem;
+        /* ！12-30 */
+      }
+      .click-show h3 {
+        text-align: center;
+        font-size: 3.75rem;
+      }
+      .click-show h4 {
+        font-size: 1.875rem;
+      }
+      .click-show .sm-youtube {
+        width: 100%;
+      }
+      .sm-youtube video{
+        width: 100%;
+        border: #504137 1px solid;
+      }
+      .build-backstories h5 {
+        color: #e1ad47;
+        font-size: 1.6875rem;
+        line-height: 2.5rem;
+        letter-spacing: 1px;
+        border-bottom: #77553f 1px solid;
+        padding-top: 0.8rem;
+        margin: 0;
+      }
+      .build-backstories p {
+        line-height: 1.5rem;
+        color: white;
+        font-size: 1.2rem;
+        font-family: "RTWSYueGoTrial";
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin: 0.5rem;
+      }
+      .click-show .back-show {
+        color: #f7e4bc !important;
+        font-size: 3rem;
+        font-weight: lighter;
+        position: absolute;
+        left: 48%;
+        top: 0rem;
+        user-select: none;
+        cursor: pointer;
+      }
+      .class-news-list .class-news {
+        margin: 0 0 2.5%;
+      }
+      .class-news-list .learn-more-btn {
+        margin: 0 auto 2rem;
+      }
+      /* 按钮 */
+      .learn-more-btn {
+        color: #e8d8b2;
+        border: 1px solid #ce4212;
+        background: #552815;
+        position: unset;
+      }
+      .learn-more-btn:hover {
+        background-color: #75371d !important;
+        color: white !important;
+        transition: 0.5s;
+      }
+      @media screen and (max-width: 1200px) {
+        .click-show .build-show-left,
+        .build-show-right {
+          width: 40%;
+        }
+      }
+      @media screen and (max-width: 991px) {
+        .click-show .build-show-left {
+          width: 80%;
+          margin: 50% auto 0;
+        }
+        .click-show .build-show-right {
+          width: 80%;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: 991px) {
+        .click-show .build-show-left {
+          width: 100%;
+          margin: 50% auto 0;
+        }
+        .click-show .build-show-right {
+          width: 100%;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .click-show {
+          padding: 0 4px;
+        }
+      }
+    </style>
+    <title>build-index</title>
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="head-box">
+      <div class="head-bg">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- logo -->
+          <a class="navbar-brand" href="javascript:void(0)"> <img src="./img/logo.png" alt="Logo" /> </a>
+          <!-- 伸缩按钮 -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 下拉选项栏 -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">CLASSIFICATION</a>
+                <div class="dropdown-menu dropdown-max">
+                  <div class="flex-container">
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 搜索框 -->
+            <form class="nav-search search-form flex-grow-1">
+              <div class="input-group">
+                <input type="text" name="search" class="search-input" placeholder="" />
+                <button tabindex="0" class="btn" type="submit" aria-label="Search">
+                  <img class="" style="height:40%;" src="./img/search.svg" alt="" />
+                </button>
+              </div>
+            </form>
+            <!-- 向右对齐 登录 购物车 -->
+            <ul class="navbar-nav">
+              <!-- 购物车 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link dropdown-toggle " data-toggle="dropdown">
+                  <!-- <span class="glyphicon glyphicon-shopping-cart"></span> -->
+                  <img style="height:2.4rem;vertical-align:middle" src="./img/shop_cart.svg" alt="" />
+                </a>
+                <div class="dropdown-menu dropdown-cart">
+                  <form action="">
+                    <!-- 商品 -->
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><img class="shops-del" src="./img/delete2.svg" alt=""/></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><img class="shops-del" src="./img/delete2.svg" alt=""/></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <h5>TOTAL PRICE:$41.10</h5>
+                    <!-- 跳转购物车 & 提交订单 -->
+                    <button class="btn-w">
+                      <a href="shopping_cart.html"><img class="h-75" src="./img/shop_cart_black.svg" alt="" /> VIEW CART</a>
+                    </button>
+                    <button class="btn-w" type="submit"><img class="h-75" src="./img/checkout.svg" alt="" /> CHECKOUT</button>
+                  </form>
+                </div>
+              </li>
+              <!-- EUR -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> EUR <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-eur">
+                  <a class="dropdown-item" href="javascript:void(0)">EUR</a> <a class="dropdown-item" href="javascript:void(0)">USD</a>
+                  <a class="dropdown-item" href="javascript:void(0)">GBP</a> <a class="dropdown-item" href="javascript:void(0)">CAD</a>
+                  <a class="dropdown-item" href="javascript:void(0)">AUD</a> <a class="dropdown-item" href="javascript:void(0)">SEK</a>
+                  <a class="dropdown-item" href="javascript:void(0)">RUB</a>
+                </div>
+              </li>
+              <!-- 登录 -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown"> LOGIN <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-login">
+                  <form action="">
+                    <input type="text" name="" placeholder="Email Address" style="background-image: url('./img/email.svg')" />
+                    <input type="password" name="" placeholder="Password" style="background-image: url('./img/password.svg')" />
+                    <h5 style="text-align:right;"><a href="javascript:void(0)">Forget your password?</a></h5>
+                    <button class="btn-w" type="submit"><img class="h-75" src="./img/login.svg" alt="" />SIGN IN</button>
+                    <p><a href="./login.html">Sign in with social network site account</a></p>
+                    <div class="other-login">
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/facebook_black.svg" alt="" />Facebook</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/twitter_black.svg" alt="" />Twitter</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/google-plus_black.svg" alt="" />Google</a>
+                      </button>
+                    </div>
+                    <p><a href="./reg.html">Registration of new accounts</a></p>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main class="text-white bg-v1" style="background-image: url('./img/build/build-bg1.jpg');">
+      <!-- 背景图片 -->
+      <div class="max-160" >
+        <!-- 版本信息 -->
+        <div class="build-info">
+          <h1 class="text-center ">POE 3.4 Builds</h1>
+          <p>
+            Path of Exile: Delve includes ten powerful new or completely reworked skills, centered around two character archetypes: the Guardian and
+            the Pathfinder. Play as a holy warrior who strikes down foes with lightning damage while benefiting teammates and minions, or as a chaotic
+            archer who uses nature- and poison-based skills to pin and suffocate enemies. Whatever class you want to play in Delve League - Witch,
+            Shadow, Marauder, Duelist, Templar, Ranger, Scion, Any POE builds are worth trying. POECURRENCYBUYwill continue to collect and sort out
+            hot and popular PoE builds. What u need to do, just enjoy the 3.4 Delve league! Of course, you can still get $50~$100, if you send a great
+            build to our email:poecurrencybuy@gmail.com.
+          </p>
+        </div>
+        <!-- 版本新闻 -->
+        <div class="row ">
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds-6-3.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_02.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 职业卡片 -->
+        <div class="build-class wrapper grid-container" id="accordion" style="padding:4% 0;">
+          <h2 class="md-font text-center">Path of Exile Classes</h2>
+          <!-- 第一组 -->
+          <div class="class-row row mb-2">
+            <!-- 基础职业 -->
+            <div class="class-l col-lg-6 card img-fluid">
+              <img class="card-img-top" src="./img/build/Wallpaper_1.jpg" />
+              <div class="card-img-overlay">
+                <h3 class="card-title">Templar</h3>
+                <p class="card-text">TheTemplaris Path of Exile'sstrength/intelligencehybridclass, a perfect balance of brawn and wits.</p>
+              </div>
+              <a class="click-show-btn" alt="#collapse01" >VIEW <i class="fa fa-angle-down"></i></a>
+            </div>
+            <!-- 升华职业 -->
+            <div class="class-r col-lg-6 d-flex" style="padding:0;">
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/1-1.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Hierophant</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/1-2.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Inquisitor</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/1-3.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Guardian</h4></div>
+                </a>
+              </div>
+            </div>
+            <!-- 展开部分 -->
+            <div
+              id="collapse01"
+              class="click-show"
+              style=" background-image: url('./img/build/Builds_showbg_01.jpg'); display: none"
+            >
+              <div class="d-lg-flex flex-lg-row justify-content-between">
+                <div class="build-show-left">
+                  <h4>Templar</h4>
+                  <div class="sm-youtube" >
+                      <video muted autoplay loop="loop"><source src="./media/ourpoebg.webm" type="video/mp4" /></video>
+                  </div>
+                </div>
+                <div class="build-show-right">
+                  <h4>Ascendancy classes</h4>
+                  <img class="img-fluid" src="./img/build/builds_both_01.jpg" alt="" style="border: #504137 1px solid;" />
+                </div>
+              </div>
+              <div class="build-backstories">
+                <h5>Path of Exile Backstories: Templar</h5>
+                <p>
+                  I sit in front of the alter, head bowed, hands folded. And then, suddenly, I open my eyes. A vast empire, spreading before me. And
+                  then darkness falls over the cities and forests. Screams of terror and pain rise from far below me. I watch, unable to look away as
+                  the empire crumbles. all is still under an age long night. And then, with the sunrise,ships appear on the horizon. <br />They are
+                  destroyed by storms and the survivors wash onto a desolate shore. The dead prey on the living, and the drowned rise to drag others
+                  to their grim fate. And then… I am sitting in front of the alter. I raise my head. They did not believe me. They told me not to do.
+                  If I had seen it only once or twice, I could maybe had put it off as insignificant. But the same vision has repeated itself to me a
+                  dozen times or more. I cannot ignore such an obvious call. The Truth. He is such an elusive beast. I have been hunting him for so
+                  long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind these visions, but
+                  it is not a truth many would want to have uncovered. The Order must be told. The Truth. He is such an elusive beast. I have been
+                  hunting him for so long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind
+                  these visions, but it is not a truth many would want to have uncovered. The Order must be told. They have brought guards with them.
+                  Do they think I would fight them? I love my brothers and sisters, close-minded and blind though they be. They are brutal, but I will
+                  never let my faith falter. I know now that my brethren are merely God's tools. He has given me this path to walk, to Wraeclast, so I
+                  shall muster my strength, my magic… and my faith. It is my shield against the darkness to come.
+                </p>
+              </div>
+              <a class="back-show" data-toggle="collapse" href="#collapse1">︽</a>
+            </div>
+          </div>
+          <!-- 第2组 -->
+          <div class="class-row row mb-2">
+            <div class="class-l col-lg-6 card img-fluid">
+              <img class="card-img-top" src="./img/build/Wallpaper_2.jpg" />
+              <div class="card-img-overlay">
+                <h3 class="card-title">Ranger</h3>
+                <p class="card-text">The Ranger is Path of Exile's pure dexterity class, which befits her slim and graceful appearance.</p>
+              </div>
+              <a class="click-show-btn"  alt="#collapse02">VIEW <i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="class-r col-lg-6 d-flex" style="padding:0;">
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/2-1.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Hierophant</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/2-2.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Inquisitor</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/2-3.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Guardian</h4></div>
+                </a>
+              </div>
+            </div>
+            <!-- 展开部分 -->
+            <div
+              id="collapse02"
+              class="collapse click-show"
+              data-parent="#accordion"
+              style="background-image: url('./img/build/Builds_showbg_01.jpg')"
+            >
+              <div class="d-lg-flex flex-lg-row justify-content-between">
+                <div class="build-show-left">
+                  <h4>Templar</h4>
+                  <div class="sm-youtube" style="border: #504137 1px solid;"></div>
+                </div>
+                <div class="build-show-right">
+                  <h4>Ascendancy classes</h4>
+                  <img class="img-fluid" src="./img/build/builds_both_01.jpg" alt="" style="border: #504137 1px solid;" />
+                </div>
+              </div>
+              <div class="build-backstories">
+                <h5>Path of Exile Backstories: Templar</h5>
+                <p>
+                  I sit in front of the alter, head bowed, hands folded. And then, suddenly, I open my eyes. A vast empire, spreading before me. And
+                  then darkness falls over the cities and forests. Screams of terror and pain rise from far below me. I watch, unable to look away as
+                  the empire crumbles. all is still under an age long night. And then, with the sunrise,ships appear on the horizon. <br />They are
+                  destroyed by storms and the survivors wash onto a desolate shore. The dead prey on the living, and the drowned rise to drag others
+                  to their grim fate. And then… I am sitting in front of the alter. I raise my head. They did not believe me. They told me not to do.
+                  If I had seen it only once or twice, I could maybe had put it off as insignificant. But the same vision has repeated itself to me a
+                  dozen times or more. I cannot ignore such an obvious call. The Truth. He is such an elusive beast. I have been hunting him for so
+                  long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind these visions, but
+                  it is not a truth many would want to have uncovered. The Order must be told. The Truth. He is such an elusive beast. I have been
+                  hunting him for so long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind
+                  these visions, but it is not a truth many would want to have uncovered. The Order must be told. They have brought guards with them.
+                  Do they think I would fight them? I love my brothers and sisters, close-minded and blind though they be. They are brutal, but I will
+                  never let my faith falter. I know now that my brethren are merely God's tools. He has given me this path to walk, to Wraeclast, so I
+                  shall muster my strength, my magic… and my faith. It is my shield against the darkness to come.
+                </p>
+              </div>
+              <a class="back-show" data-toggle="collapse" href="#collapse2">︽</a>
+            </div>
+          </div>
+          <!-- 第3组 -->
+          <div class="class-row row mb-2">
+            <div class="class-l col-lg-6 card img-fluid">
+              <img class="card-img-top" src="./img/build/Wallpaper_3.jpg" />
+              <div class="card-img-overlay">
+                <h3 class="card-title">Witch</h3>
+                <p class="card-text">The Ranger is Path of Exile's pure dexterity class, which befits her slim and graceful appearance.</p>
+              </div>
+              <a class="click-show-btn" alt="#collapse03">VIEW <i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="class-r col-lg-6 d-flex" style="padding:0;">
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/3-1.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Hierophant</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/3-2.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Inquisitor</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/3-3.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Guardian</h4></div>
+                </a>
+              </div>
+            </div>
+            <!-- 展开部分 -->
+            <div
+              id="collapse03"
+              class="collapse click-show"
+              data-parent="#accordion"
+              style="background-image: url('./img/build/Builds_showbg_01.jpg')"
+            >
+              <div class="d-lg-flex flex-lg-row justify-content-between">
+                <div class="build-show-left">
+                  <h3>Templar</h3>
+                  <div class="sm-youtube" style="border: #504137 1px solid;"></div>
+                </div>
+                <div class="build-show-right">
+                  <h4>Ascendancy classes</h4>
+                  <img class="img-fluid" src="./img/build/builds_both_01.jpg" alt="" style="border: #504137 1px solid;" />
+                </div>
+              </div>
+              <div class="build-backstories">
+                <h5>Path of Exile Backstories: Templar</h5>
+                <p>
+                  I sit in front of the alter, head bowed, hands folded. And then, suddenly, I open my eyes. A vast empire, spreading before me. And
+                  then darkness falls over the cities and forests. Screams of terror and pain rise from far below me. I watch, unable to look away as
+                  the empire crumbles. all is still under an age long night. And then, with the sunrise,ships appear on the horizon. <br />They are
+                  destroyed by storms and the survivors wash onto a desolate shore. The dead prey on the living, and the drowned rise to drag others
+                  to their grim fate. And then… I am sitting in front of the alter. I raise my head. They did not believe me. They told me not to do.
+                  If I had seen it only once or twice, I could maybe had put it off as insignificant. But the same vision has repeated itself to me a
+                  dozen times or more. I cannot ignore such an obvious call. The Truth. He is such an elusive beast. I have been hunting him for so
+                  long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind these visions, but
+                  it is not a truth many would want to have uncovered. The Order must be told. The Truth. He is such an elusive beast. I have been
+                  hunting him for so long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind
+                  these visions, but it is not a truth many would want to have uncovered. The Order must be told. They have brought guards with them.
+                  Do they think I would fight them? I love my brothers and sisters, close-minded and blind though they be. They are brutal, but I will
+                  never let my faith falter. I know now that my brethren are merely God's tools. He has given me this path to walk, to Wraeclast, so I
+                  shall muster my strength, my magic… and my faith. It is my shield against the darkness to come.
+                </p>
+              </div>
+              <a class="back-show" data-toggle="collapse" href="#collapse3">︽</a>
+            </div>
+          </div>
+          <!-- 第4组 -->
+          <div class="class-row row mb-2">
+            <div class="class-l col-lg-6 card img-fluid">
+              <img class="card-img-top" src="./img/build/Wallpaper_4.jpg" />
+              <div class="card-img-overlay">
+                <h3 class="card-title">Duelist</h3>
+                <p class="card-text">The Ranger is Path of Exile's pure dexterity class, which befits her slim and graceful appearance.</p>
+              </div>
+              <a class="click-show-btn" alt="#collapse04">VIEW <i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="class-r col-lg-6 d-flex" style="padding:0;">
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/4-1.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Hierophant</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/4-2.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Inquisitor</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/4-3.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Guardian</h4></div>
+                </a>
+              </div>
+            </div>
+            <!-- 展开部分 -->
+            <div
+              id="collapse04"
+              class="collapse click-show"
+              data-parent="#accordion"
+              style="background-image: url('./img/build/Builds_showbg_01.jpg')"
+            >
+              <div class="d-lg-flex flex-lg-row justify-content-between">
+                <div class="build-show-left">
+                  <h3>Templar</h3>
+                  <div class="sm-youtube" style="border: #504137 1px solid;"></div>
+                </div>
+                <div class="build-show-right">
+                  <h4>Ascendancy classes</h4>
+                  <img class="img-fluid" src="./img/build/builds_both_01.jpg" alt="" style="border: #504137 1px solid;" />
+                </div>
+              </div>
+              <div class="build-backstories">
+                <h5>Path of Exile Backstories: Templar</h5>
+                <p>
+                  I sit in front of the alter, head bowed, hands folded. And then, suddenly, I open my eyes. A vast empire, spreading before me. And
+                  then darkness falls over the cities and forests. Screams of terror and pain rise from far below me. I watch, unable to look away as
+                  the empire crumbles. all is still under an age long night. And then, with the sunrise,ships appear on the horizon. <br />They are
+                  destroyed by storms and the survivors wash onto a desolate shore. The dead prey on the living, and the drowned rise to drag others
+                  to their grim fate. And then… I am sitting in front of the alter. I raise my head. They did not believe me. They told me not to do.
+                  If I had seen it only once or twice, I could maybe had put it off as insignificant. But the same vision has repeated itself to me a
+                  dozen times or more. I cannot ignore such an obvious call. The Truth. He is such an elusive beast. I have been hunting him for so
+                  long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind these visions, but
+                  it is not a truth many would want to have uncovered. The Order must be told. The Truth. He is such an elusive beast. I have been
+                  hunting him for so long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind
+                  these visions, but it is not a truth many would want to have uncovered. The Order must be told. They have brought guards with them.
+                  Do they think I would fight them? I love my brothers and sisters, close-minded and blind though they be. They are brutal, but I will
+                  never let my faith falter. I know now that my brethren are merely God's tools. He has given me this path to walk, to Wraeclast, so I
+                  shall muster my strength, my magic… and my faith. It is my shield against the darkness to come.
+                </p>
+              </div>
+              <a class="back-show" data-toggle="collapse" href="#collapse4">︽</a>
+            </div>
+          </div>
+          <!-- 第5组 -->
+          <div class="class-row row mb-2">
+            <div class="class-l col-lg-6 card img-fluid">
+              <img class="card-img-top" src="./img/build/Wallpaper_5.jpg" />
+              <div class="card-img-overlay">
+                <h3 class="card-title">Shadow</h3>
+                <p class="card-text">The Ranger is Path of Exile's pure dexterity class, which befits her slim and graceful appearance.</p>
+              </div>
+              <a class="click-show-btn" alt="#collapse05">VIEW <i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="class-r col-lg-6 d-flex" style="padding:0;">
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/5-1.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Hierophant</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/5-2.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Inquisitor</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/5-3.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">Guardian</h4></div>
+                </a>
+              </div>
+            </div>
+            <!-- 展开部分 -->
+            <div
+              id="collapse05"
+              class="collapse click-show"
+              data-parent="#accordion"
+              style="background-image: url('./img/build/Builds_showbg_01.jpg')"
+            >
+              <div class="d-lg-flex flex-lg-row justify-content-between">
+                <div class="build-show-left">
+                  <h3>Templar</h3>
+                  <div class="sm-youtube" style="border: #504137 1px solid;"></div>
+                </div>
+                <div class="build-show-right">
+                  <h4>Ascendancy classes</h4>
+                  <img class="img-fluid" src="./img/build/builds_both_01.jpg" alt="" style="border: #504137 1px solid;" />
+                </div>
+              </div>
+              <div class="build-backstories">
+                <h5>Path of Exile Backstories: Templar</h5>
+                <p>
+                  I sit in front of the alter, head bowed, hands folded. And then, suddenly, I open my eyes. A vast empire, spreading before me. And
+                  then darkness falls over the cities and forests. Screams of terror and pain rise from far below me. I watch, unable to look away as
+                  the empire crumbles. all is still under an age long night. And then, with the sunrise,ships appear on the horizon. <br />They are
+                  destroyed by storms and the survivors wash onto a desolate shore. The dead prey on the living, and the drowned rise to drag others
+                  to their grim fate. And then… I am sitting in front of the alter. I raise my head. They did not believe me. They told me not to do.
+                  If I had seen it only once or twice, I could maybe had put it off as insignificant. But the same vision has repeated itself to me a
+                  dozen times or more. I cannot ignore such an obvious call. The Truth. He is such an elusive beast. I have been hunting him for so
+                  long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind these visions, but
+                  it is not a truth many would want to have uncovered. The Order must be told. The Truth. He is such an elusive beast. I have been
+                  hunting him for so long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind
+                  these visions, but it is not a truth many would want to have uncovered. The Order must be told. They have brought guards with them.
+                  Do they think I would fight them? I love my brothers and sisters, close-minded and blind though they be. They are brutal, but I will
+                  never let my faith falter. I know now that my brethren are merely God's tools. He has given me this path to walk, to Wraeclast, so I
+                  shall muster my strength, my magic… and my faith. It is my shield against the darkness to come.
+                </p>
+              </div>
+              <a class="back-show" data-toggle="collapse" href="#collapse5">︽</a>
+            </div>
+          </div>
+          <!-- 第6组 -->
+          <div class="class-row row mb-2">
+            <div class="class-l col-lg-6 card img-fluid">
+              <img class="card-img-top" src="./img/build/Wallpaper_6.jpg" />
+              <div class="card-img-overlay">
+                <h3 class="card-title">Marauder</h3>
+                <p class="card-text">The Ranger is Path of Exile's pure dexterity class, which befits her slim and graceful appearance.</p>
+              </div>
+              <a class="click-show-btn" alt="#collapse06">VIEW <i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="class-r col-lg-6 d-flex" style="padding:0;">
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/6-1.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">John Doe</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/6-2.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">John Doe</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/6-3.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">John Doe</h4></div>
+                </a>
+              </div>
+            </div>
+            <!-- 展开部分 -->
+            <div
+              id="collapse06"
+              class="collapse click-show"
+              data-parent="#accordion"
+              style="background-image: url('./img/build/Builds_showbg_01.jpg')"
+            >
+              <div class="d-lg-flex flex-lg-row justify-content-between">
+                <div class="build-show-left">
+                  <h3>Templar</h3>
+                  <div class="sm-youtube" style="border: #504137 1px solid;"></div>
+                </div>
+                <div class="build-show-right">
+                  <h4>Ascendancy classes</h4>
+                  <img class="img-fluid" src="./img/build/builds_both_01.jpg" alt="" style="border: #504137 1px solid;" />
+                </div>
+              </div>
+              <div class="build-backstories">
+                <h5>Path of Exile Backstories: Templar</h5>
+                <p>
+                  I sit in front of the alter, head bowed, hands folded. And then, suddenly, I open my eyes. A vast empire, spreading before me. And
+                  then darkness falls over the cities and forests. Screams of terror and pain rise from far below me. I watch, unable to look away as
+                  the empire crumbles. all is still under an age long night. And then, with the sunrise,ships appear on the horizon. <br />They are
+                  destroyed by storms and the survivors wash onto a desolate shore. The dead prey on the living, and the drowned rise to drag others
+                  to their grim fate. And then… I am sitting in front of the alter. I raise my head. They did not believe me. They told me not to do.
+                  If I had seen it only once or twice, I could maybe had put it off as insignificant. But the same vision has repeated itself to me a
+                  dozen times or more. I cannot ignore such an obvious call. The Truth. He is such an elusive beast. I have been hunting him for so
+                  long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind these visions, but
+                  it is not a truth many would want to have uncovered. The Order must be told. The Truth. He is such an elusive beast. I have been
+                  hunting him for so long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind
+                  these visions, but it is not a truth many would want to have uncovered. The Order must be told. They have brought guards with them.
+                  Do they think I would fight them? I love my brothers and sisters, close-minded and blind though they be. They are brutal, but I will
+                  never let my faith falter. I know now that my brethren are merely God's tools. He has given me this path to walk, to Wraeclast, so I
+                  shall muster my strength, my magic… and my faith. It is my shield against the darkness to come.
+                </p>
+              </div>
+              <a class="back-show" data-toggle="collapse" href="#collapse6">︽</a>
+            </div>
+          </div>
+          <!-- 第7组 -->
+          <div class="class-row row mb-2">
+            <div class="class-l col-lg-6 card img-fluid">
+              <img class="card-img-top" src="./img/build/Wallpaper_7.jpg" />
+              <div class="card-img-overlay">
+                <h3 class="card-title">John Doe</h3>
+                <p class="card-text">TheTemplaris Path of Exile'sstrength/intelligencehybridclass, a perfect balance of brawn and wits.</p>
+              </div>
+              <a class="click-show-btn" alt="#collapse07">VIEW <i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="class-r col-lg-6 d-flex" style="padding:0;">
+              <div class="class-a card img-fluid"><!-- 留空 --></div>
+              <div class="class-a card img-fluid">
+                <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/7-1.jpg" />
+                  <div class="card-img-overlay"><h4 class="card-title">John Doe</h4></div>
+                </a>
+              </div>
+              <div class="class-a card img-fluid"><!-- 留空 --></div>
+            </div>
+            <!-- 展开部分 -->
+            <div
+              id="collapse07"
+              class="collapse click-show"
+              data-parent="#accordion"
+              style="background-image: url('./img/build/Builds_showbg_01.jpg')"
+            >
+              <div class="d-lg-flex flex-lg-row justify-content-between">
+                <div class="build-show-left">
+                  <h3>Templar</h3>
+                  <div class="sm-youtube" style="border: #504137 1px solid;"></div>
+                </div>
+                <div class="build-show-right">
+                  <h4>Ascendancy classes</h4>
+                  <img class="img-fluid" src="./img/build/builds_both_01.jpg" alt="" style="border: #504137 1px solid;" />
+                </div>
+              </div>
+              <div class="build-backstories">
+                <h5>Path of Exile Backstories: Templar</h5>
+                <p>
+                  I sit in front of the alter, head bowed, hands folded. And then, suddenly, I open my eyes. A vast empire, spreading before me. And
+                  then darkness falls over the cities and forests. Screams of terror and pain rise from far below me. I watch, unable to look away as
+                  the empire crumbles. all is still under an age long night. And then, with the sunrise,ships appear on the horizon.
+                </p>
+                <p>
+                  They are destroyed by storms and the survivors wash onto a desolate shore. The dead prey on the living, and the drowned rise to drag
+                  others to their grim fate. And then… I am sitting in front of the alter. I raise my head. They did not believe me. They told me not
+                  to do. If I had seen it only once or twice, I could maybe had put it off as insignificant. But the same vision has repeated itself
+                  to me a dozen times or more. I cannot ignore such an obvious call. The Truth. He is such an elusive beast. I have been hunting him
+                  for so long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the mystery behind these
+                  visions, but it is not a truth many would want to have uncovered. The Order must be told. The Truth. He is such an elusive beast. I
+                  have been hunting him for so long, and now, I believe, I have found him. It is a bitter victory, finally uncovering part of the
+                  mystery behind these visions, but it is not a truth many would want to have uncovered. The Order must be told. They have brought
+                  guards with them. Do they think I would fight them? I love my brothers and sisters, close-minded and blind though they be. They are
+                  brutal, but I will never let my faith falter. I know now that my brethren are merely God's tools. He has given me this path to walk,
+                  to Wraeclast, so I shall muster my strength, my magic… and my faith. It is my shield against the darkness to come.
+                </p>
+              </div>
+              <a class="back-show" data-toggle="collapse" href="#collapse7">︽</a>
+            </div>
+          </div>
+        </div>
+        <h2 class="md-font text-center">Path of Exile Classes</h2>
+        <div class="class-news-list row">
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds-6-3.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_02.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds-6-3.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_02.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds-6-3.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_02.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="class-news col-md-6 col-lg-3 card img-fluid">
+            <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div style="width:100%;">
+            <a href="javascript:void(0)"> <h5 class="learn-more-btn">>> LEARN MORE</h5> </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="follow text-center">
+        <a href="javascript:void(0)">FOLLOW OURPOE</a> <a href="javascript:void(0)"><img src="./img/facebook.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/twitter.png"/></a> <a href="javascript:void(0)"><img src="./img/google+.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/youtube.png"/></a>
+      </div>
+      <div class=" footer-b">
+        <div class="mx-auto" style="max-width:24rem; padding: 4% 0"><img class="w-100" src="./img/logo.png" alt="" /></div>
+        <p>
+          <a href="javascript:void(0)">AbOUT US</a> | <a href="javascript:void(0)">TERMS OF SERVICES</a> |
+          <a href="javascript:void(0)">REFUND POLICY</a> | <a href="javascript:void(0)">SELL TO US</a> |
+          <a href="javascript:void(0)">POE POWER lEVELING</a> | <a href="javascript:void(0)">POE CURRENCY GUIDES</a> |
+          <a href="javascript:void(0)">POE FAQ</a> | <a href="javascript:void(0)">POE BEASTCRAFTING</a>
+        </p>
+        <p>Copyright 2009-2018 <span>PoeCurrencyBuy.com</span>.All rights reserved. <span>Sitemaps</span></p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <script>
+      $(".click-show-btn,.back-show").click(function() {
+          $(".click-show").slideUp(500);
+          var abc = $(this).attr('alt');
+          if($(abc).css("display")=="none"){
+            $(abc).slideDown(500,function(){
+              $("html,body").animate(
+                {
+                  scrollTop: ($(this)
+                    .parent()
+                    .offset().top -= $(".head-box").height())
+                },
+                500
+              );
+            });
+          }
+          else {
+            $(abc).slideUp();
+          }
+      });
+    </script>
+  </body>
+</html>

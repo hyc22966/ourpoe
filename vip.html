@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- 网站信息 -->
+    <meta name="keywoords" contect="" />
+    <meta name="description" contect="" />
+    <meta name="Copyright" content="AntsNet" />
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" contect="index,follow" />
+    <!-- sns 社交标签 begin -->
+    <meta property="og:title" content="Pack is for people who love their dogs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pack" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://packdog.com/" />
+    <meta property="og:image" content="http://packdog.com/static/facebook.jpg" />
+    <meta property="og:description" content="Pack is the new home to capture and share the everyday moments in your dog’s life." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chrome 浏览器" />
+    <meta name="twitter:description" content="Google Chrome 是一款快速、简单且安全的网络浏览器，能很好地满足新型网页对浏览器的要求。" />
+    <meta name="twitter:image" content="https://www.google.com/chrome/static/images/thank-you-hero.png" />
+    <meta name="twitter:url" content="https://www.google.com/intl/zh-CN_ALL/chrome/thank-you.html" />
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/public.css" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        margin: 0;
+      }
+      .vip-ti1 {
+        min-height: 3.5rem;
+        margin: 0 auto;
+        color: #1e1816;
+        font-family: "yahei";
+        font-weight: bold;
+        font-size: 2rem;
+        background-color: #dfb45f;
+        border-radius: 2px;
+        padding: 0.5rem 0;
+      }
+      .vip-ti2 {
+        color: #a89f99;
+        font-size: 1.875rem;
+        font-weight: lighter;
+        margin: 4% 0 5%;
+      }
+      /* 单击可以显示 */
+      #accordion {
+        height: 18rem;
+        color: #c6af7d;
+      }
+      .vip-sm {
+        /* max-width: 20%; */
+        min-width: 15%;
+        font-family: "yahei";
+        margin: 0;
+      }
+      .vip-sm-show {
+        color: #c6af7d;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .vip-sm .collapse {
+        font-size: 1rem;
+        font-weight: lighter;
+      }
+      /* 5个vip卡片 */
+      .vip-cards {
+        margin: 0 auto;
+        padding: 0 8.5%;
+      }
+      .vip-block {
+        width: 20%;
+        position: relative;
+        background-image: url("./img/vip_card_bg.jpg");
+        background-size: 90% 95%;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        margin: 0 auto 6%;
+      }
+      .vip-b-info {
+        height: 100%;
+        background-color: #17110f;
+        border: 1px #3d3d3d solid;
+        border-left: none;
+        padding: 1.2rem 0.8rem;
+        position: relative;
+        left: 3px;
+        bottom: 3px;
+      }
+      .vip-logo {
+        color: black;
+        font-size: 1.25rem;
+        font-weight: bold;
+        background-color: #dfb45f;
+        border-radius: 2px;
+        padding: 0 2rem;
+      }
+      .vip-block h3 {
+        color: #f5e6c9;
+        font-size: 2.8rem;
+        margin: 10% 0 5%;
+      }
+      .vip-block h4 {
+        color: #dfb45f;
+        font-size: 1rem;
+        margin-bottom: 5%;
+      }
+      .vip-block h5 {
+        color: #e7d3ad;
+        font-size: 1.25rem;
+        line-height: 3rem;
+        font-weight: lighter;
+      }
+      /* vip-other */
+      .vip-other {
+        background-color: #1e1816;
+        font-size: 1.55rem;
+        text-align: left;
+        padding: 2% 0 4%;
+      }
+      @media screen and (max-width: 1400px) {
+        .vip-ti1 {
+          font-size: 1.8rem;
+        }
+        .vip-sm-show {
+          font-size: 1.3rem;
+        }
+        .vip-block h3 {
+          font-size: 2rem;
+        }
+        #accordion {
+          height: 14rem;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        .vip-ti1 {
+          width: 90% !important;
+          padding: 0.5%;
+        }
+        .vip-ti2 {
+          font-size: 1.5rem;
+        }
+        #accordion {
+          height: auto;
+          display: block !important;
+        }
+        #accordion span {
+          display: none;
+        }
+        .vip-block {
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .vip-ti1 {
+          font-size: 1.5rem;
+        }
+        .vip-sm {
+          margin: 0.5rem 0;
+        }
+        .vip-sm-show {
+          font-size: 1.2rem;
+        }
+        .vip-ti2 {
+          font-size: 1.3rem;
+        }
+        .vip-ti2 span {
+          display: none;
+        }
+        .vip-block h5 {
+          font-size: 1.1rem;
+          line-height: 2rem;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        .vip-block {
+          width: 90%;
+        }
+      }
+    </style>
+    <title>VIP</title>
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="head-box">
+      <div class="head-bg">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- logo -->
+          <a class="navbar-brand" href="javascript:void(0)"> <img src="./img/logo.png" alt="Logo" /> </a>
+          <!-- 伸缩按钮 -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 下拉选项栏 -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">CLASSIFICATION</a>
+                <div class="dropdown-menu dropdown-max">
+                  <div class="flex-container">
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 搜索框 -->
+            <form class="nav-search search-form flex-grow-1">
+              <div class="input-group">
+                <input type="text" name="search" class="search-input" placeholder="" />
+                <button tabindex="0" class="btn" type="submit" aria-label="Search">
+                  <img class="" style="height:40%;" src="./img/search.svg" alt="" />
+                </button>
+              </div>
+            </form>
+            <!-- 向右对齐 登录 购物车 -->
+            <ul class="navbar-nav">
+              <!-- 购物车 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link dropdown-toggle " data-toggle="dropdown">
+                  <!-- <span class="glyphicon glyphicon-shopping-cart"></span> -->
+                  <img style="height:2.4rem;vertical-align:middle" src="./img/shop_cart.svg" alt="" />
+                </a>
+                <div class="dropdown-menu dropdown-cart">
+                  <form action="">
+                    <!-- 商品 -->
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><img class="shops-del" src="./img/delete2.svg" alt=""/></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><img class="shops-del" src="./img/delete2.svg" alt=""/></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <h5>TOTAL PRICE:$41.10</h5>
+                    <!-- 跳转购物车 & 提交订单 -->
+                    <button class="btn-w">
+                      <a href="shopping_cart.html"><img class="h-75" src="./img/shop_cart_black.svg" alt="" /> VIEW CART</a>
+                    </button>
+                    <button class="btn-w" type="submit"><img class="h-75" src="./img/checkout.svg" alt="" /> CHECKOUT</button>
+                  </form>
+                </div>
+              </li>
+              <!-- EUR -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> EUR <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-eur">
+                  <a class="dropdown-item" href="javascript:void(0)">EUR</a> <a class="dropdown-item" href="javascript:void(0)">USD</a>
+                  <a class="dropdown-item" href="javascript:void(0)">GBP</a> <a class="dropdown-item" href="javascript:void(0)">CAD</a>
+                  <a class="dropdown-item" href="javascript:void(0)">AUD</a> <a class="dropdown-item" href="javascript:void(0)">SEK</a>
+                  <a class="dropdown-item" href="javascript:void(0)">RUB</a>
+                </div>
+              </li>
+              <!-- 登录 -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown"> LOGIN <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-login">
+                  <form action="">
+                    <input type="text" name="" placeholder="Email Address" style="background-image: url('./img/email.svg')" />
+                    <input type="password" name="" placeholder="Password" style="background-image: url('./img/password.svg')" />
+                    <h5 style="text-align:right;"><a href="javascript:void(0)">Forget your password?</a></h5>
+                    <button class="btn-w" type="submit"><img class="h-75" src="./img/login.svg" alt="" />SIGN IN</button>
+                    <p><a href="./login.html">Sign in with social network site account</a></p>
+                    <div class="other-login">
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/facebook_black.svg" alt="" />Facebook</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/twitter_black.svg" alt="" />Twitter</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/google-plus_black.svg" alt="" />Google</a>
+                      </button>
+                    </div>
+                    <p><a href="./reg.html">Registration of new accounts</a></p>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <div class="text-white text-center" style="background: linear-gradient(to right,#211b19,#33302e,#33302e,#211b19); padding: 7% 0 5%">
+        <!-- top -->
+        <div class="" style="background-color: #1e1816;">
+          <h1 class="vip-ti1" style="width:60%; position: relative; top: -1.6rem">What can you enjoy if you become an OURPOE VIP member?</h1>
+          <div class="d-flex align-items-center justify-content-center" id="accordion">
+            <div class="vip-sm">
+              <div class="vip-sm-show" data-toggle="collapse" data-target="#d1">Lowest Price</div>
+              <div id="d1" class="collapse" data-parent="#accordion">Lorem ipsum dolor sit amet<br />consectetur adipisicing elit</div>
+            </div>
+            <span>|</span>
+            <div class="vip-sm">
+              <div class="vip-sm-show" data-toggle="collapse" data-target="#d2">Better Service</div>
+              <div id="d2" class="collapse" data-parent="#accordion">Lorem ipsum dolor sit amet<br />consectetur adipisicing elit</div>
+            </div>
+            <span>|</span>
+            <div class="vip-sm">
+              <div class="vip-sm-show" data-toggle="collapse" data-target="#d3">1-to-1 Service</div>
+              <div id="d3" class="collapse" data-parent="#accordion">Lorem ipsum dolor sit amet<br />consectetur adipisicing elit</div>
+            </div>
+            <span>|</span>
+            <div class="vip-sm">
+              <div class="vip-sm-show" data-toggle="collapse" data-target="#d4">Instant Refund</div>
+              <div id="d4" class="collapse" data-parent="#accordion">Lorem ipsum dolor sit amet<br />consectetur adipisicing elit</div>
+            </div>
+            <span>|</span>
+            <div class="vip-sm">
+              <div class="vip-sm-show" data-toggle="collapse" data-target="#d5">Bigger Rate to Win</div>
+              <div id="d5" class="collapse" data-parent="#accordion">Lorem ipsum dolor sit amet<br />consectetur adipisicing elit</div>
+            </div>
+          </div>
+          <h1 class="vip-ti1" style="width:80%; position: relative; bottom: -1.6rem">
+            How to become our member or is there any requirement to become a VIP member?
+          </h1>
+        </div>
+        <!-- center -->
+        <div class="vip-m">
+          <h2 class="vip-ti2"><span>——————</span>we have five kinds of VIP members<span>——————</span></h2>
+          <!-- VIP特权 -->
+          <div class="vip-cards row">
+            <div class="vip-block">
+              <div class="vip-b-info">
+                <span class="vip-logo">VIP1</span>
+                <h3>ACCOUNT</h3>
+                <h4>you need registered</h4>
+                <hr style="background-color:#c4b393; height:.2rem; margin: 1.2rem 0;" />
+                <h4>you will</h4>
+                <h5>√ Enjoy 1% discount</h5>
+                <h5>√ All goods</h5>
+                <h5>√ Every time</h5>
+              </div>
+            </div>
+            <div class="vip-block">
+              <div class="vip-b-info">
+                <span class="vip-logo">VIP2</span>
+                <h3><span>$</span>200</h3>
+                <h4>you need spend over</h4>
+                <hr style="background-color:#c4b393; height:.2rem; margin: 1.2rem 0;" />
+                <h4>you will</h4>
+                <h5>√ Get 200+ Shop Points</h5>
+                <h5>√ Enjoy 2% discount</h5>
+                <h5>√ All goods</h5>
+                <h5>√ Every time</h5>
+              </div>
+            </div>
+            <div class="vip-block">
+              <div class="vip-b-info">
+                <span class="vip-logo">VIP3</span>
+                <h3><span>$</span>800</h3>
+                <h4>you need spend over</h4>
+                <hr style="background-color:#c4b393; height:.2rem; margin: 1.2rem 0;" />
+                <h4>you will</h4>
+                <h5>√ Get 800+ Shop Points</h5>
+                <h5>√ Enjoy 3% discount</h5>
+                <h5>√ All goods</h5>
+                <h5>√ Every time</h5>
+              </div>
+            </div>
+            <div class="vip-block">
+              <div class="vip-b-info">
+                <span class="vip-logo">VIP4</span>
+                <h3><span>$</span>1500</h3>
+                <h4>you need spend over</h4>
+                <hr style="background-color:#c4b393; height:.2rem; margin: 1.2rem 0;" />
+                <h4>you will</h4>
+                <h5>√ Get 1500+ Shop Points</h5>
+                <h5>√ Enjoy 4% discount</h5>
+                <h5>√ All goods</h5>
+                <h5>√ Every time</h5>
+              </div>
+            </div>
+            <div class="vip-block">
+              <div class="vip-b-info">
+                <span class="vip-logo">VIP5</span>
+                <h3><span>$</span>3000</h3>
+                <h4>you need spend over</h4>
+                <hr style="background-color:#c4b393; height:.2rem; margin: 1.2rem 0;" />
+                <h4>you will</h4>
+                <h5>√ Get 3000+ Shop Points</h5>
+                <h5>√ Enjoy 5% discount</h5>
+                <h5>√ All goods</h5>
+                <h5>√ Every time</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- other -->
+        <div class="vip-other">
+          <div class="w-75 mx-auto">
+            <p style="color:#dfb45f">
+              We offer 24/7 online customer support and delivery service, so whenever you contact us, our staffs will be happy to help you, and if you
+              have any suggestion, please just tell us, we will give you some gifts if your suggestions are used by us.
+            </p>
+            <br />
+            <p style="color:#dac7a2">Thank you and have fun!</p>
+            <p style="color:#d76c42">www.R4PG.com</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="follow text-center">
+        <a href="javascript:void(0)">FOLLOW OURPOE</a> <a href="javascript:void(0)"><img src="./img/facebook.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/twitter.png"/></a> <a href="javascript:void(0)"><img src="./img/google+.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/youtube.png"/></a>
+      </div>
+      <div class=" footer-b">
+        <div class="mx-auto" style="max-width:24rem; padding: 4% 0"><img class="w-100" src="./img/logo.png" alt="" /></div>
+        <p>
+          <a href="javascript:void(0)">AbOUT US</a> | <a href="javascript:void(0)">TERMS OF SERVICES</a> |
+          <a href="javascript:void(0)">REFUND POLICY</a> | <a href="javascript:void(0)">SELL TO US</a> |
+          <a href="javascript:void(0)">POE POWER lEVELING</a> | <a href="javascript:void(0)">POE CURRENCY GUIDES</a> |
+          <a href="javascript:void(0)">POE FAQ</a> | <a href="javascript:void(0)">POE BEASTCRAFTING</a>
+        </p>
+        <p>Copyright 2009-2018 <span>PoeCurrencyBuy.com</span>.All rights reserved. <span>Sitemaps</span></p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

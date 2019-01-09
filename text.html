@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>如何让select的样式也漂亮起来</title>
+<mce:style type="text/css"><!--
+.select * {
+  margin: 0;
+  padding: 0;
+}
+.select {
+  border:1px solid #cccccc;
+  float: left;
+  display: inline;
+  }
+.select div {
+  border:1px solid #f9f9f9;
+  float: left;
+}
+/* 子选择器，在FF等非IE浏览器中识别 */
+.select>div {
+  width:120px;
+  height: 17px;
+  overflow:hidden;
+  }
+  
+/* 通配选择符，只在IE浏览器中识别 */
+* html .select div select {
+  display:block;
+  float: left;
+  margin: -2px;
+}
+.select div>select {
+  display:block;
+  width:124px;
+  float:none;
+  margin: -2px;
+  padding: 0px;
+}
+.select:hover {
+  border:1px solid #666666; //鼠标移上的效果 
+}
+.select select>option {
+  text-indent: 2px; //option在FF等非IE浏览器缩进2px
+}
+--></mce:style><style type="text/css" mce_bogus="1">.select * {
+  margin: 0;
+  padding: 0;
+}
+.select {
+  border:1px solid #cccccc;
+  float: left;
+  display: inline;
+  }
+.select div {
+  border:1px solid #f9f9f9;
+  float: left;
+}
+/* 子选择器，在FF等非IE浏览器中识别 */
+.select>div {
+  width:120px;
+  height: 17px;
+  overflow:hidden;
+  }
+  
+/* 通配选择符，只在IE浏览器中识别 */
+* html .select div select {
+  display:block;
+  float: left;
+  margin: -2px;
+}
+.select div>select {
+  display:block;
+  width:124px;
+  float:none;
+  margin: -2px;
+  padding: 0px;
+}
+.select:hover {
+  border:1px solid #666666; //鼠标移上的效果 
+}
+.select select>option {
+  text-indent: 2px; //option在FF等非IE浏览器缩进2px
+}
+
+#alert_wrap{
+  background-color: darkcyan;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+}
+</style>
+</head>
+<body><div class="select">
+ <div>
+ <select>
+  <option>看见效果了吧</option>
+  <option>看见效果了吧</option>
+  <option>看见效果了吧</option>
+ </select>
+ </div>
+</div>
+<p class="a1">123</p>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $("p").click(function(){
+        alert("asdasdasdasdasdasdasdasdasdasabc",1111000)
+      });
+    });
+    
+    window.alert = alert;
+    function alert(data,time,callback) { //回调函数
+        var alert_bg = document.createElement('div');
+        alert_box = document.createElement('div'),
+            alert_text = document.createElement('div'),
+            alert_btn = document.createElement('div'),
+            textNode = document.createTextNode(data ? data : ''),
+            btnText = document.createTextNode('close');
+
+        // 控制样式
+        css(alert_bg, {
+            'position': 'fixed',
+            'top': '0',
+            'left': '0',
+            'right': '0',
+            'bottom': '0',
+            'background-color': 'rgba(0, 0, 0, 0.1)',
+            'z-index': '999999999'
+        });
+
+        css(alert_box, {
+            'color': '#fff',
+            'width': '420px',
+            'max-width': '90%',
+            'font-size': '16px',
+            'text-align': 'center',
+            'background-color': '#3a3330',
+            'border-radius': '4px',
+            'position': 'absolute',
+            'top': '50%',
+            'left': '50%',
+            'border': '1px solid #ddad4f',
+            'transform': 'translate(-50%, -50%)'
+        });
+        css(alert_text, {
+            'padding': '10px 15px',
+            'border-bottom': '1px solid #11111111'
+        });
+        css(alert_btn, {
+            'padding': '10px 0',
+            'color': '#ddad4f',
+            'font-weight': '600',
+            'cursor': 'pointer'
+        });
+        // 内部结构套入
+        alert_text.appendChild(textNode);
+        alert_btn.appendChild(btnText);
+        alert_box.appendChild(alert_text);
+        alert_box.appendChild(alert_btn);
+        alert_bg.appendChild(alert_box);
+
+        // 整体显示到页面内
+        document.getElementsByTagName('body')[0].appendChild(alert_bg);
+        setTimeout(function(){
+            alert_bg.parentNode.removeChild(alert_bg);
+            if (typeof callback === 'function') {
+                callback(); //回调
+            }},time);
+        // 确定绑定点击事件删除标签
+        alert_btn.onclick = function() {
+            alert_bg.parentNode.removeChild(alert_bg);
+            if (typeof callback === 'function') {
+                callback(); //回调
+            }
+        }
+    }
+
+    function css(targetObj, cssObj) {
+        var str = targetObj.getAttribute("style") ? targetObj.getAttribute('style') : '';
+        for (var i in cssObj) {
+            str += i + ':' + cssObj[i] + ';';
+        }
+        targetObj.style.cssText = str;
+    }
+
+    // alert('提示信息!', function() {
+    //     window.location.href = 'http://cn.bing.com';
+    // });
+</script>
+</body>
+</html>

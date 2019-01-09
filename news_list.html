@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- 网站信息 -->
+    <meta name="keywoords" contect="" />
+    <meta name="description" contect="" />
+    <meta name="Copyright" content="AntsNet" />
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" contect="index,follow" />
+    <!-- sns 社交标签 begin -->
+    <meta property="og:title" content="Pack is for people who love their dogs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pack" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://packdog.com/" />
+    <meta property="og:image" content="http://packdog.com/static/facebook.jpg" />
+    <meta property="og:description" content="Pack is the new home to capture and share the everyday moments in your dog’s life." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chrome 浏览器" />
+    <meta name="twitter:description" content="Google Chrome 是一款快速、简单且安全的网络浏览器，能很好地满足新型网页对浏览器的要求。" />
+    <meta name="twitter:image" content="https://www.google.com/chrome/static/images/thank-you-hero.png" />
+    <meta name="twitter:url" content="https://www.google.com/intl/zh-CN_ALL/chrome/thank-you.html" />
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/public.css" />
+    <style>
+      /* 最新news */
+      .class-news {
+        margin: 0;
+      }
+      .news-d1 {
+        margin-bottom: 1rem;
+      }
+      .news-d1 > .news-t-block:first-child {
+        width: 66.3%;
+        margin-right: 1rem;
+      }
+      .news-d1 > .news-t-block {
+        width: 32%;
+      }
+      .news-d2 {
+        width: 32.6%;
+      }
+      .news-d2 .news-t-block {
+        width: 100%;
+      }
+      .news-t-block {
+        border: #95794e 1px solid;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .news-t-block:hover {
+        border: #f0c84e 1px solid;
+      }
+      .card-img-overlay {
+        background: linear-gradient(#ffffff01, #111111);
+        padding: 0.5rem !important;
+      }
+      .news-top {
+        font-size: 1.375rem;
+      }
+      .card-img-overlay h5 {
+        color: #f0c84e;
+      }
+      .card-img-overlay p {
+        color: #aeadac;
+        font-size: 1.125rem;
+      }
+      .col-d1-h5 {
+        font-size: 1.875rem;
+      }
+      /* 全部news */
+      /* nav */
+      .news-nav-out1 {
+        border-top: 1px solid #5f4d42;
+        border-bottom: 1px solid #5f4d42;
+        background-color: #2a211d;
+      }
+      .news-nav-out1 .max-160{
+        padding: 0;
+      }
+      .news-nav-out1 .nav-tabs {
+        border: none;
+        display: flex;
+      }
+      .news-nav-out1 .nav-item a {
+        height: 4.5rem;
+        line-height: 4.5rem;
+        color: #f0c84e;
+        font-size: 1.875rem;
+        font-weight: 600;
+        border: none;
+        padding: 0 0.5rem;
+        margin-right: 2rem;
+      }
+      .news-nav-out1 .nav-item .active {
+        color: #2a211d;
+        background-color: #f0c84e;
+        border-radius: 0px;
+      }
+      .news-nav-out2{
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        padding: 0 1.2rem;
+        display: none;
+      }
+      .news-nav-out2 .nav-out-in{
+        padding: 0;
+        max-width: 560px;
+        position: relative;
+      }
+      .news-nav-out2 .nav-md-btn{
+        height: 3rem;
+        max-width: 560px;
+        line-height: 3rem;
+        color: #2a211d;
+        text-align: center;
+        background-color: #f0c84e;
+        display: none;
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+      .news-nav-out2 .nav-tabs{
+        border: none;
+        max-width: 560px;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top:3rem;
+        display: block;
+        background-color: #2a211d;
+        border: 1px solid #504137;
+        z-index: 10;
+        display: none;
+      }
+      .news-nav-out2 .nav-tabs li a{
+        color: #f0c84e;
+        display: inline-block;
+        height: 1.8rem;
+        line-height: 1.8rem;
+        font-size: 1.125rem;
+        font-weight: normal;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+      .news-nav-out2 .nav-tabs li .active{
+        background-color: #2a211d;
+        color: white;
+      }
+      .news-nav-out2 .nav-tabs li a:hover{
+        color: white;
+    }
+      /* tab-pane */
+      .tab-pane {
+        padding: 4% 0;
+      }
+      .tab-content .col-md-6 .news-t:hover h5 {
+        color: #eee;
+        transition: 0.5s;
+      }
+      /* news list */
+      .tab-pane .col-md-6 {
+        float: left;
+        margin-bottom: 2%;
+      }
+      .news-blocks{
+        width: 25%;
+        padding:0 .6rem;
+        margin-bottom: 1.2rem;
+      }
+      .news-bord {
+        height: 100%;
+        width: 100%;
+        background-color: #2a211d;
+        border: #564433 1px solid;
+      }
+      .news-bord:hover {
+        border: #dfb45f 1px solid;
+      }
+      .news-t {
+        border-top: #564433 1px solid;
+        padding: 3%;
+      }
+      .news-t h5 {
+        color: #f0c84e;
+        font-size: 1rem;
+      }
+      .news-t p {
+        color: #b0a085;
+        font-size: 1rem;
+        margin: 0;
+      }
+      /* 线 */
+      .col-line {
+        width: 100%;
+        float: left;
+        height: 1rem;
+        border-bottom: #5f4d42 1px solid;
+        margin-bottom: 2%;
+      }
+      /* 下一页 */
+      .next-page {
+        font-size: 1.2rem;
+        font-weight: 200;
+        width: 15%;
+        height: 2.2rem;
+        line-height: 2rem;
+        color: #dfb45f;
+        border: 1px solid #dfb45f;
+        background: #462a23;
+        margin: 0 auto;
+      }
+      .p3 {
+        margin-right: 1rem;
+      }
+      .p3:last-child {
+        margin: 0;
+      }
+      @media screen and (max-width: 1200px) {
+        .news-blocks{
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        .news-d1 > .news-t-block:first-child {
+          width: 100%;
+          /* margin-right: 1rem; */
+          margin-bottom: 1rem;
+        }
+        .news-d2 {
+          width: 100%;
+        }
+        .news-d2 .news-t-block {
+          width: auto;
+        }
+        .news-d2 > .news-t-block:first-child {
+          margin-right: 1rem;
+        }
+        /* 下一页 */
+        .next-page {
+          font-size: 1rem;
+          width: 20%;
+          height: 2rem;
+          line-height: 1.8rem;
+        }
+        /* 1.9 */
+        .news-nav-out1 {
+          display: none;
+        }
+        .news-nav-out2 {
+          display: block;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .news-d1 {
+          margin-bottom: 0;
+        }
+        .class-news {
+          width: 100% !important;
+          margin: 1% 0.5% !important;
+        }
+        .news-bord h5{
+          font-size: 1.2rem;
+        }
+        .news-bord p{
+          font-size: 1.2rem;
+        }
+        /* 下一页 */
+        .next-page {
+          font-size: 1rem;
+          width: 15rem;
+          height: 2rem;
+          line-height: 1.8rem;
+        }
+        .px-7{
+          padding-left: 1rem;
+          padding-right:4%;
+        }
+        .tab-pane .col-md-6{
+          padding-left: 1%;
+          padding-right: 1%;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        .news-blocks{
+          width: 100%;
+        }
+      }
+    </style>
+    <title>news_list</title>
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="head-box">
+      <div class="head-bg">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- logo -->
+          <a class="navbar-brand" href="javascript:void(0)"> <img src="./img/logo.png" alt="Logo" /> </a>
+          <!-- 伸缩按钮 -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 下拉选项栏 -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">CLASSIFICATION</a>
+                <div class="dropdown-menu dropdown-max">
+                  <div class="flex-container">
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 搜索框 -->
+            <form class="nav-search search-form flex-grow-1">
+              <div class="input-group">
+                <input type="text" name="search" class="search-input" placeholder="" />
+                <button tabindex="0" class="btn" type="submit" aria-label="Search">
+                  <img class="" style="height:40%;" src="./img/search.svg" alt="" />
+                </button>
+              </div>
+            </form>
+            <!-- 向右对齐 登录 购物车 -->
+            <ul class="navbar-nav">
+              <!-- 购物车 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link dropdown-toggle " data-toggle="dropdown">
+                  <!-- <span class="glyphicon glyphicon-shopping-cart"></span> -->
+                  <img style="height:2.4rem;vertical-align:middle" src="./img/shop_cart.svg" alt="" />
+                </a>
+                <div class="dropdown-menu dropdown-cart">
+                  <form action="">
+                    <!-- 商品 -->
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><img class="shops-del" src="./img/delete2.svg" alt=""/></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><img class="shops-del" src="./img/delete2.svg" alt=""/></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <h5>TOTAL PRICE:$41.10</h5>
+                    <!-- 跳转购物车 & 提交订单 -->
+                    <button class="btn-w">
+                      <a href="shopping_cart.html"><img class="h-75" src="./img/shop_cart_black.svg" alt="" /> VIEW CART</a>
+                    </button>
+                    <button class="btn-w" type="submit"><img class="h-75" src="./img/checkout.svg" alt="" /> CHECKOUT</button>
+                  </form>
+                </div>
+              </li>
+              <!-- EUR -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> EUR <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-eur">
+                  <a class="dropdown-item" href="javascript:void(0)">EUR</a> <a class="dropdown-item" href="javascript:void(0)">USD</a>
+                  <a class="dropdown-item" href="javascript:void(0)">GBP</a> <a class="dropdown-item" href="javascript:void(0)">CAD</a>
+                  <a class="dropdown-item" href="javascript:void(0)">AUD</a> <a class="dropdown-item" href="javascript:void(0)">SEK</a>
+                  <a class="dropdown-item" href="javascript:void(0)">RUB</a>
+                </div>
+              </li>
+              <!-- 登录 -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown"> LOGIN <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-login">
+                  <form action="">
+                    <input type="text" name="" placeholder="Email Address" style="background-image: url('./img/email.svg')" />
+                    <input type="password" name="" placeholder="Password" style="background-image: url('./img/password.svg')" />
+                    <h5 style="text-align:right;"><a href="javascript:void(0)">Forget your password?</a></h5>
+                    <button class="btn-w" type="submit"><img class="h-75" src="./img/login.svg" alt="" />SIGN IN</button>
+                    <p><a href="./login.html">Sign in with social network site account</a></p>
+                    <div class="other-login">
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/facebook_black.svg" alt="" />Facebook</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/twitter_black.svg" alt="" />Twitter</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/google-plus_black.svg" alt="" />Google</a>
+                      </button>
+                    </div>
+                    <p><a href="./reg.html">Registration of new accounts</a></p>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main class="bg-v1" style=" background-image: url('./img/news_bg_01.jpg');">
+      <!-- 面包屑导航 -->
+      <div class="breadcrumb-outbox">
+        <nav class="breadcrumb">
+          <a class="breadcrumb-item" href="javascript:void(0)"><i class="fa fa-home"></i> Home</a>
+          <a class="breadcrumb-item" href="javascript:void(0)">builds</a>
+          <span class="breadcrumb-item active">Templar</span>
+        </nav>
+      </div>
+      <div class="text-white bg-w100" style=" padding: 7% 0 8%">
+        <!-- top -->
+        <div class="news-top max-160 align-content-around">
+          <div class="news-d1 d-lg-flex align-content-around">
+            <div class="class-news news-t-block card">
+              <a href="javascript:void(0)">
+              <img class="card-img-top" src="./img/build/news_3_14_01.jpg" alt="" />
+              <div class="card-img-overlay">
+                <h5 class="col-d1-h5">POE 3.4 Builds: Guardian Aura Support Build</h5>
+                <p class="card-text ">- HC/SC League starter - Endgame, Cheap and Safe</p>
+              </div>
+              </a>
+            </div>
+            <div class="news-d2 d-md-flex flex-lg-column align-content-around">
+              <div class="class-news news-t-block card">
+                  <a href="javascript:void(0)">
+                <img class="card-img-top" src="./img/build/news_3_14_02.jpg" alt="" />
+                <div class="card-img-overlay">
+                  <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
+                  <p class="card-text">Some example text.</p>
+                </div>
+                </a>
+              </div>
+              <div class="class-news news-t-block card mt-auto">
+                  <a href="javascript:void(0)">
+                <img class="card-img-top" src="./img/build/news_3_14_03.jpg" alt="" />
+                <div class="card-img-overlay">
+                  <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
+                  <p class="card-text">Some example text.</p>
+                </div>
+                </a>
+              </div>
+            </div>
+          </div>
+            <div class="d-md-flex w-100 justify-content-between">
+                <div class="class-news news-t-block card p3">
+                    <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/news_3_14_04.jpg" alt="" />
+                  <div class="card-img-overlay">
+                    <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
+                    <p class="card-text">Some example text.</p>
+                  </div>
+                  </a>
+                </div>
+                <div class="class-news news-t-block card p3">
+                    <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/news_3_14_05.jpg" alt="" />
+                  <div class="card-img-overlay">
+                    <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
+                    <p class="card-text">Some example text.</p>
+                  </div>
+                  </a>
+                </div>
+                <div class="class-news news-t-block card p3">
+                    <a href="javascript:void(0)">
+                  <img class="card-img-top" src="./img/build/news_3_14_06.jpg" alt="" />
+                  <div class="card-img-overlay">
+                    <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
+                    <p class="card-text">Some example text.</p>
+                  </div>
+                  </a>
+                </div>
+            </div>
+          </div>
+        <div class="clearfix" style="margin-bottom:8%"></div>
+        <!-- 新闻及相关信息 -->
+        <!-- 1.9 -->
+        <div class="nav-out news-nav-out1">
+          <div class="nav-out-in max-160">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#news">NEWS AND GUIDES</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#update">UPDATE</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#video">VIDEO</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#gallery">GALLERY</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="news-nav-out2">
+          <div class="nav-out-in max-160">
+              <div class="nav-md-btn">NEWS AND GUIDES</div>
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#news">NEWS AND GUIDES</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#update">UPDATE</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#video">VIDEO</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#gallery">GALLERY</a></li>
+              </ul>
+          </div>
+        </div>
+        <!-- Tab panes -->
+        <div class="tab-content max-160">
+          <!-- news新闻 -->
+          <div id="news" class="tab-pane active">
+            <div class="d-flex flex-wrap">
+                <div class="news-blocks">
+                  <div class="news-bord">
+                    <a href="javascript:void(0)">
+                      <img class="w-100" src="./img/build/assion_news1.jpg" />
+                      <div class="news-t">
+                        <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                        <p>-High Damage & League Starter>-High Damage & League Starter</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="news-blocks">
+                  <div class="news-bord">
+                    <a href="javascript:void(0)">
+                      <img class="w-100" src="./img/build/assion_news1.jpg" />
+                      <div class="news-t">
+                        <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                        <p>-High Damage & League Starter>-High Damage & League Starter>-High Damage & League Starter>-High Damage & League Starter</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="news-blocks">
+                  <div class="news-bord">
+                    <a href="javascript:void(0)">
+                      <img class="w-100" src="./img/build/assion_news1.jpg" />
+                      <div class="news-t">
+                        <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                        <p>-High Damage & League Starter>-High Damage & League Starter</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="news-blocks">
+                  <div class="news-bord">
+                    <a href="javascript:void(0)">
+                      <img class="w-100" src="./img/build/assion_news1.jpg" />
+                      <div class="news-t">
+                        <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                        <p>-High Damage & League Starter>-High Damage & League Starter>-High Damage & League Starter>-High Damage & League Starter</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="news-blocks">
+                  <div class="news-bord">
+                    <a href="javascript:void(0)">
+                      <img class="w-100" src="./img/build/assion_news1.jpg" />
+                      <div class="news-t">
+                        <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                        <p>-High Damage & League Starter>-High Damage & League Starter</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="news-blocks">
+                  <div class="news-bord">
+                    <a href="javascript:void(0)">
+                      <img class="w-100" src="./img/build/assion_news1.jpg" />
+                      <div class="news-t">
+                        <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                        <p>-High Damage & League Starter>-High Damage & League Starter>-High Damage & League Starter>-High Damage & League Starter</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="news-blocks">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              
+            </div>
+            <div class="col-line"></div>
+            <!-- 下一页 -->
+            <div class="float-left w-100 text-center">
+              <a href="javascript:void(0)"><h5 class="next-page">>> NEXT PAGE</h5></a>
+            </div>
+          </div>
+          <!-- updata -->
+          <div id="update" class="tab-pane fade row">
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                  <a href="javascript:void(0)">
+                <img class="w-100" src="./img/build/assion_news1.jpg" />
+                <div class="news-t">
+                  <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                  <p>-High Damage & League Starter</p>
+                </div>
+                </a>
+              </div>
+          </div>
+          <!-- video -->
+          <div id="video" class="tab-pane fade row">
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-line"></div>
+            <!-- 下一页 -->
+            <div class="float-left w-100 text-center">
+              <a href="javascript:void(0)"><h5 class="next-page">>> NEXT PAGE</h5></a>
+            </div>
+          </div>
+          <!-- gallery -->
+          <div id="gallery" class="tab-pane fade row">
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <img class="w-100" src="./img/build/assion_news1.jpg" />
+              <div class="news-t">
+                <h5>POE 3.4 Shadow Assassin Rain of Arrows Build</h5>
+                <p>-High Damage & League Starter</p>
+              </div>
+            </div>
+            <div class="col-line"></div>
+            <!-- 下一页 -->
+            <div class="float-left w-100 text-center">
+              <a href="javascript:void(0)"><h5 class="next-page">>> NEXT PAGE</h5></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="clearfix" style="margin-bottom:6%"></div>
+    <footer class="footer">
+      <div class="follow text-center">
+        <a href="javascript:void(0)">FOLLOW OURPOE</a> <a href="javascript:void(0)"><img src="./img/facebook.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/twitter.png"/></a> <a href="javascript:void(0)"><img src="./img/google+.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/youtube.png"/></a>
+      </div>
+      <div class=" footer-b">
+        <div class="mx-auto" style="max-width:24rem; padding: 4% 0"><img class="w-100" src="./img/logo.png" alt="" /></div>
+        <p>
+          <a href="javascript:void(0)">AbOUT US</a> | <a href="javascript:void(0)">TERMS OF SERVICES</a> |
+          <a href="javascript:void(0)">REFUND POLICY</a> | <a href="javascript:void(0)">SELL TO US</a> |
+          <a href="javascript:void(0)">POE POWER lEVELING</a> | <a href="javascript:void(0)">POE CURRENCY GUIDES</a> |
+          <a href="javascript:void(0)">POE FAQ</a> | <a href="javascript:void(0)">POE BEASTCRAFTING</a>
+        </p>
+        <p>Copyright 2009-2018 <span>PoeCurrencyBuy.com</span>.All rights reserved. <span>Sitemaps</span></p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script>
+      $(".nav-md-btn").click(function(){
+        $(".news-nav-out2 .nav-tabs").toggle()
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- 网站信息 -->
+    <meta name="keywoords" contect="" />
+    <meta name="description" contect="" />
+    <meta name="Copyright" content="AntsNet" />
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" contect="index,follow" />
+    <!-- sns 社交标签 begin -->
+    <meta property="og:title" content="Pack is for people who love their dogs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pack" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://packdog.com/" />
+    <meta property="og:image" content="http://packdog.com/static/facebook.jpg" />
+    <meta property="og:description" content="Pack is the new home to capture and share the everyday moments in your dog’s life." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chrome 浏览器" />
+    <meta name="twitter:description" content="Google Chrome 是一款快速、简单且安全的网络浏览器，能很好地满足新型网页对浏览器的要求。" />
+    <meta name="twitter:image" content="https://www.google.com/chrome/static/images/thank-you-hero.png" />
+    <meta name="twitter:url" content="https://www.google.com/intl/zh-CN_ALL/chrome/thank-you.html" />
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/n.css" />
+
+    <title>user_order</title>
+    <style>
+        body{
+        	background-color: #261f1c;
+        }
+        main p{
+          font-size: 1.25rem;
+        }
+        .order-block{
+            margin-bottom: 2.5rem;
+        }
+        /* table */
+        .table-order{
+            margin-bottom: 0;
+        }
+        .table-order td{
+          color: #e5e5e5;
+          font-size: 1.5rem;
+          font-weight: lighter;
+          text-align: center;
+          border: none;
+          padding: .5rem;
+        }
+        .table-order tbody> :first-child{
+	      background-color: #31242299;
+        }
+        .table-order tbody> :last-child td{
+          background-color: #22161499;
+          font-size: 1.2rem;
+        }
+        .table-order tbody tr> :first-child{
+            color: #eebe5d;
+        }
+        .table-order tbody tr> :last-child{
+            color: #eebe5d;
+        }
+        .table-order tbody tr> :nth-child(5){
+            color: #eebe5d;
+        }
+        /* 订单信息 */
+        .order-li{
+            display: none;
+        }
+        .order-block:first-child .order-li{
+            display: block !important;
+        }
+        .order-block:first-child .order-view{
+            display: none !important;
+        }
+        .order-li .not-line{
+            background-color: #312826;
+        }
+        .order-li h5{
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .order-li h5 span{
+            color: #c4c4c4;
+            font-size: .9rem;
+            font-weight: normal;
+        }
+        .order-now >li {
+            background-color: #312826;
+        }
+        .hist-goods-out{
+            border-top: #332a29 1px solid;
+            border-bottom: #332a29 1px solid;
+            margin-bottom: 2.5rem;
+        }
+        .hist-goods{
+            color: white;
+            font-weight: lighter;
+        }
+        .inorder-name{
+            font-weight:lighter;
+            text-align: center;
+            margin-bottom: 2rem !important;
+        }
+        .inorder-name span{
+            color: #eebe5d;
+        }
+        /* eva */
+        .a-eva{
+            color: black;
+            font-weight: normal;
+            background-color: #dfb45f;
+	        border-radius: 3px;
+            padding: 0 .5rem;
+            display: inline-block;
+            float: right;
+        }
+        .a-eva:hover{
+            color: black;
+        }
+        /* view */
+        .order-view{
+            color: white;
+            height: 1.875rem ;
+            font-size: 1.25rem;
+            font-weight: lighter;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 3px;
+            box-sizing: border-box;
+            padding: 0 .5rem;
+            margin-right: 1rem; 
+            float: right;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .order-view:hover{
+            color: #dfb45f;
+            border-color: #dfb45f;
+            transition: .5s;
+        }
+      @media screen and (max-width: 768px) {
+        .user-card{
+            padding: 1.5rem 0.5rem;
+        }
+        .hist-goods img {
+            width: 40px;
+        }
+        .a-eva{
+            float:unset;
+        }
+        .order-view{
+            float: unset;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="head-box">
+      <div class="head-bg">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- logo -->
+          <a class="navbar-brand" href="javascript:void(0)"> <img src="./img/logo.png" alt="Logo" /> </a>
+          <!-- 伸缩按钮 -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 下拉选项栏 -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="javascript:void(0)" id="navbardrop" data-toggle="dropdown">CLASSIFICATION <i class="fa fa-bars"></i></a>
+                <div class="dropdown-menu dropdown-max">
+                  <div class="flex-container">
+                    <div class="flex-item-build">
+                      <h4><a>POE Builds</a> <i class="fa fa-angle-down"></i></h4>
+                      <!-- <div class="" > -->
+                      <ul>
+                        <li>
+                          <h5 class="build-ti">Templar <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="javascript:void(0)">Inquisitor</a></li>
+                            <li><a href="">Hierophant</a></li>
+                            <li><a href="">Guardian</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Ranger <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Deadeye</a></li>
+                            <li><a href="">Raider</a></li>
+                            <li><a href="">Pathfinder</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Witch <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Necromancer</a></li>
+                            <li><a href="">Elementalist</a></li>
+                            <li><a href="">Elementalist</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Duelist <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Slayer</a></li>
+                            <li><a href="">Gladiator</a></li>
+                            <li><a href="">Champion</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Shadow <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Assassin</a></li>
+                            <li><a href="">Saboteur</a></li>
+                            <li><a href="">Trickster</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Marauder <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Juggernaut</a></li>
+                            <li><a href="">Berserker</a></li>
+                            <li><a href="">Chieftain</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Scion <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Ascendant</a></li>
+                          </ul>
+                        </li>
+                        <li class="clearfix"></li>
+                      </ul>
+                      <!-- </div> -->
+                    </div>
+                    <div class="flex-item">
+                      <h4>OURPOE Goods <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Currency</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Fragments</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Fossils</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Resonators</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Essences</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Divination Cards</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Prophecies</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Skill Gems</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>POE Map <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">POE Lab</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">POE Map</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>POE News and Data <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">News and Guide</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Update</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Video</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Gallery</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>About Us <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">About Us</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Why choose us</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">VIP and Discount</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>OURPOE Help <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Shopping Guide</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Qrder Tracker</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">POE FAQ</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Unable To Login</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 搜索框 -->
+            <form class="nav-search search-form flex-grow-1">
+              <div class="input-group">
+                <input type="text" name="search" class="search-input" placeholder="" />
+                <button tabindex="0" class="btn" type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+              </div>
+            </form>
+            <!-- 向右对齐 登录 购物车 -->
+            <ul class="navbar-nav">
+              <!-- 购物车 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link " data-toggle="dropdown">
+                  <i class="fa fa-shopping-cart" style="font-size:2.0rem;"></i>
+                </a>
+                <div class="dropdown-menu dropdown-cart">
+                  <form action="">
+                    <!-- 商品 -->
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><i class="shops-del fa fa-trash"></i></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><i></i></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><i class="shops-del fa fa-trash"></i></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <h5>TOTAL PRICE:$41.10</h5>
+                    <!-- 跳转购物车 & 提交订单 -->
+                    <button class="btn-w">
+                      <a href="shopping_cart.html"><i class="fa fa-shopping-cart"></i> VIEW CART</a>
+                    </button>
+                    <button class="btn-w" type="submit"><i class="fa fa-credit-card"></i> CHECKOUT</button>
+                  </form>
+                </div>
+              </li>
+              <!-- EUR -->
+              <li class="nav-item dropdown eur-li">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">EUR <i class="fa fa-eur" aria-hidden="true"></i></a>
+                <div class="dropdown-menu dropdown-eur">
+                  <a class="dropdown-item act" href="javascript:void(0)">EUR <i class="fa fa-eur" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">USD <i class="fa fa-usd" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">GBP <i class="fa fa-gbp" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">CAD <i class="fa fa-cad" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">AUD <i class="fa fa-aud" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">SEK <i class="fa fa-sek" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">RUB <i class="fa fa-rub" aria-hidden="true"></i></a>
+                </div>
+              </li>
+              <!-- 登录 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"> LOGIN <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-login">
+                  <form action="">
+                    <input type="text" name="" placeholder="Email Address" style="background-image: url('./img/email.svg')" />
+                    <input type="password" name="" placeholder="Password" style="background-image: url('./img/password.svg')" />
+                    <h5 style="text-align:right;"><a href="javascript:void(0)">Forget your password?</a></h5>
+                    <button class="btn-w" type="submit"><i class="fa fa-sign-in-alt"></i> SIGN IN</button>
+                    <p><a href="./login.html">Sign in with social network site account</a></p>
+                    <div class="other-login">
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><i class="fa fa-facebook-f"></i> Facebook</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><i class="fa fa-twitter"></i> Twitter</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><i class="fa fa-google-plus"></i> Google</a>
+                      </button>
+                    </div>
+                    <p><a href="./reg.html">Registration of new accounts</a></p>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main class="user-bg" style="background-image: url(./img/bg_user.jpg);">
+      <!-- nav左侧导航栏 -->
+      <ul class="user-menu">
+            <li>
+              <a href=""><i class="fa fa-home"></i><br>
+                OVERVIEW
+              </a></li>
+            <li class="li-act">
+                <a href=""><i class="fa fa-file-text-o" aria-hidden="true"></i><br>
+                  MY ORDERS
+                </a></li>
+            <li>
+                <a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i><br>
+                  MY GAMES
+                </a></li>
+            <li>
+                <a href=""><i class="fa fa-database" aria-hidden="true"></i><br>
+                  MY POINTS
+                </a></li>
+            <li>
+                <a href=""><i class="fa fa-commenting-o" aria-hidden="true"></i><br>
+                  MY REVIEWS
+                </a></li>
+            <li>
+                <a href=""><i class="fa fa-sliders" aria-hidden="true"></i><br>
+                  ACCOUNT SETTINGS
+                </a></li>
+            <li>
+                <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i><br>
+                  MY MESSAGES
+                </a></li>
+        </ul>
+      <div class="main-user">
+        <h1>ALL ORDERS</h1>
+        <div class="row">
+          <div class="col-md-12">
+            <!-- s -->
+            <div class="order-block">
+                <!-- 订单tab -->
+                <div class="table-responsive-xl">
+                    <table class="table table-order">
+                        <tbody>
+                        <tr>
+                            <td>Order number</td>
+                            <td>Date</td>
+                            <td>server</td>
+                            <td>Discount</td>
+                            <td>Status</td>
+                            <td>Total price</td>
+                        </tr>
+                        <tr>
+                            <td>POEB1811230463</td>
+                            <td>2018/11/25</td>
+                            <td>SFHHGFBCF</td>
+                            <td>3% discount</td>
+                            <td>Completed</td>
+                            <td>$300</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="user-card">
+                    <div class="order-li">
+                        <!-- 订单物品 -->
+                        <div class="d-flex hist-goods-out">
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                        </div>
+                        <p class="inorder-name">The role name with which you trade:<span>dasfffasa</span></p>
+                        <!-- 订单状态 -->
+                        <ul class="d-flex justify-content-between bg-secondary order-now">
+                            <li class="not-line"></li>
+                            <li class="">
+                                <div class="not-now is-now">1</div>
+                            </li>
+                            <li class="">
+                                <div class="not-now is-now">2</div>
+                            </li>
+                            <li class="">
+                                <div class="not-now is-now">3</div>
+                            </li>
+                            <li class="">
+                                <div class="not-now ">4</div>
+                            </li>
+                            <li class="is-line"></li>
+                        </ul>
+                        <div class="d-flex justify-content-between now-ins">
+                            <div class="flex-fill">
+                                <h5>Order confirmed <br><span>(2018/11/27   14:30)</span></h5>
+                            </div>
+                            <div class="flex-fill">
+                                <h5>Payment has been <br><span>(2018/11/27   14:30)</span></h5>
+                            </div>
+                            <div class="flex-fill">
+                                <h5>Is the delivery <br><span>(2018/11/27   14:30)</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <h5>Order completed <br><span>(2018/11/27   14:30)</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The order has been completed.<a class="a-eva" href="">EVALUATION</a><button class="order-view" type="button">VIEW DETAILS</button></p>
+                </div>
+            </div>
+            <!-- s -->
+            <div class="order-block">
+                <!-- 订单tab -->
+                <div class="table-responsive-xl">
+                    <table class="table table-order">
+                        <tbody>
+                        <tr>
+                            <td>Order number</td>
+                            <td>Date</td>
+                            <td>server</td>
+                            <td>Discount</td>
+                            <td>Status</td>
+                            <td>Total price</td>
+                        </tr>
+                        <tr>
+                            <td>POEB1811230463</td>
+                            <td>2018/11/25</td>
+                            <td>SFHHGFBCF</td>
+                            <td>3% discount</td>
+                            <td>Completed</td>
+                            <td>$300</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="user-card">
+                    <div class="order-li">
+                        <!-- 订单物品 -->
+                        <div class="d-flex hist-goods-out">
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                        </div>
+                        <p class="inorder-name">The role name with which you trade:<span>dasfffasa</span></p>
+                        <!-- 订单状态 -->
+                        <ul class="d-flex justify-content-between bg-secondary order-now">
+                            <li class="not-line"></li>
+                            <li class="">
+                                <div class="not-now is-now">1</div>
+                            </li>
+                            <li class="">
+                                <div class="not-now is-now">2</div>
+                            </li>
+                            <li class="">
+                                <div class="not-now is-now">3</div>
+                            </li>
+                            <li class="">
+                                <div class="not-now ">4</div>
+                            </li>
+                            <li class="is-line"></li>
+                        </ul>
+                        <div class="d-flex justify-content-between now-ins">
+                            <div class="flex-fill">
+                                <h5>Order confirmed <br><span>(2018/11/27   14:30)</span></h5>
+                            </div>
+                            <div class="flex-fill">
+                                <h5>Payment has been <br><span>(2018/11/27   14:30)</span></h5>
+                            </div>
+                            <div class="flex-fill">
+                                <h5>Is the delivery <br><span>(2018/11/27   14:30)</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <h5>Order completed <br><span>(2018/11/27   14:30)</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The order has been completed.<a class="a-eva" href="">EVALUATION</a><button class="order-view" type="button">VIEW DETAILS</button></p>
+                </div>
+            </div>
+            <!-- s -->
+            <div class="order-block">
+                <!-- 订单tab -->
+                <div class="table-responsive-xl">
+                    <table class="table table-order">
+                        <tbody>
+                        <tr>
+                            <td>Order number</td>
+                            <td>Date</td>
+                            <td>server</td>
+                            <td>Discount</td>
+                            <td>Status</td>
+                            <td>Total price</td>
+                        </tr>
+                        <tr>
+                            <td>POEB1811230463</td>
+                            <td>2018/11/25</td>
+                            <td>SFHHGFBCF</td>
+                            <td>3% discount</td>
+                            <td>Completed</td>
+                            <td>$300</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="user-card">
+                    <div class="order-li">
+                        <!-- 订单物品 -->
+                        <div class="d-flex hist-goods-out">
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="hist-goods"><img src="./img/shop/poe_exalted.png" alt=""> X <span>100</span></div>
+                                <h5>Chaos Orb</h5>
+                            </div>
+                        </div>
+                        <p class="inorder-name">The role name with which you trade:<span>dasfffasa</span></p>
+                        <!-- 订单状态 -->
+                        <ul class="d-flex justify-content-between bg-secondary order-now">
+                            <li class="not-line"></li>
+                            <li class="">
+                                <div class="not-now is-now">1</div>
+                            </li>
+                            <li class="">
+                                <div class="not-now is-now">2</div>
+                            </li>
+                            <li class="">
+                                <div class="not-now is-now">3</div>
+                            </li>
+                            <li class="">
+                                <div class="not-now ">4</div>
+                            </li>
+                            <li class="is-line"></li>
+                        </ul>
+                        <div class="d-flex justify-content-between now-ins">
+                            <div class="flex-fill">
+                                <h5>Order confirmed <br><span>(2018/11/27   14:30)</span></h5>
+                            </div>
+                            <div class="flex-fill">
+                                <h5>Payment has been <br><span>(2018/11/27   14:30)</span></h5>
+                            </div>
+                            <div class="flex-fill">
+                                <h5>Is the delivery <br><span>(2018/11/27   14:30)</h5>
+                            </div>
+                            <div class="flex-fill">
+                                <h5>Order completed <br><span>(2018/11/27   14:30)</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The order has been completed.<a class="a-eva" href="">EVALUATION</a><button class="order-view" type="button">VIEW DETAILS</button></p>
+                </div>
+            </div>
+            <!-- block over -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="follow text-center">
+        <a class="" href="javascript:void(0)">FOLLOW OURPOE</a> <a href="javascript:void(0)"><i class="fa fa-facebook-f"></i></a>
+        <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a> <a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a>
+        <a href="javascript:void(0)"><i class="	fa fa-youtube"></i></a>
+      </div>
+      <div class=" footer-b">
+        <div class="mx-auto" style="max-width:24rem; padding: 4% 0"><img class="w-100" src="./img/logo.png" alt="" /></div>
+        <p>
+          <a href="javascript:void(0)">AbOUT US</a> | <a href="javascript:void(0)">TERMS OF SERVICES</a> |
+          <a href="javascript:void(0)">REFUND POLICY</a> | <a href="javascript:void(0)">SELL TO US</a> |
+          <a href="javascript:void(0)">POE POWER lEVELING</a> | <a href="javascript:void(0)">POE CURRENCY GUIDES</a> |
+          <a href="javascript:void(0)">POE FAQ</a> | <a href="javascript:void(0)">POE BEASTCRAFTING</a>
+        </p>
+        <p>Copyright 2009-2018 <span>PoeCurrencyBuy.com</span>.All rights reserved. <span>Sitemaps</span></p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- header.js -->
+    <script src="./js/head.js"></script>
+    <script>
+        $(".order-view").click(function(){
+            $(this).parents(".user-card").children(".order-li").slideToggle()
+        })
+    </script>
+  </body>
+</html>

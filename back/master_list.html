@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- 引入文本图标库 -->
+    <link rel="stylesheet" href="./css/bootstrap-font.css" />
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <style>
+      body {
+        background: #17110f !important;
+      }
+      .bg-top{
+          background-repeat: no-repeat;
+          background-size: 100%;
+      }
+      .p-b8{
+          padding: 0 8%;
+      }
+      .master-list-ti h1{
+        font-size: 4.5rem ;
+      }
+      .master-block {
+        width: 50%;
+      }
+      .master-list .col-lg-6{
+        margin-bottom:5%;
+      }
+      .master-head{
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: auto 70%;
+      }
+      .master-img{
+          /* height: 70%; */
+          background-image: url('./img/master/bottom.png');
+          background-repeat: no-repeat;
+          background-size: 70% auto;
+          background-position:  bottom center;
+          padding-bottom: 4%;
+          position: relative;
+      }
+      .img-light{
+        display: none;
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+      }
+      .master-img:hover .img-light{
+        display: block;
+      }
+    </style>
+    <title>master_list</title>
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="head-box">
+      <div class="head-bg">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- logo -->
+          <a class="navbar-brand" href="#"> <img src="./img/logo.png" alt="Logo" /> </a>
+          <!-- 伸缩按钮 -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 下拉选项栏 -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto navbar-left">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">CLASSIFICATION</a>
+                <div class="dropdown-menu dropdown-max">
+                  <div class="flex-container">
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 搜索框 -->
+            <form class="nav-search navbar-right search-form">
+              <div class="input-group">
+                <input type="text" name="search" class="search-input" placeholder="" />
+                <span class="input-group-btn">
+                  <button tabindex="0" class="btn" type="submit" aria-label="Search">
+                    <span class="	glyphicon glyphicon-search"></span>
+                    <!-- <img class="search-icon" src="/assets/icons/search.svg" width="16px" height="16px" alt="Search"> -->
+                    <!-- <img class="search-icon-inverted" src="/assets/icons/search_dark.svg" width="16px" height="16px" alt="Search"> -->
+                  </button>
+                </span>
+              </div>
+            </form>
+            <!-- 向右对齐 登录 购物车 -->
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown"> <span class="glyphicon glyphicon-shopping-cart"></span> </a>
+                <div class="dropdown-menu dropdown-max">
+                  <ul class="row container margin-auto">
+                    <li class="col-sm-4">
+                      <h5>标题a</h5>
+                      <a class="dropdown-item" href="#">Link 1</a> <a class="dropdown-item" href="#">Link 2</a>
+                      <a class="dropdown-item" href="#">Link 3</a> <a class="dropdown-item" href="#">Link 4</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> EUR <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-max">
+                  <ul class="row container margin-auto">
+                    <li class="col-sm-4">
+                      <h5>标题a</h5>
+                      <a class="dropdown-item" href="#">Link 1</a> <a class="dropdown-item" href="#">Link 2</a>
+                      <a class="dropdown-item" href="#">Link 3</a> <a class="dropdown-item" href="#">Link 4</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> LOGIN <b class="caret"></b> </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <div class="bg-top p-b8 text-white" style=" background-image: url('./img/master/master_list_bg.jpg'); padding-bottom: 8%">
+        <!-- master概述 -->
+        <div class="master-list-ti text-center" style="padding:11% 0">
+          <h1>Master</h1>
+          <div class="mx-auto mb-4" style="max-width: 58.8rem;">
+            <p class="mb-0" style="color:#b2dafc; padding: 1rem 1rem 0">
+              Seven men and women, masters in their fields, stood against Dominus' tyranny. Some with words, others with steel. Seven masters
+              forsaken, sent to die in a corrupted land. Seven masters who lived, learned, and now thrive in Wraeclast. Seven Forsaken Masters who can
+              train you... if you choose to help them.<br/><p class="text-right" style="color:#b9b9b8;">-Description on the official Path of Exile website</p>
+            </p>
+          </div>
+          <div class="mx-auto" style="max-width:68rem;font-size: 1.25rem ;">
+            Theforsaken mastersare eightNPCsthat randomly spawn inWraeclastand offer the playermissions. In exchange for completing these missions,
+            players will be granted ahideoutand exclusivecraftingoptions. Each master specializes in crafting for a specific type of item and has his
+            own style of missions, as well as a different hideout tileset.
+          </div>
+        </div>
+        <!-- master列表 -->
+        <div class="master-list">
+          <div class="row text-center">
+            <div class="col-lg-6 row" >
+                <!-- 单个职业 .master-block -->
+              <div class="master-block">
+                <div class="master-head" style=" background-image:url('./img/master/Master_Haku.jpg')"><img class="img-fluid" src="./img/master/head_boder.png" alt="" /></div>
+                <h5>HaKu</h5>
+                <div class="master-img">
+                  <img class="img-fluid" src="./img/master/Master_Haku_m.png" alt="" style=" position:relative; left:-16%; " />
+                  <img class="img-light" src="./img/master/light.png" alt="">
+                </div>
+              </div>
+              <!-- 单个职业 .master-block -->
+              <div class="master-block">
+                <div class="master-head" style=" background-image:url('./img/master/Master_Elreon.jpg')"><img class="img-fluid" src="./img/master/head_boder.png" alt="" /></div>
+                <h5>Elreon</h5>
+                <div class="master-img">
+                  <img class="img-fluid" src="./img/master/Master_Elreon_m.png" alt="" />
+                  <img class="img-light" src="./img/master/light.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 row">
+              <!-- 单个职业 .master-block -->
+              <div class="master-block" >
+                <div class="master-head" style=" background-image:url('./img/master/Master_Catarina.jpg')"><img class="img-fluid" src="./img/master/head_boder.png" alt="" /></div>
+                <h5>Catarina</h5>
+                <div class="master-img">
+                  <img class="img-fluid" src="./img/master/Master_Catarina_m.png" alt="" style=" position:relative; left:-5%; " />
+                  <img class="img-light" src="./img/master/light.png" alt="">
+                </div>
+              </div>
+              <!-- 单个职业 .master-block -->
+              <div class="master-block">
+                <div class="master-head" style=" background-image:url('./img/master/Master_Tora.jpg')"><img class="img-fluid" src="./img/master/head_boder.png" alt="" /></div>
+                <h5>Tora</h5>
+                <div class="master-img">
+                  <img class="img-fluid" src="./img/master/Master_Tora_m.png" alt="" />
+                  <img class="img-light" src="./img/master/light.png" alt="">
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6 row">
+                <!-- 单个职业 .master-block -->
+              <div class="master-block">
+                <div class="master-head" style=" background-image:url('./img/master/Master_Vorici.jpg')"><img class="img-fluid" src="./img/master/head_boder.png" alt="" /></div>
+                <h5>VORICI</h5>
+                <div class="master-img">
+                  <img class="img-fluid" src="./img/master/Master_Vorici_m.png" alt=""/>
+                  <img class="img-light" src="./img/master/light.png" alt="">
+                </div>
+              </div>
+              <!-- 单个职业 .master-block -->
+              <div class="master-block">
+                <div class="master-head" style=" background-image:url('./img/master/Master_Leo.jpg')"><img class="img-fluid" src="./img/master/head_boder.png" alt="" /></div>
+                <h5>LEO</h5>
+                <div class="master-img">
+                  <img class="img-fluid" src="./img/master/Master_Leo_m.png" alt="" />
+                  <img class="img-light" src="./img/master/light.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 row">
+              <!-- 单个职业 .master-block -->
+              <div class="master-block" >
+                <div class="master-head" style=" background-image:url('./img/master/Master_Vagan.jpg')"><img class="img-fluid" src="./img/master/head_boder.png" alt="" /></div>
+                <h5>VAGAN</h5>
+                <div class="master-img">
+                  <img class="img-fluid" src="./img/master/Master_Vagan_m.png" alt="" />
+                  <img class="img-light" src="./img/master/light.png" alt="">
+                </div>
+              </div>
+              <!-- 单个职业 .master-block -->
+              <div class="master-block">
+                <div class="master-head" style=" background-image:url('./img/master/Master_Zana.jpg')"><img class="img-fluid" src="./img/master/head_boder.png" alt="" /></div>
+                <h5>ZANA</h5>
+                <div class="master-img">
+                  <img class="img-fluid" src="./img/master/Master_Zana_m.png" alt="" style=" position:relative; left:-6%; " />
+                  <img class="img-light" src="./img/master/light.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="follow text-center">
+        <a href="javascript:void(0)">FOLLOW OURPOE</a> <a href="javascript:void(0)"><img src="./img/facebook.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/twitter.png"/></a> <a href="javascript:void(0)"><img src="./img/google+.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/youtube.png"/></a>
+      </div>
+      <div class=" footer-b">
+        <div class="mx-auto" style="max-width:24rem; padding: 4% 0"><img class="w-100" src="./img/logo.png" alt="" /></div>
+        <p>
+          <a href="javascript:void(0)">AbOUT US</a> | <a href="javascript:void(0)">TERMS OF SERVICES</a> |
+          <a href="javascript:void(0)">REFUND POLICY</a> | <a href="javascript:void(0)">SELL TO US</a> |
+          <a href="javascript:void(0)">POE POWER lEVELING</a> | <a href="javascript:void(0)">POE CURRENCY GUIDES</a> |
+          <a href="javascript:void(0)">POE FAQ</a> | <a href="javascript:void(0)">POE BEASTCRAFTING</a>
+        </p>
+        <p>Copyright 2009-2018 <span>PoeCurrencyBuy.com</span>.All rights reserved. <span>Sitemaps</span></p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

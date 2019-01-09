@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- 网站信息 -->
+    <meta name="keywoords" contect="" />
+    <meta name="description" contect="" />
+    <meta name="Copyright" content="AntsNet" />
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" contect="index,follow" />
+    <!-- sns 社交标签 begin -->
+    <meta property="og:title" content="Pack is for people who love their dogs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pack" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://packdog.com/" />
+    <meta property="og:image" content="http://packdog.com/static/facebook.jpg" />
+    <meta property="og:description" content="Pack is the new home to capture and share the everyday moments in your dog’s life." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chrome 浏览器" />
+    <meta name="twitter:description" content="Google Chrome 是一款快速、简单且安全的网络浏览器，能很好地满足新型网页对浏览器的要求。" />
+    <meta name="twitter:image" content="https://www.google.com/chrome/static/images/thank-you-hero.png" />
+    <meta name="twitter:url" content="https://www.google.com/intl/zh-CN_ALL/chrome/thank-you.html" />
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/mouse-ins.css" />
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/n.css" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        margin: 0;
+      }
+      /* top */
+      h1 {
+        color: #ebdfbe;
+        font-size: 3rem;
+        text-align: right;
+        margin-bottom: 2.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+        font-weight: normal;
+        margin: 1rem 0;
+      }
+      .Label {
+        color: #ddd;
+        font-family: "yahei";
+        font-size: 1rem;
+        text-align: right;
+      }
+      .Label a {
+        color: #ccc;
+        display: inline-block;
+        margin: 0.4rem 0.6rem;
+        padding: 0 0.5rem;
+        border: #9c9b9b 1px solid;
+        border-radius: 3px;
+      }
+      .Label a:hover {
+        color: rgb(255, 218, 175);
+        border: rgb(238, 214, 168) 1px solid;
+      }
+      .top-ti {
+        overflow: hidden;
+        background-size: auto 120%;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        position: relative;
+        padding-top: 7%;
+        padding-bottom: 1.4rem;
+      }
+      /* 角色头图 */
+      .class-imgb {
+        height: 120%;
+        position: absolute;
+        bottom: -15%;
+        left: 0;
+        z-index: 0;
+      }
+      /* video */
+      .build-video {
+        width: 49%;
+        height: 100%;
+        margin: 0 1% 0 0;
+      }
+      .build-video video{
+        border: #32261e 1px solid;
+        box-shadow:9px -8px 13px 0 rgba(23, 17, 15, 0.45);
+        width: 100%;
+      }
+      .build-video p {
+        font-size: 1.3rem;
+        margin: 0.8rem 0 1.5rem;
+      }
+      /* 装备图表 */
+      .build-inventory {
+        width: 50%;
+        background-image: url("./img/goods/inventory_bg.png");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        position: relative;
+        margin: 0 auto;
+      }
+      .panel-t86::before {
+        content: "";
+        display: block;
+        padding-top: 86%;
+      }
+      .inve-imgs {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .shops-img{
+        text-align: center;
+        border: none;
+        margin: 0;
+      }
+      .shops-img img{
+          max-height: 100%;
+          max-width: 85%;
+          vertical-align: middle;
+      }
+      .img-mid{
+        width: 100%;
+        vertical-align:middle;
+        height: 100%;
+        padding: 0;
+      }
+      .img-mid span{
+        height: 100%;
+        overflow: hidden;
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0;
+      }
+      /* 宝石Gams */
+      .build-gams .gams-box {
+        font-weight: lighter;
+        list-style: none;
+        background-color: #0d0601;
+        border: 2px solid #30231a;
+        padding: 2% 4%;
+        column-count: 6;
+        column-gap: 0;
+      }
+      .build-gams .gams-box li {
+        height: 3rem;
+        line-height: 3rem;
+        color: #c9a465;
+      }
+      .build-gams .gams-box li a{
+        color: inherit;
+      }
+      .build-gams .gams-box img {
+        height: 90%;
+      }
+      /* 新闻 */
+      .news-m {
+        margin: -10px;
+      }
+      .class-news {
+        margin-bottom: 3%;
+        border: unset;
+        padding: 0 0.6rem;
+      }
+      /* 技能链接 */
+      .skills {
+        /* 瀑布流式 */
+        list-style: none;
+        column-count: 2;
+        column-gap: 0;
+      }
+      .skill-block {
+        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        page-break-inside: avoid; /* Firefox */
+        break-inside: avoid; /* IE 10+ */
+        box-sizing: border-box;
+        padding: 0 1.2% 1%;
+      }
+      .skill-block h5 {
+        height: 3rem;
+        line-height: 2.8rem;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        background-color: #281e18;
+        padding: 0 1% 0 2%;
+        overflow: hidden;
+      }
+      .skill-block .body-armour{
+        display: inline-block;
+        float: right;
+        color: #a0856f !important;
+        font-size: 1.25rem;
+        margin: 0;
+      }
+      .skill-block .h5-body li {
+        height: 2.8rem;
+        line-height: 2.6rem;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        overflow: hidden;
+        padding-left: 7%;
+      }
+      .skill-block .h5-body li:hover {
+        background-color: #281e18;
+      }
+      .skill-block .h5-body {
+        border: 1px solid #32261e;
+        background-color: #100902;
+        /* padding: 1.7% 0; */
+        margin: 0;
+        list-style: none;
+      }
+      .skill-block h5 img {
+        height: 75% !important;
+        padding-right: 1rem;
+      }
+      .skill-block .h5-body li img {
+        height: 75% !important;
+        padding-right: 1rem;
+      }
+      .news-content{
+        max-width: 100%;
+      }
+      @media screen and (max-width: 1400px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+        .top-box {
+          display: block !important;
+        }
+        /* video */
+        .build-video {
+          width: 100%;
+          /* height: 100%; */
+          margin: 0 auto;
+        }
+        /* 装备图表 */
+        .build-inventory {
+          width: 100%;
+          background-size: 100% auto;
+          margin: 0 auto;
+        }
+        .build-gams .gams-box {
+          column-count: 4;
+        }
+      }
+      @media screen and (max-width: 1280px) {
+        .skill-block h5 {
+          height: 2.8rem;
+          line-height: 2.65rem;
+          font-size: 1.3rem;
+        }
+        .skill-block .h5-body li {
+          height: 2.7rem;
+          line-height: 2.6rem;
+          font-size: 1.3rem;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        .build-gams .gams-box {
+          column-count: 3;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+          text-align: left;
+          margin-bottom: 1rem;
+        }
+        .Label {
+          text-align: left;
+        }
+        h2 {
+          font-size: 1.6rem;
+        }
+        .news-m {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .class-news {
+          padding: 0;
+        }
+        .build-gams .gams-box {
+          column-count: 2;
+        }
+        .skills {
+          column-count: 1;
+        }
+        .skill-block {
+          width: 100%;
+          margin: 0 0 1rem;
+        }
+        .skill-block h5 {
+          height: 2.5rem;
+          line-height: 2.4rem;
+          font-size: 1.2rem;
+          font-weight: 400;
+        }
+        .skill-block .h5-body li {
+          height: 2.5rem;
+          line-height: 2.4rem;
+          font-size: 1.2rem;
+          font-weight: 400;
+        }
+      }
+    </style>
+    <title>build-child</title>
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="head-box">
+      <div class="head-bg">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- logo -->
+          <a class="navbar-brand" href="javascript:void(0)"> <img src="./img/logo.png" alt="Logo" /> </a>
+          <!-- 伸缩按钮 -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 下拉选项栏 -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">CLASSIFICATION</a>
+                <div class="dropdown-menu dropdown-max">
+                  <div class="flex-container">
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                    <div class="flex-item">
+                      <h5>POE Builds</h5>
+                      <a class="dropdown-item" href="#">Templar</a> <a class="dropdown-item" href="#">Ranger</a>
+                      <a class="dropdown-item" href="#">Witch</a> <a class="dropdown-item" href="#">Duelist</a>
+                      <a class="dropdown-item" href="#">Shadow</a> <a class="dropdown-item" href="#">Marauder</a>
+                      <a class="dropdown-item" href="#">Scion</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 搜索框 -->
+            <form class="nav-search search-form flex-grow-1">
+              <div class="input-group">
+                <input type="text" name="search" class="search-input" placeholder="" />
+                <button tabindex="0" class="btn" type="submit" aria-label="Search">
+                  <img class="" style="height:40%;" src="./img/search.svg" alt="" />
+                </button>
+              </div>
+            </form>
+            <!-- 向右对齐 登录 购物车 -->
+            <ul class="navbar-nav">
+              <!-- 购物车 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link dropdown-toggle " data-toggle="dropdown">
+                  <!-- <span class="glyphicon glyphicon-shopping-cart"></span> -->
+                  <img style="height:2.4rem;vertical-align:middle" src="./img/shop_cart.svg" alt="" />
+                </a>
+                <div class="dropdown-menu dropdown-cart">
+                  <form action="">
+                    <!-- 商品 -->
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><img class="shops-del" src="./img/delete2.svg" alt=""/></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><img class="shops-del" src="./img/delete2.svg" alt=""/></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <h5>TOTAL PRICE:$41.10</h5>
+                    <!-- 跳转购物车 & 提交订单 -->
+                    <button class="btn-w">
+                      <a href="shopping_cart.html"><img class="h-75" src="./img/shop_cart_black.svg" alt="" /> VIEW CART</a>
+                    </button>
+                    <button class="btn-w" type="submit"><img class="h-75" src="./img/checkout.svg" alt="" /> CHECKOUT</button>
+                  </form>
+                </div>
+              </li>
+              <!-- EUR -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> EUR <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-eur">
+                  <a class="dropdown-item" href="javascript:void(0)">EUR</a> <a class="dropdown-item" href="javascript:void(0)">USD</a>
+                  <a class="dropdown-item" href="javascript:void(0)">GBP</a> <a class="dropdown-item" href="javascript:void(0)">CAD</a>
+                  <a class="dropdown-item" href="javascript:void(0)">AUD</a> <a class="dropdown-item" href="javascript:void(0)">SEK</a>
+                  <a class="dropdown-item" href="javascript:void(0)">RUB</a>
+                </div>
+              </li>
+              <!-- 登录 -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown"> LOGIN <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-login">
+                  <form action="">
+                    <input type="text" name="" placeholder="Email Address" style="background-image: url('./img/email.svg')" />
+                    <input type="password" name="" placeholder="Password" style="background-image: url('./img/password.svg')" />
+                    <h5 style="text-align:right;"><a href="javascript:void(0)">Forget your password?</a></h5>
+                    <button class="btn-w" type="submit"><img class="h-75" src="./img/login.svg" alt="" />SIGN IN</button>
+                    <p><a href="./login.html">Sign in with social network site account</a></p>
+                    <div class="other-login">
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/facebook_black.svg" alt="" />Facebook</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/twitter_black.svg" alt="" />Twitter</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><img class="h-75" src="./img/google-plus_black.svg" alt="" />Google</a>
+                      </button>
+                    </div>
+                    <p><a href="./reg.html">Registration of new accounts</a></p>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main class=" bg-v1" style="background-image:url('./img/goods/goods_bg_t01.jpg');">
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb-outbox">
+      <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="javascript:void(0)"><i class="fa fa-home"></i> Home</a>
+        <a class="breadcrumb-item" href="javascript:void(0)">builds</a>
+        <span class="breadcrumb-item active">Templar</span>
+      </nav>
+    </div>
+      <!-- top -->
+      <div class="text-white px-8" >
+        <div class="">
+          <div class="top-ti" style="background-image: url('./img/goods/Inquisitor_b.png');">
+            <!-- 标题 -->
+            <h1 class="">PoE 3.4 Templar Inquisitor Blade Vortex Build <br />- High Crit Chance & Elemental Damage</h1>
+            <div class="Label">
+                <i class="fa fa-bookmark"></i> Tags: <a href="javascript:void(0)">Elemental</a> <a href="javascript:void(0)">Crit</a> <a href="javascript:void(0)">Elemental</a>
+              <a href="javascript:void(0)">Crit</a> <a href="javascript:void(0)">Elemental</a> <a href="javascript:void(0)">Crit</a>
+              <a href="javascript:void(0)">Elemental</a>
+            </div>
+          </div>
+          <div class="top-box d-flex justify-content-center">
+            <!-- youtube -->
+            <div class="build-video">
+                <div class="video-container iframe-container">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/crPPUbhelmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              <p>This build will enable players to get a favorable situation in the early leagues.</p>
+            </div>
+            <!-- 装备图表 -->
+            <div class="build-inventory">
+              <div class="panel-t86"></div>
+              <div class="inve-imgs">
+                <div class="shops-img" style="width: 14%; height: 16%; position: absolute; left: 43%; top: 19%;">
+                  <div class="img-mid">
+                    <span></span>
+                    <img
+                      data-mtpis="
+                      <div class=&quot;inventory-data text-center&quot;>
+                        <h2 class=&quot;inData-title color-violet&quot;>Indigon Hubris Circlet</h2>
+                        <div class=&quot;inData-content color-uniques&quot;>
+                          <p class=&quot;color-green&quot;>Quality : <span>+20%</span> Energy Shield : <span>225</span></p>
+                          <hr />
+                          <p class=&quot;color-red&quot;>Blood Rage grants additional 12% increased Attack Speed</p>
+                          <hr style=&quot;background-color:#c4b393; height:0px; margin:4px 0;&quot; />
+                          <p class=&quot;&quot;>176% increased Energy Shield
+                            increased maximum Mana
+                            Recover 10% of maximum Life when you use a Mana Flask
+                            Non-instant Mana recovery from Flasks is also recovered as Life</p>
+                            <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                            59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                            <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                            59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                        </div>
+                      </div>"
+                      src="./img/goods/inventory_head_01.png"
+                      alt="头饰"
+                    />
+                  </div>
+                </div>
+                <div class="shops-img" style="width: 14%; height: 35%; position: absolute; left: 12.5%; top: 21.5%;">
+                  <div class="img-mid">
+                    <span></span>
+                    <img
+                    data-mtpis="
+                    <div class=&quot;inventory-data text-center&quot;>
+                      <h2 class=&quot;inData-title color-violet&quot;>Indigon Hubris Circlet</h2>
+                      <div class=&quot;inData-content color-uniques&quot;>
+                        <p class=&quot;color-green&quot;>Quality : <span>+20%</span> Energy Shield : <span>225</span></p>
+                        <hr />
+                        <p class=&quot;color-red&quot;>Blood Rage grants additional 12% increased Attack Speed</p>
+                        <hr style=&quot;background-color:#c4b393; height:0px; margin:4px 0;&quot; />
+                        <p class=&quot;&quot;>176% increased Energy Shield
+                          increased maximum Mana
+                          Recover 10% of maximum Life when you use a Mana Flask
+                          Non-instant Mana recovery from Flasks is also recovered as Life</p>
+                          <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                          59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                          <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                          59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                      </div>
+                    </div>"
+                      src="./img/shop/POE_Unique_Weapons_ungil's_gauche.png"
+                      alt="左手"
+                    />
+                  </div>
+                </div>
+                <div class="shops-img" style="width: 14%; height: 35%; position: absolute; right: 12.5%; top: 21.5%;">
+                  <div class="img-mid">
+                    <span></span>
+                    <img
+                    data-mtpis="
+                    <div class=&quot;inventory-data text-center&quot;>
+                      <h2 class=&quot;inData-title color-violet&quot;>Indigon Hubris Circlet</h2>
+                      <div class=&quot;inData-content color-uniques&quot;>
+                        <p class=&quot;color-green&quot;>Quality : <span>+20%</span> Energy Shield : <span>225</span></p>
+                        <hr />
+                        <p class=&quot;color-red&quot;>Blood Rage grants additional 12% increased Attack Speed</p>
+                        <hr style=&quot;background-color:#c4b393; height:0px; margin:4px 0;&quot; />
+                        <p class=&quot;&quot;>176% increased Energy Shield
+                          increased maximum Mana
+                          Recover 10% of maximum Life when you use a Mana Flask
+                          Non-instant Mana recovery from Flasks is also recovered as Life</p>
+                          <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                          59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                          <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                          59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                      </div>
+                    </div>"
+                      src="./img/shop/POE_Unique_Weapons_advancing_fortress.png"
+                      alt="右手"
+                    />
+                  </div>
+                </div>
+                <div class="shops-img" style="width: 14%; height: 25%; position: absolute; left: 43%; top: 39%;">
+                  <div class="img-mid">
+                    <span></span>
+                    <img src="./img/goods/inventory_body_01.png" alt="身甲"/>
+                  </div>
+                </div>
+                <div class="shops-img" style="width: 7%; height: 8%; position: absolute; right: 31.5%; top: 37%;">
+                  <div class="img-mid">
+                    <span></span>
+                    <img src="./img/goods/inventory_ornament_01.png" alt="饰品" />
+                  </div>
+                </div>
+                <div class="shops-img" style="width: 7%; height: 8%; position: absolute; left: 31.5%; top: 48%;">
+                  <div class="img-mid">
+                    <span></span>
+                    <img src="./img/goods/inventory_key_01.png" alt="戒指左" />
+                  </div>
+                </div>
+                <div class="shops-img" style="width: 7%; height: 8%; position: absolute; right: 31.5%; top: 48%;">
+                  <div class="img-mid">
+                    <span></span>
+                    <img src="./img/goods/inventory_key_02.png" alt="戒指右" />
+                  </div>
+                </div>
+                <div class="shops-img" style="width: 14%; height: 17%; position: absolute; left: 24%; top: 60%;">
+                  <div class="img-mid">
+                    <span></span>
+                    <img src="./img/goods/inventory_arm_01.png" alt="手臂" />
+                  </div>
+                </div>
+                <div class="shops-img" style="width: 15%; height: 10%; position: absolute; left: 42%; top: 67%;" >
+                  <div class="img-mid">
+                    <span></span>
+                    <img src="./img/shop/POE_Unique_Armours_mark_of_the_red_covenant.png" alt="腰"/>
+                  </div>
+                </div>
+                <div class="shops-img" style="width: 14%; height: 17%; position: absolute; right: 24%; top: 60%;">
+                  <div class="img-mid">
+                    <span></span>
+                    <img src="./img/goods/inventory_let_01.png" alt="腿" />
+                  </div>
+                </div >
+                <img src="./img/goods/inventory_water_01.png" alt="药水1" style="width: 7%; position: absolute; left: 32%; top: 80%;" />
+                <img src="./img/goods/inventory_water_02.png" alt="药水2" style="width: 7%; position: absolute; left: 39.5%; top: 80%;" />
+                <img src="./img/goods/inventory_water_03.png" alt="药水3" style="width: 7%; position: absolute; left: 47%; top: 80%;" />
+                <img src="./img/goods/inventory_water_04.png" alt="药水4" style="width: 7%; position: absolute; left: 55%; top: 80%;" />
+                <img src="./img/goods/inventory_water_05.png" alt="药水5" style="width: 7%; position: absolute; left: 63%; top: 80%;" />
+              </div>
+            </div>
+          </div>
+          <!-- 宝石Gams -->
+          <div class="build-gams">
+            <h2>Talent Gems</h2>
+            <ul class="gams-box">
+              <li>
+                <img
+                data-mtpis="
+                <div class=&quot;inventory-data text-center&quot;>
+                  <h2 class=&quot;inData-title color-violet&quot;>Indigon Hubris Circlet</h2>
+                  <div class=&quot;inData-content color-uniques&quot;>
+                    <p class=&quot;color-green&quot;>Quality : <span>+20%</span> Energy Shield : <span>225</span></p>
+                    <hr />
+                    <p class=&quot;color-red&quot;>Blood Rage grants additional 12% increased Attack Speed</p>
+                    <hr style=&quot;background-color:#c4b393; height:0px; margin:4px 0;&quot; />
+                    <p class=&quot;&quot;>176% increased Energy Shield
+                      increased maximum Mana
+                      Recover 10% of maximum Life when you use a Mana Flask
+                      Non-instant Mana recovery from Flasks is also recovered as Life</p>
+                      <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                      59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                      <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                      59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                  </div>
+                </div>"
+                  style="height:90%"
+                  src="./img/goods/Talent_Gems_01.png"
+                  alt=""
+                />Gams
+              </li>
+              <li><img src="./img/goods/Talent_Gems_02.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_01.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_02.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_01.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_02.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_01.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_02.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_01.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_02.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_01.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_02.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_01.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_02.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_01.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_02.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_01.png" alt="" />Gams</li>
+              <li><img src="./img/goods/Talent_Gems_02.png" alt="" />Gams</li>
+            </ul>
+          </div>
+          <!-- 版本新闻 -->
+          <div class="news-m row my-3">
+            <div class="class-news col-md-6 col-lg-3 card img-fluid">
+              <a href="javascript:void(0)">
+                <div class="class-border">
+                  <img class="card-img-top" src="./img/build/builds-6-3.jpg" />
+                  <div class="card-img-overlay">
+                    <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="class-news col-md-6 col-lg-3 card img-fluid">
+                <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_02.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="class-news col-md-6 col-lg-3 card img-fluid">
+                <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="class-news col-md-6 col-lg-3 card img-fluid">
+                <a href="javascript:void(0)">
+              <div class="class-border">
+                <img class="card-img-top" src="./img/build/builds_01.jpg" />
+                <div class="card-img-overlay">
+                  <p class="card-title text-center">PoE 3.4 Templar Inquisitor Blade Vortex Build - High Crit Chance & Elemental Damage</p>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- skill技能 -->
+        <div class="build-skill">
+          <!-- skill link -->
+          <h2>Skill Links</h2>
+          <ul class="skills">
+            <li class="skill-block">
+              <h5 class="color-green">
+                <img
+                data-mtpis="
+                <div class=&quot;inventory-data text-center&quot;>
+                  <h2 class=&quot;inData-title color-violet&quot;>Indigon Hubris Circlet</h2>
+                  <div class=&quot;inData-content color-uniques&quot;>
+                    <p class=&quot;color-green&quot;>Quality : <span>+20%</span> Energy Shield : <span>225</span></p>
+                    <hr />
+                    <p class=&quot;color-red&quot;>Blood Rage grants additional 12% increased Attack Speed</p>
+                    <hr style=&quot;background-color:#c4b393; height:0px; margin:4px 0;&quot; />
+                    <p class=&quot;&quot;>176% increased Energy Shield
+                      increased maximum Mana
+                      Recover 10% of maximum Life when you use a Mana Flask
+                      Non-instant Mana recovery from Flasks is also recovered as Life</p>
+                      <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                      59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                      <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                      59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                  </div>
+                </div>"
+                  src="./img/goods/Goods_01.png"
+                  alt=""
+                />Frenzy(6 / 20)<a href="javascript:void(0)">BodyArmour</a>
+              </h5>
+              <ul class="h5-body">
+                <li class="color-green">
+                  <img
+                  data-mtpis="
+                  <div class=&quot;inventory-data text-center&quot;>
+                    <h2 class=&quot;inData-title color-violet&quot;>Indigon Hubris Circlet</h2>
+                    <div class=&quot;inData-content color-uniques&quot;>
+                      <p class=&quot;color-green&quot;>Quality : <span>+20%</span> Energy Shield : <span>225</span></p>
+                      <hr />
+                      <p class=&quot;color-red&quot;>Blood Rage grants additional 12% increased Attack Speed</p>
+                      <hr style=&quot;background-color:#c4b393; height:0px; margin:4px 0;&quot; />
+                      <p class=&quot;&quot;>176% increased Energy Shield
+                        increased maximum Mana
+                        Recover 10% of maximum Life when you use a Mana Flask
+                        Non-instant Mana recovery from Flasks is also recovered as Life</p>
+                        <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                        59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                        <p>56% increased Mana Cost of Skills for each 200 total Mana you haveSpent Recently
+                        59% increased Spell Damage for each 200 total Mana you have SpentRecently</p>
+                    </div>
+                  </div>"
+                    src="./img/goods/Goods_02.png"
+                    alt=""
+                  />Greater Multiple Projectiles(14)
+                </li>
+                <li class="color-red"><img src="./img/goods/Goods_03.png" alt="" />Melee Splash(16)</li>
+                <li class="color-green"><img src="./img/goods/Goods_05.png" alt="" />Chain(14)</li>
+                <li class="color-red"><img src="./img/goods/Goods_06.png" alt="" />Multistrike(14)</li>
+                <li class="color-green"><img src="./img/goods/Goods_07.png" alt="" />Faster Attacks(20 / 22)</li>
+              </ul>
+            </li>
+            <li class="skill-block">
+              <h5 class="color-red"><img src="./img/goods/Goods_18.png" alt="" /> <a href="">Immortal Call(19 / 20) )</a><p class="body-armour" href="javascript:void(0)">BodyArmour</p></h5>
+              <ul class="h5-body">
+                <li class="color-blue"><img src="./img/goods/Goods_15.png" alt="" /><span>Arcane Surge(20 / 20)</span></li>
+                <li class="color-red"><img src="./img/goods/Goods_16.png" alt="" />Increased Duration(20 / 20)</li>
+              </ul>
+            </li>
+            <li class="skill-block">
+              <h5 class="color-red"><img src="./img/goods/Goods_18.png" alt="" />Immortal Call(2)<a href="javascript:void(0)">BodyArmour</a></h5>
+              <ul class="h5-body">
+                <li class="color-red"><img src="./img/goods/Goods_17.png" alt="" />Cast when Damage Taken(2)</li>
+              </ul>
+            </li>
+            <li class="skill-block">
+              <h5 class="color-blue"><img src="./img/goods/Goods_08.png" alt="" />Frost Wall(19 / 20)<a href="javascript:void(0)">BodyArmour</a></h5>
+              <ul class="h5-body">
+                <li class="color-blue"><img src="./img/goods/Goods_09.png" alt="" />Faster Casting(20 / 20)</li>
+                <li class="color-blue"><img src="./img/goods/Goods_10.png" alt="" />Spell Cascade(19 / 16)</li>
+              </ul>
+            </li>
+            <li class="skill-block">
+              <h5 class="color-blue"><img src="./img/goods/Goods_19.png" alt="" />Flame Dash(19)<a href="javascript:void(0)">BodyArmour</a></h5>
+              <ul class="h5-body">
+                <li class="color-blue"><img src="./img/goods/Goods_09.png" alt="" />Faster Casting(20 / 20)</li>
+              </ul>
+            </li>
+            <li class="skill-block">
+              <h5 class="color-blue"><img src="./img/goods/Goods_08.png" alt="" />Frost Wall(19 / 20)<a href="javascript:void(0)">BodyArmour</a></h5>
+              <ul class="h5-body">
+                <li class="color-blue"><img src="./img/goods/Goods_09.png" alt="" />Faster Casting(20 / 20)</li>
+                <li class="color-blue"><img src="./img/goods/Goods_10.png" alt="" />Spell Cascade(19 / 16)</li>
+              </ul>
+            </li>
+            <li class="skill-block">
+              <h5 class="color-blue"><img src="./img/goods/Goods_19.png" alt="" />Flame Dash(19)<a href="javascript:void(0)">BodyArmour</a></h5>
+              <ul class="h5-body">
+                <li class="color-blue"><img src="./img/goods/Goods_09.png" alt="" />Faster Casting(20 / 20)</li>
+              </ul>
+            </li>
+            <li class="skill-block">
+              <h5 class="color-blue"><img src="./img/goods/Goods_08.png" alt="" />Frost Wall(19 / 20)<a href="javascript:void(0)">BodyArmour</a></h5>
+              <ul class="h5-body">
+                <li class="color-blue"><img src="./img/goods/Goods_09.png" alt="" />Faster Casting(20 / 20)</li>
+                <li class="color-blue"><img src="./img/goods/Goods_10.png" alt="" />Spell Cascade(19 / 16)</li>
+              </ul>
+            </li>
+            <li class="skill-block">
+              <h5 class="color-blue"><img src="./img/goods/Goods_19.png" alt="" />Flame Dash(19)<a href="javascript:void(0)">BodyArmour</a></h5>
+              <ul class="h5-body">
+                <li class="color-blue"><img src="./img/goods/Goods_09.png" alt="" />Faster Casting(20 / 20)</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+          <!-- skill tree -->
+          <div class="skill-tree">
+            <h2>Skill Tree</h2>
+            <img class="w-100" src="./img/goods/talent_img.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- 其他 -->
+      <div class="build-down news-content px-8 bg-down text-white" style="background-image: url('./img/goods/goods_bg_b01.jpg')">
+        <p>
+          How to get a good experience in the early league has always been a lively discussion by the players. Path of Exile is a game with many
+          genres and rich gameplay. Poe's rich play elements give players a lot of choices, and the use of builds can greatly increase the fun of the
+          game. The Inquisitor in this build is a compound character, which is biased towards strength and wisdom. At the same time, the sublimation
+          talent is more suitable for the totem flow build, and the damage bonus to the totem and the self-defense bonus are relatively high.
+        </p>
+        <!-- <div class="double-line"></div> -->
+        <h3>Overview</h3>
+        <p>
+          This build will enable players to get a favorable situation in the early leagues, and there will be a huge improvement in the latter stage,
+          mainly using Blade Vortex and Orb of Storms to improve Dps, fast and safe.
+        </p>
+        <h3>Mechanics</h3>
+        <p>
+          The mechanics of this build is simple, we convert physical damage to elemental and accelerate the crit chance, ideally we should have 90%
+          elemental and 10% physical.
+        </p>
+        <!-- <h2></h2> -->
+        <div class="row mx-0">
+          <div class="col-md-6">
+            <h3>Pros and cons</h3>
+            <ul>
+              <li>+ High DPS</li>
+              <li>+ Fast map cleaning</li>
+              <li>+ Friendly to players with low budget</li>
+              <li>+ Can kill shaper in 5 link</li>
+              <li>- not a tank, you have to dodge some damage</li>
+              <li>- Hard leveling because of low dexterity in beginning</li>
+              <li>- There may be some unknown errors in hardcore</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3>Note</h3>
+            <p class="m-0">
+              When the following mods exist on the map, it may affect the normal use of the build. Please treat these mods with caution.
+            </p>
+            <ul>
+              <li>- Physical/Elemental reflect</li>
+              <li>- Players are Cursed with Temporal Chains</li>
+              <li>- Players cannot Regenerate Life, Mana or Energy Shield</li>
+              <li>- No Leech</li>
+              <li>- - X% maximum Player Resistances</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3>Pros & Cons</h3>
+            <ul>
+              <li>+Fast and Strong</li>
+              <li>+Magic Find.</li>
+              <li>+Evasion and Dodge</li>
+              <li>+Far Shot Playstyle</li>
+              <li>-Not a good "all-around" build</li>
+              <li>-Have to reroll some map mods</li>
+              <li>-Single Target</li>
+              <li>-Tough to League Start with</li>
+              <li>-Have not tested Hardcore</li>
+              <li>-Can be high budget</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3>Ascendancies</h3>
+            <ul>
+              <li>1. Righteous Providence</li>
+              <li>2. Inevitable Judgement</li>
+              <li>3. Sanctify</li>
+              <li>4. Instruments of Virtue</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="follow text-center">
+        <a href="javascript:void(0)">FOLLOW OURPOE</a> <a href="javascript:void(0)"><img src="./img/facebook.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/twitter.png"/></a> <a href="javascript:void(0)"><img src="./img/google+.png"/></a>
+        <a href="javascript:void(0)"><img src="./img/youtube.png"/></a>
+      </div>
+      <div class=" footer-b">
+        <div class="mx-auto" style="max-width:24rem; padding: 4% 0"><img class="w-100" src="./img/logo.png" alt="" /></div>
+        <p>
+          <a href="javascript:void(0)">AbOUT US</a> | <a href="javascript:void(0)">TERMS OF SERVICES</a> |
+          <a href="javascript:void(0)">REFUND POLICY</a> | <a href="javascript:void(0)">SELL TO US</a> |
+          <a href="javascript:void(0)">POE POWER lEVELING</a> | <a href="javascript:void(0)">POE CURRENCY GUIDES</a> |
+          <a href="javascript:void(0)">POE FAQ</a> | <a href="javascript:void(0)">POE BEASTCRAFTING</a>
+        </p>
+        <p>Copyright 2009-2018 <span>PoeCurrencyBuy.com</span>.All rights reserved. <span>Sitemaps</span></p>
+      </div>
+    </footer>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- 弹出框插件 -->
+    <script src="./js/mTips.js"></script>
+    <script>
+      // $(document).ready(function(){
+      //   var mTips = $("[data-mtpis]")
+      //   console.log(mTips)
+      // })
+      // $('[data-mtpis]').hover(function(event) {
+      //   var text = $(this).attr('data-mtpis');
+      //   var doc = $('<div></div>').addClass('mTips').html(text).appendTo('body');
+      //   $(".mTips").css("left",event.clientX)
+      //   $(".mTips").css("top",event.clientY - 10)
+      // },function() {
+      //     $('.mTips').hide();
+      // });
+      // $(".mTips").hover(function() {
+      //     $(this).css('display', 'block');;
+      // }, function() {
+      //     $(this).css('display', 'none');
+      //     $(this).remove();
+      // });
+    </script>
+  </body>
+</html>

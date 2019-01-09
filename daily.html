@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- 网站信息 -->
+    <meta name="keywoords" contect="" />
+    <meta name="description" contect="" />
+    <meta name="Copyright" content="AntsNet" />
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" contect="index,follow" />
+    <!-- sns 社交标签 begin -->
+    <meta property="og:title" content="Pack is for people who love their dogs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pack" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://packdog.com/" />
+    <meta property="og:image" content="http://packdog.com/static/facebook.jpg" />
+    <meta property="og:description" content="Pack is the new home to capture and share the everyday moments in your dog’s life." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chrome 浏览器" />
+    <meta name="twitter:description" content="Google Chrome 是一款快速、简单且安全的网络浏览器，能很好地满足新型网页对浏览器的要求。" />
+    <meta name="twitter:image" content="https://www.google.com/chrome/static/images/thank-you-hero.png" />
+    <meta name="twitter:url" content="https://www.google.com/intl/zh-CN_ALL/chrome/thank-you.html" />
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/n.css" />
+
+    <title>Daily labyrinth</title>
+    <style>
+      body {
+        background-color: #17110f;
+      }
+      .main-box {
+        padding: 2% 0;
+      }
+      main h3,h4{
+        font-size: 1.4rem;
+      }
+      main h5{
+        color: #e3b367;
+        font-size: 1.2rem
+      }
+      h1 {
+        font-size: 4rem;
+        text-shadow: 1px 2px 0px rgb(0, 0, 0, 0.5);
+        margin-top: 2rem;
+      }
+      main p{
+          color: #e6d6bd;
+          line-height: 1.5rem;
+          margin: 0;
+      }
+      .daily-lab{
+        max-width: 1446px;
+        margin: 0 auto;
+      }
+      .daily-lab-img{
+        width: 100%;
+      }
+      .daily-nav {
+        height: 120px;
+        background-image: url('./img/daily/daily_nav.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      .daily-nav ul{
+        height: 100%;
+        list-style: none;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .daily-nav li{
+        height: 100%;
+        width: 25%;
+        text-align: center;
+        float: left;
+        background-image: url('./img/daily/daily_navi.png');
+        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position: center center; 
+        color: #fec076;
+        color: #af8350;
+        font-size: 1.5rem;
+        font-family:'Courier New', Courier, monospace;
+        cursor: pointer;
+        user-select: none;
+      }
+      .daily-con{
+        width: 100%;
+        max-width: 1458px;
+        min-height: 1927px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        padding: 1rem 1rem 4rem;
+      }
+      .daily-block{
+        display: none;
+      }
+      .act{
+        color: #fec076;
+        
+      }
+      main h3,h4{
+        border: none !important;
+      }
+    </style>
+  </head>
+  <body class="bg-v1" style="background-image: url('./img/daily/daily_bg.jpg');">
+    <!-- Fixed navbar -->
+    <div class="head-box">
+      <div class="head-bg">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- logo -->
+          <a class="navbar-brand" href="javascript:void(0)"> <img src="./img/logo.png" alt="Logo" /> </a>
+          <!-- 伸缩按钮 -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 下拉选项栏 -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="javascript:void(0)" id="navbardrop" data-toggle="dropdown">CLASSIFICATION <i class="fa fa-bars"></i></a>
+                <div class="dropdown-menu dropdown-max">
+                  <div class="flex-container">
+                    <div class="flex-item-build">
+                      <h4><a>POE Builds</a> <i class="fa fa-angle-down"></i></h4>
+                      <!-- <div class="" > -->
+                      <ul>
+                        <li>
+                          <h5 class="build-ti">Templar <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="javascript:void(0)">Inquisitor</a></li>
+                            <li><a href="">Hierophant</a></li>
+                            <li><a href="">Guardian</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Ranger <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Deadeye</a></li>
+                            <li><a href="">Raider</a></li>
+                            <li><a href="">Pathfinder</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Witch <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Necromancer</a></li>
+                            <li><a href="">Elementalist</a></li>
+                            <li><a href="">Elementalist</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Duelist <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Slayer</a></li>
+                            <li><a href="">Gladiator</a></li>
+                            <li><a href="">Champion</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Shadow <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Assassin</a></li>
+                            <li><a href="">Saboteur</a></li>
+                            <li><a href="">Trickster</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Marauder <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Juggernaut</a></li>
+                            <li><a href="">Berserker</a></li>
+                            <li><a href="">Chieftain</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5 class="build-ti">Scion <i class="fa fa-angle-down"></i></h5>
+                          <ul style="list-style: none;">
+                            <li><a href="">Ascendant</a></li>
+                          </ul>
+                        </li>
+                        <li class="clearfix"></li>
+                      </ul>
+                      <!-- </div> -->
+                    </div>
+                    <div class="flex-item">
+                      <h4>OURPOE Goods <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Currency</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Fragments</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Fossils</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Resonators</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Essences</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Divination Cards</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Prophecies</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Skill Gems</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>POE Map <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">POE Lab</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">POE Map</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>POE News and Data <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">News and Guide</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Update</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Video</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Gallery</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>About Us <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">About Us</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Why choose us</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">VIP and Discount</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex-item">
+                      <h4>OURPOE Help <i class="fa fa-angle-down"></i></h4>
+                      <ul>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Shopping Guide</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Qrder Tracker</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">POE FAQ</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Unable To Login</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 搜索框 -->
+            <form class="nav-search search-form flex-grow-1">
+              <div class="input-group">
+                <input type="text" name="search" class="search-input" placeholder="" />
+                <button tabindex="0" class="btn" type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+              </div>
+            </form>
+            <!-- 向右对齐 登录 购物车 -->
+            <ul class="navbar-nav">
+              <!-- 购物车 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link " data-toggle="dropdown">
+                  <i class="fa fa-shopping-cart" style="font-size:2.0rem;"></i>
+                </a>
+                <div class="dropdown-menu dropdown-cart">
+                  <form action="">
+                    <!-- 商品 -->
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><img src="./img/shop/poe_exalted.png" alt="" /></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><i class="shops-del fa fa-trash"></i></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <div class="shops-sm-block d-flex align-items-center">
+                      <div class="shops-img"><i></i></div>
+                      <div class="shops-text flex-grow-1">
+                        <p>
+                          POE Exalted Orb x <i>1</i> <a href="javascript:void(0)"><i class="shops-del fa fa-trash"></i></a>
+                        </p>
+                        <p>Price:$8.22 <span>TOTAL:$41.10</span></p>
+                      </div>
+                    </div>
+                    <h5>TOTAL PRICE:$41.10</h5>
+                    <!-- 跳转购物车 & 提交订单 -->
+                    <button class="btn-w">
+                      <a href="shopping_cart.html"><i class="fa fa-shopping-cart"></i> VIEW CART</a>
+                    </button>
+                    <button class="btn-w" type="submit"><i class="fa fa-credit-card"></i> CHECKOUT</button>
+                  </form>
+                </div>
+              </li>
+              <!-- EUR -->
+              <li class="nav-item dropdown eur-li">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">EUR <i class="fa fa-eur" aria-hidden="true"></i></a>
+                <div class="dropdown-menu dropdown-eur">
+                  <a class="dropdown-item act" href="javascript:void(0)">EUR <i class="fa fa-eur" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">USD <i class="fa fa-usd" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">GBP <i class="fa fa-gbp" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">CAD <i class="fa fa-cad" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">AUD <i class="fa fa-aud" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">SEK <i class="fa fa-sek" aria-hidden="true"></i></a>
+                  <a class="dropdown-item" href="javascript:void(0)">RUB <i class="fa fa-rub" aria-hidden="true"></i></a>
+                </div>
+              </li>
+              <!-- 登录 -->
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"> LOGIN <b class="caret"></b> </a>
+                <div class="dropdown-menu dropdown-login">
+                  <form action="">
+                    <input type="text" name="" placeholder="Email Address" style="background-image: url('./img/email.svg')" />
+                    <input type="password" name="" placeholder="Password" style="background-image: url('./img/password.svg')" />
+                    <h5 style="text-align:right;"><a href="javascript:void(0)">Forget your password?</a></h5>
+                    <button class="btn-w" type="submit"><i class="fa fa-sign-in-alt"></i> SIGN IN</button>
+                    <p><a href="./login.html">Sign in with social network site account</a></p>
+                    <div class="other-login">
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><i class="fa fa-facebook-f"></i> Facebook</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><i class="fa fa-twitter"></i> Twitter</a>
+                      </button>
+                      <button class="btn-3">
+                        <a href="javascript:void(0)"><i class="fa fa-google-plus"></i> Google</a>
+                      </button>
+                    </div>
+                    <p><a href="./reg.html">Registration of new accounts</a></p>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- 面包屑导航 -->
+      <div class="breadcrumb-outbox">
+        <nav class="breadcrumb">
+          <a class="breadcrumb-item" href="javascript:void(0)"><i class="fa fa-home"></i> Home</a>
+          <a class="breadcrumb-item" href="javascript:void(0)">builds</a> <span class="breadcrumb-item active">Templar</span>
+        </nav>
+      </div>
+            
+      <div class="main-box">
+        <div class="daily-lab">
+          <img class="daily-lab-img" src="./img/daily/daily_lab.png" alt="">
+        </div>
+        <div class="con-box">
+          <div class="daily-nav">
+                <ul>
+                  <li>
+                    <div class="dis-tab">
+                      <div class="tabcell-mid act">GENERAL</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dis-tab">
+                      <div class="tabcell-mid">SUBLIMATION</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dis-tab">
+                      <div class="tabcell-mid">PUZZLES</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dis-tab">
+                      <div class="tabcell-mid">ACHIEVEMENT</div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- <div class="clearfix"></div> -->
+          </div>
+          <div class="daily-con shops-text" style="background-image: url('./img/daily/daily_cont.png')">
+            <div class="daily-block" style="display:block">
+              <div class="content-block">
+                <p>
+                  Since the Path Of Exile update the Master Missions, many players are complaining about the cumbersome of the Master Missions, which
+                  seems to force the player to complete some missions they do not want to accept. And most of them seem is a major interruption to the
+                  flow of gameplay. However, the Hideout related to the master missions has been affirmed by many people. The following will give a more
+                  detailed information about the master task to help better accomplish these tasks.
+                </p>
+              </div>
+              <div class="content-block">
+                <h3>What is Master Missons</h3>
+                <p>
+                  The forsaken masters are eight NPCs that randomly spawn in Wraeclast and offer the player missions. In exchange for completing these
+                  missions, players will be granted a hideout and exclusive crafting options. Each master specializes in crafting for a specific type of
+                  item and has his own style of missions, as well as
+                </p>
+                <p>
+                  This is an explanation of the Master Missions on Wikipedia. Let's take a closer look at how the Master Missions affects the player's
+                  experience in the game.
+                </p>
+                <p>
+                  First, you always meet the masters somewhere in the wilderness. When you have done the first task for them, they come to the camp of the
+                  respective act. Except for Zana - that is then on the Eternal Device in theSolaris Temple.
+                </p>
+                <p>
+                  For each task that you solve for the Masters, you get Experience Points, which will be charged here as Reputation. One could therefore
+                  speak of "reputation" points. When you have achieved a certain amount of reputation with a master, the master increases one level or
+                  offers new options to the player. It is important to know that the Masters expect different levels of favors until they reach the next
+                  level: The fastest for the Masters of Act1, Zana is the most demanding.
+                </p>
+                <p>
+                  By chance you meet in the rest of the game somewhere in the level areas again and again on the masters, they offer a constantly new
+                  tasks, so you can level them steadily higher. If you do not succeed in solving a task, that does not matter: the reputation does not
+                  sink if you accept a task but fail. So you can basically accept any task, even if you are not sure if you can do it at all (or want).
+                  But when you have completed a task, you must return to the master in the level area to earn the extra reputation. Incidentally, there is
+                  a small logic gap when you meet a master in the wilderness, who is supposed to wait there until he has done his job. If you come to the
+                  respective camp or hideout before completing the task, the same master is also around there.
+                </p>
+              </div>
+              <div class="content-block">
+                <h3>Master mission challenge</h3>
+                <p class="sha">A few remarks about the missions of the masters, especially about Zana's missions:</p>
+                <p>
+                  Overall, the missions of the masters are quite unimaginative / simple / boring / annoying / quickly done. At least with the normal
+                  masters
+                </p>
+                <!-- 图文 -->
+                <div class="img-text">
+                  <h5>Haku, Armourmaster</h5>
+                  <p>
+                    The most difficult / dangerous missions for me so far were the missions of Haku. For each one you have to get a Karui spirit from a
+                    dungeon, often under time pressure. The spirit may be located
+                  </p>
+                  <ul>
+                    <li>In these dungeons are again quite often</li>
+                    <li>In these dungeons are again quite often</li>
+                    <li>In these dungeons are again quite often</li>
+                  </ul>
+                  <p>
+                    In these dungeons are again quite often immortal totems that violate the player character significantly with their elemental attacks
+                    and in particular can slow down / chill. Types of locomotion such as teleporting or jumping are possible in these dungeons - but only
+                    as long as you do not have the Karui Spirit under your belt. Since you can be threatened by other sources of danger as soon as you
+                    transport it (killed opponents rebuild, boulders fall from above ...), such missions, especially on higher-level maps, are not really
+                    the risk - in relation to the reward by a few reputation points - worth.
+                  </p>
+                </div>
+                <div class="img-text">
+                  <h5>Elreon, Loremaster</h5>
+                  <img src="./img/news/news01.jpg" alt="">
+                  <p>
+                    Elreon's missions are simpel, at least if you have a character who can quickly deal large area damage. You must defend a relic over a
+                    period of time or until you have killed a certain number of enemies. Or you must feed souls (50) to the relic. The feed radius is
+                    shown with a golden circle.
+                  </p>
+                  <p>Enemy waves include</p>
+                  <ul>
+                    <li>In these dungeons are again quite often</li>
+                    <li>In these dungeons are again quite often</li>
+                    <li>In these dungeons are again quite often</li>
+                    <li>In these dungeons are again quite often</li>
+                  </ul>
+                </div>
+                <div class="img-text">
+                  <h5>Catarina, Master of the Dead</h5>
+                  <p>
+                    Catarina's tasks are sometimes simple, sometimes annoying. They are annoying when you need to escort revived monsters through a map to
+                    a statue or to Catarina himself. Because constantly new enemies are spawning around these monsters and the monsters to be escorted are
+                    attacking these opponents, instead of running behind the player character. That really sometimes turns into annoying Pied Piper work
+                    and in such cases I like to renounce the reputation points. Catarina will probably be the last master I want to level beyond level 6
+                    in my hideout.
+                  </p>
+                </div>
+                <div class="img-text">
+                  <h5>Catarina, Master of the Dead</h5>
+                  <p>
+                    Catarina's tasks are sometimes simple, sometimes annoying. They are annoying when you need to escort revived monsters through a map to
+                    a statue or to Catarina himself. Because constantly new enemies are spawning around these monsters and the monsters to be escorted are
+                    attacking these opponents, instead of running behind the player character. That really sometimes turns into annoying Pied Piper work
+                    and in such cases I like to renounce the reputation points. Catarina will probably be the last master I want to level beyond level 6
+                    in my hideout.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="daily-block">
+              <div class="content-block">
+                <p>
+                  Since the Path Of Exile update the Master Missions, many players are complaining about the cumbersome of the Master Missions, which
+                  seems to force the player to complete some missions they do not want to accept. And most of them seem is a major interruption to the
+                  flow of gameplay. However, the Hideout related to the master missions has been affirmed by many people. The following will give a more
+                  detailed information about the master task to help better accomplish these tasks.
+                </p>
+              </div>
+              <div class="content-block">
+                <h5>What is Master Missons</h5>
+                <p>
+                  For each task that you solve for the Masters, you get Experience Points, which will be charged here as Reputation. One could therefore
+                  speak of "reputation" points. When you have achieved a certain amount of reputation with a master, the master increases one level or
+                  offers new options to the player. It is important to know that the Masters expect different levels of favors until they reach the next
+                  level: The fastest for the Masters of Act1, Zana is the most demanding.
+                </p>
+                <p>
+                  By chance you meet in the rest of the game somewhere in the level areas again and again on the masters, they offer a constantly new
+                  tasks, so you can level them steadily higher. If you do not succeed in solving a task, that does not matter: the reputation does not
+                  sink if you accept a task but fail. So you can basically accept any task, even if you are not sure if you can do it at all (or want).
+                  But when you have completed a task, you must return to the master in the level area to earn the extra reputation. Incidentally, there is
+                  a small logic gap when you meet a master in the wilderness, who is supposed to wait there until he has done his job. If you come to the
+                  respective camp or hideout before completing the task, the same master is also around there.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="follow text-center">
+        <a class="" href="javascript:void(0)">FOLLOW OURPOE</a> <a href="javascript:void(0)"><i class="fa fa-facebook-f"></i></a>
+        <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a> <a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a>
+        <a href="javascript:void(0)"><i class="	fa fa-youtube"></i></a>
+      </div>
+      <div class=" footer-b">
+        <div class="mx-auto" style="max-width:24rem; padding: 4% 0"><img class="w-100" src="./img/logo.png" alt="" /></div>
+        <p>
+          <a href="javascript:void(0)">AbOUT US</a> | <a href="javascript:void(0)">TERMS OF SERVICES</a> |
+          <a href="javascript:void(0)">REFUND POLICY</a> | <a href="javascript:void(0)">SELL TO US</a> |
+          <a href="javascript:void(0)">POE POWER lEVELING</a> | <a href="javascript:void(0)">POE CURRENCY GUIDES</a> |
+          <a href="javascript:void(0)">POE FAQ</a> | <a href="javascript:void(0)">POE BEASTCRAFTING</a>
+        </p>
+        <p>Copyright 2009-2018 <span>PoeCurrencyBuy.com</span>.All rights reserved. <span>Sitemaps</span></p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- header.js -->
+    <script src="./js/head.js"></script>
+    <script>
+      $(function(){
+        $(".tabcell-mid").click(function(){
+          $(".daily-block").hide()
+          var index = $(".tabcell-mid").index(this)
+          console.log(index)
+          $(".daily-block")[index].style.display="block"
+          
+        })
+      })
+    </script>
+  </body>
+</html>

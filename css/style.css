@@ -1,0 +1,431 @@
+/** 主内容 ***************/
+/*---- 背景及新闻 */
+body{
+  background:#17110f;
+}
+.main-top{
+  height: 60rem ;
+  position: relative;
+}
+.banner-img{
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url('../img/banner-bg.jpg') no-repeat;
+  background-position:center center;
+  background-size: cover;
+  position: absolute;
+}
+/* 主标题 */
+.main-title{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10% 1rem 0;
+}
+.main-title h1{
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+.main-title p{
+  color: wheat;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+}
+/*==== 背景视频 */
+.main-box {
+  position: relative;
+  overflow: hidden;
+}
+.main-box video {
+  position: absolute;
+  top: 0;
+  left: auto;
+  min-width: 120rem;
+  min-height: auto;
+  height: auto;
+  width: 100%;
+  /* 加滤镜
+  -webkit-filter: grayscale(100%);
+  filter:grayscale(100%); */
+  z-index: -11;
+}
+.main-box source {
+  min-width: 120rem;
+  min-height: auto;
+  height: auto;
+  width: auto;
+}
+.screen-news{
+  padding: 0 6%;
+	position: absolute;
+	bottom: 5%;
+	top: auto;
+}
+/*---- 关于我们 */
+.about_us{
+  background-color: #17110f;
+}
+.about_us .about_img-l .us_info{
+  color: white;
+  position: absolute;
+  right: 10%;
+  top:20%;
+}
+.about_us .about_img-l .us_info h2{
+  font-size: 3rem;
+  /* background: linear-gradient(to right, #133f7b11 0%,#133f7b 100%); */
+  background-image: linear-gradient(-90deg, 
+		#133f7b 26%, 
+		rgba(19, 63, 123, 0.64) 53%, 
+		#4c586400 100%);
+	border-style: solid;
+	border-width: 1px;
+	border-image-source: linear-gradient(-90deg, 
+		#43627e 0%, 
+		rgba(67, 98, 126, 0.54) 46%, 
+		#0091aa00 100%);
+  border-image-slice: 1;
+  border-left: none;
+  padding-left: 2rem;
+  margin: 0;
+}
+.about_us .about_img-r .us_info{
+  color: white;
+  position: absolute;
+  left: 10%;
+  top:20%;
+}
+.about_us .about_img-r .us_info h2{
+  font-size: 3rem;
+  /* background: linear-gradient(to left, #133f7b11 0%,#5a201c 100%); */
+  
+	background-image: linear-gradient(90deg, 
+  #742926 26%, 
+  rgba(116, 41, 38, 0.64) 53%, 
+  rgba(116, 41, 38, 0) 100%);
+  border-style: solid;
+  border-width: 1px;
+  border-image-source: linear-gradient(90deg, 
+    #97423f 0%, 
+    #97423f00 100%);
+  border-image-slice: 1;
+  border-right: none;
+  padding-right: 2rem;
+  margin: 0;
+}
+/*---- news and guides */
+/* guides 标题 */
+.guides-title{
+  font-size: 2rem;
+  height: 6rem ;
+  line-height: 6rem ;
+  color:  #dfb35f;
+  text-align: center;
+  border: #504137 1px solid;
+  border-bottom: 0;
+  margin:4px 0 0;
+}
+.guides .row{
+  overflow: hidden;
+  margin:0 0 4px 0;
+  position: relative;
+}
+.guides .row img{
+  width: 100%;
+  height: 100%;
+  border: #504137 1px solid;
+}
+      /* 文本 */
+.guides .guides-info{
+  max-width: 55%;
+  color: white;
+  position: absolute;
+  right: 5%;
+  top:20%;
+}
+.guides .guides-info h2{
+  font-size: 2.5rem;
+  text-align: right;
+}
+.guides .guides-info p{
+  text-align: right;
+  color: #f1e0bd;
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 2rem;
+  margin-top: 5%;
+}
+/* 按钮 */
+.guides .learn-more-btn{
+  position: absolute;
+  right: 5%;
+  bottom:5%;
+}
+.learn-more-btn{
+  width: 12rem;
+  height: 2.2rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-align: center;
+  width: 12rem;
+  height: 2.2rem;
+  line-height: 2rem;
+  margin: 0;
+}
+.learn-more-btn:hover{
+  /* border: solid 1px # !important; */
+  background-color: #75371d !important;
+  color: white !important;
+  transition: .5s;
+}
+/*---- other and vip */
+.other{
+  margin: 0;
+  padding: 0;
+}
+.other .col-md-4{
+  margin: 0;
+  padding: 0 2px 4px;
+}
+.other .col-md-4 a{
+  display: block;
+  border: #504137 1px solid;
+}
+.other .col-md-4 a:hover{
+  border-color: #f0c84e;
+}
+.other .job{
+  width: 100%;
+  height: auto;
+  /* border: #504137 1px solid;
+  border-bottom: none; */
+}
+.other .job-info{
+  height: 8rem;
+  text-align: center;
+  background: #2f201c;
+  border-top: #504137 1px solid;
+  /* border: #504137 1px solid; */
+  padding: 0 10%;
+}
+.other .col-md-4{
+  position: relative;
+}
+.other .job-info h2{
+  color: #e8b34a;
+  margin: 0;
+}
+.other .job-info p{
+  color: #efe7c7;
+  margin: 0;
+}
+    /* vip */
+    
+.panel-y::before{
+  content: "";
+  display: block;
+  padding-top: 28%;
+}
+.vip{
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+  border: #504137 1px solid;
+  margin-bottom: 4px;
+  position: relative;
+}
+.vip-info{
+  max-width: 80%;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+.vip-ti{
+  color: white;
+  font-size: 2.625rem ;
+  margin: 3% 0 0 10%;
+}
+.vip .d-flex{
+  margin-left: 7%;
+}
+.vip img{
+  width: 90%;
+  position: relative;
+  left: -5%;
+}
+.vip .d-flex img{
+  width: 25%;
+  left: 0;
+}
+.vip-info p{
+  color: #efe7c7;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/*---- 设备屏幕大小发生改变时 */
+@media screen and (min-width: 1920px){
+}
+
+@media screen and (max-width: 1500px) {
+  /* 调整guides文本 */
+  .guides .guides-info{
+    right: 5%;
+    top:15%;
+  }
+  .guides .guides-info h2{
+    font-size: 2rem;
+  }
+  .guides .guides-info p{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-top: 4%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .screen-news{
+    padding: 0;
+  }
+  .guides .guides-info{
+    right: 5%;
+    top:15%;
+  }
+  .guides .guides-info h2{
+    font-size: 1.6rem;
+  }
+  .guides .guides-info p{
+    font-size: 1.0rem;
+    line-height: 1.1rem;
+    margin-top: 4%;
+  }
+  .about_us .us_info .p-normal{
+    font-size: 1.0rem;
+    margin-top: 5%;
+  }
+  .vip-ti{
+    font-size: 2rem ;
+    margin: 2% 0 0 8%;
+  }
+  .vip-info p{
+    font-size: 1.2rem;
+  }
+}
+/* 屏幕小于992px时 */
+@media screen and (max-width: 991px) {
+  /* 隐藏 */
+  .main-box video{
+    display: none;
+  }
+  .main-top{
+    background-image: url('../img/bg_011.jpg');
+    background-size:auto 100%;
+    background-position: center top;
+  } 
+  .about_us .about_img-r .us_info h2{
+    font-size: 1.6rem;
+  }
+  .about_us .about_img-l .us_info h2{
+    font-size: 1.6rem;
+  }
+  .about_us .us_info .p-normal{
+    font-size: 1.0rem;
+    margin-top: 5%;
+  }
+  .guides .col-img img{
+    /* 设备屏幕较小时修改图片样式 */
+    width: 140%;
+    height: 140%;
+  }
+  .learn-more-btn{
+    font-size: 1rem;
+    width: 10rem;
+    height: 1.8rem;
+    line-height: 1.7rem;
+  }
+  /* -职业-样式变动 */
+  .other .job-info{
+    height: 6rem;
+  }
+  .other .job-info h2{
+    font-size: 1.5rem;
+  }
+  .other .job-info p{
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about_us .col-md-6{
+    padding: 0 !important;
+  }
+  .guides .row img{
+    /* 设备屏幕较小时修改图片样式 */
+    width: 180%;
+    height: 180%;
+    position: relative;
+  }
+  .guides .guides-info{
+    max-width: 35%;
+  }
+  .guides .guides-info p{
+    display: none;
+  }
+  /* -职业-样式变动 */
+  .other .job-info{
+    width: 100%;
+    height: 7rem;
+    position: absolute;
+    bottom: 0;
+  }
+  .other .job-info h2{
+    margin: .3rem 0;
+  }
+  .vip{
+    background-position: 70% 50%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+  }
+  .panel-y::before{
+      content: "";
+      display: block;
+      padding-top: 44%;
+  }
+  .vip .d-flex img{
+    display: none;
+  }
+  .vip h2{
+    font-size: 1.3rem;
+  }
+  .vip p{
+    margin: 1rem 0;
+  }
+  .vip-info{
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .guides .guides-info h2{
+    font-size: 1rem;
+  }
+  .other .job-info{
+    padding: 0;
+  }
+  .vip p{
+    margin: .5rem 0;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+/************************* 滚动图片 *************************/
+.btn_l{
+  position: absolute;
+  top:10rem;
+  cursor:pointer;
+}
+.btn_r{
+  position: absolute;
+  top:10rem;
+  right: 0;
+  cursor:pointer;
+}

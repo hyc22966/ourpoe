@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* 隐藏滚动条 */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: #232323;
+        color: white;
+        margin: 0;
+        position: relative;
+      }
+      #map-screen {
+        width: 100%;
+        overflow: hidden;
+        /* position: relative; */
+      }
+      .map-block {
+        width: 1920px;
+        height: 1080px;
+        background-image: url("./img/AtlasComplete350Demo.jpg");
+        background-size: 100%;
+        position: relative;
+        transform-origin: 0% 0%;
+      }
+      .map-item {
+        height: 18px;
+        width: 18px;
+        background-size: 100%;
+        position: absolute;
+        cursor: pointer;
+        pointer-events: none;
+      }
+      .map-title{
+        /* position: relative; */
+      }
+      .map-item-title{
+        font-size: 1rem;
+        position: absolute;
+        user-select: none;
+        pointer-events: none;
+      }
+      .divn{
+        width:260px;height:300px;background-color:#ddd;color:#232323;overflow: scroll;
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="map-screen">
+        <div class="map-block" id="div1" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+          <div class="map-item-box">
+              
+            <div class="map-item" style="background-image: url('./img/map/Dungeon1.png');left: 315px;top: 148px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1596px;top:133px;"></div>
+              <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1595px;top:903px;"></div>
+              <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:314px;top:897px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:307px;top:234px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left: 395px;top: 154px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1555px;top:193px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1581px;top:859px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:411px;top:910px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:332px;top:843px;"></div>
+            <!-- t3 -->
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:320px;top:295px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:391px;top:272px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:470px;top:193px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1492px;top:149px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1530px;top:245px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1574px;top:762px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1516px;top:835px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:485px;top:860px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:384px;top:837px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:324px;top:763px;"></div>
+            <!-- t4 -->
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:343px;top:362px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:439px;top:243px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:540px;top:181px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1431px;top:215px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1533px;top:322px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1526px;top:719px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1428px;top:789px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:544px;top:881px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:486px;top:794px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:389px;top:758px;"></div>
+            
+            <!-- t5 -->
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:350px;top:465px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:471px;top:285px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:618px;top:189px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1338px;top:189px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1494px;top:366px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1563px;top:658px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:1333px;top:835px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:621px;top:863px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:565px;top:757px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Barrows1.png');left:372px;top:671px;"></div>
+            <!-- t6 -->
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:410px;top:492px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:460px;top:354px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:704px;top:195px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1250px;top:143px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1506px;top:468px;"></div>
+            
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1515px;top:565px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1342px;top:760px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1250px;top:887px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:696px;top:875px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:662px;top:773px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:360px;top:569px;"></div>
+            <!-- t7 -->
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:444px;top:421px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:542px;top:345px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:784px;top:159px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1145px;top:142px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1459px;top:387px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1464px;top:653px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1277px;top:794px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1151px;top:890px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:781px;top:908px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:728px;top:829px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:438px;top:606px;"></div>
+            <!-- t8 -->
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:506px;top:473px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:566px;top:281px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:887px;top:151px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:992px;top:146px;"></div>
+            
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1237px;top:191px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1410px;top:433px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1412px;top:585px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1219px;top:788px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1008px;top:909px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:876px;top:911px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:529px;top:579px;"></div>
+            <!-- t9 -->
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:545px;top:435px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:602px;top:255px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:881px;top:197px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1050px;top:181px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1215px;top:236px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1327px;top:367px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1360px;top:659px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1154px;top:803px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:982px;top:865px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:875px;top:864px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:518px;top:640px;"></div>
+            <!-- t10 -->
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:582px;top:403px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:668px;top:291px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:805px;top:205px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:991px;top:198px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1176px;top:284px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1289px;top:279px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1308px;top:604px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:1103px;top:833px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:814px;top:840px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/LunarisTemple2.png');left:609px;top:647px;"></div>
+            <!-- t11 -->
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:687px;top:430px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:718px;top:370px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:814px;top:279px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1004px;top:247px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1084px;top:279px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1196px;top:392px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1213px;top:628px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1024px;top:806px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:852px;top:784px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:701px;top:657px;"></div>
+            <!-- t12 -->
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:706px;top:481px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:902px;top:268px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1001px;top:295px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1208px;top:490px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1191px;top:571px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1171px;top:701px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1000px;top:755px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:899px;top:754px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:679px;top:572px;"></div>
+            <!-- t13 -->
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:742px;top:419px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:771px;top:323px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:851px;top:341px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1072px;top:337px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1150px;top:426px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1142px;top:656px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1043px;top:723px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:856px;top:728px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:746px;top:633px;"></div>
+            <!-- t14 -->
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:772px;top:380px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1107px;top:368px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1111px;top:600px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1092px;top:750px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:894px;top:681px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:769px;top:729px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:772px;top:561px;"></div>
+            <!-- t15 -->
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:819px;top:406px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1075px;top:400px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:1076px;top:660px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:800px;top:679px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Carcass3.png');left:816px;top:593px;"></div>
+            <!-- t16 -->
+            <div class="map-item" style="background-image: url('./img/map/Hydra.png');left:857px;top:432px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Hydra.png');left:1046px;top:430px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Hydra.png');left:1044px;top:627px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/Hydra.png');left:858px;top:626px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:951px;top:531px;"></div>
+
+            <!-- 传奇地图 -->
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:296px;top:183px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:307px;top:331px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:1479px;top:262px;"></div>            
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:1483px;top:741px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:476px;top:712px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:668px;top:225px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:1419px;top:337px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:591px;top:801px;"></div>      
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:1291px;top:706px;"></div>
+            
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:1134px;top:197px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:738px;top:792px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:1066px;top:865px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:578px;top:575px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:529px;top:397px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:1370px;top:325px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:925px;top:862px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:1129px;top:324px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:1138px;top:565px;"></div>
+
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:728px;top:562px;"></div>
+            <div class="map-item" style="background-image: url('./img/map/musicbox.png');left:769px;top:482px;"></div>
+                        
+                                    
+
+            
+
+                              
+            
+            
+            
+          </div>
+          <div class="map-title">
+            <div class="map-item-title">Arid Lake(T2)</div>
+            <div class="map-item-title">Arid Lake(T2)</div>
+            <div class="map-item-title">Arid Lake(T2)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Arid Lake(Ti)</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            <div class="map-item-title">Volcano Map</div>
+            
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            <div class="map-item-title">Volcano Map(t8)</div>
+            
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            <div class="map-item-title">Volcano Map(t9)</div>
+            
+            <div class="map-item-title">Volcano Map(t10)</div>
+            <div class="map-item-title">Volcano Map(t10)</div>
+            <div class="map-item-title">Volcano Map(t10)</div>
+            <div class="map-item-title">Volcano Map(t10)</div>
+            <div class="map-item-title">Volcano Map(t10)</div>
+            <div class="map-item-title">Volcano Map(t10)</div>
+            <div class="map-item-title">Volcano Map(t10)</div>
+            <div class="map-item-title">Volcano Map(t10)</div>
+            <div class="map-item-title">Volcano Map(t10)</div>
+            <div class="map-item-title">Volcano Map(t10)</div>
+            
+            <div class="map-item-title">Abyss (t11)</div>
+            <div class="map-item-title">Abyss Map(t11)</div>
+            <div class="map-item-title">Abyss Map(t11)</div>
+            <div class="map-item-title">Abyss Map(t11)</div>
+            <div class="map-item-title">Abyss Map(t11)</div>
+            <div class="map-item-title">Abyss Map(t11)</div>
+            <div class="map-item-title">Abyss Map(t11)</div>
+            <div class="map-item-title">Abyss Map(t11)</div>
+            <div class="map-item-title">Abyss Map(t11)</div>
+            <div class="map-item-title">Abyss Map(t11)</div>
+
+            
+            <div class="map-item-title">Abyss Map(t12)</div>
+            <div class="map-item-title">Abyss Map(t12)</div>
+            <div class="map-item-title">Abyss Map(t12)</div>
+            <div class="map-item-title">Abyss Map(t12)</div>
+            <div class="map-item-title">Abyss Map(t12)</div>
+            <div class="map-item-title">Abyss Map(t12)</div>
+            <div class="map-item-title">Abyss Map(t12)</div>
+            <div class="map-item-title">Abyss Map(t12)</div>
+            <div class="map-item-title">Abyss Map(t12)</div>
+            
+            <div class="map-item-title">Abyss Map(t13)</div>
+            <div class="map-item-title">Abyss Map(t13)</div>
+            <div class="map-item-title">Abyss Map(t13)</div>
+            <div class="map-item-title">Abyss Map(t13)</div>
+            <div class="map-item-title">Abyss Map(t13)</div>
+            <div class="map-item-title">Abyss Map(t13)</div>
+            <div class="map-item-title">Abyss Map(t13)</div>
+            <div class="map-item-title">Abyss Map(t13)</div>
+            <div class="map-item-title">Abyss Map(t13)</div>
+            
+            <div class="map-item-title">Abyss Map(t14)</div>
+            <div class="map-item-title">Abyss Map(t14)</div>
+            <div class="map-item-title">Abyss Map(t14)</div>
+            <div class="map-item-title">Abyss Map(t14)</div>
+            <div class="map-item-title">Abyss Map(t14)</div>
+            <div class="map-item-title">Abyss Map(t14)</div>
+            <div class="map-item-title">Abyss Map(t14)</div>
+            
+            <div class="map-item-title">Abyss Map(t15)</div>
+            <div class="map-item-title">Abyss Map(t15)</div>
+            <div class="map-item-title">Abyss Map(t15)</div>
+            <div class="map-item-title">Abyss Map(t15)</div>
+            <div class="map-item-title">Abyss Map(t15)</div>
+            
+            <div class="map-item-title">Hydra Map(t16)</div>
+            <div class="map-item-title">Hydra Map(t16)</div>
+            <div class="map-item-title">Hydra Map(t16)</div>
+            <div class="map-item-title">Hydra Map(t16)</div>
+            <div class="map-item-title"> </div>
+
+            
+            <div class="map-item-title">unique Map(t1)</div>
+            <div class="map-item-title">unique Map(t3)</div>
+            <div class="map-item-title">unique Map(t3)</div>
+            <div class="map-item-title">unique Map(t4)</div>
+            <div class="map-item-title">unique Map(t4)</div>
+            <div class="map-item-title">unique Map(t5)</div>
+            <div class="map-item-title">unique Map(t5)</div>
+            <div class="map-item-title">unique Map(t5)</div>
+            <div class="map-item-title">unique Map(t6)</div>
+            <div class="map-item-title">unique Map(t7)</div>
+            <div class="map-item-title">unique Map(t7)</div>
+            <div class="map-item-title">unique Map(t8)</div>
+            <div class="map-item-title">unique Map(t8)</div>
+            <div class="map-item-title">unique Map(t9)</div>
+            <div class="map-item-title">unique Map(t9)</div>
+            <div class="map-item-title">unique Map(t9)</div>
+            <div class="map-item-title">unique Map(t11)</div>
+            <div class="map-item-title">unique Map(t12)</div>
+            <div class="map-item-title">unique Map(t12)</div>
+            <div class="map-item-title">unique ???</div>
+            <textarea class="divn"></textarea>
+            <div class="div1" style="height: 18px;width: 18px; background-color:#88994488; position: absolute; left: 0; top: 0;"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(".div1").bind("mousedown", function(oldeEent) {
+          $(document).bind("mousemove", function(event) {
+            $(".div1").css("left",event.clientX)
+            $(".div1").css("top",event.clientY)
+          })
+          $(document).bind("mouseup", function(event) {
+            $(document).unbind("mousemove")
+            var offsetX = event.clientX - $("#div1").offset().left;
+            var offsetY = event.clientY - $("#div1").offset().top;
+            console.log(offsetX, offsetY);
+
+            $(".divn").text("<div class=\"map-item\" style=\"background-image: url('./img/map/musicbox.png');left:" + $(".div1").offset().left + "px;top:"+$(".div1").offset().top+"px;\"></div>")
+          })
+        })
+        
+      // 依照地图钮的位置 循环其title的定位
+      var mapItems = $(".map-item")
+      $(".map-item-title").each(function(index){
+        var tiPosL = mapItems[index].offsetLeft
+        var tiPosT = mapItems[index].offsetTop
+        var tiW = $(this).width() / 2 -9
+        var tiT = 24
+        $(this).css('left',tiPosL - tiW)
+        $(this).css('top',tiPosT - tiT)
+      });
+      // // 鼠标拖动以显示被遮挡的内容
+      // $(".map-block").bind("mousedown", function(oldeEent) {
+      //   var olds = $(".map-block")
+      //     .css("transform")
+      //     .replace(/[^\d*\.\d*\-,|^\d*\-,]/g, "")
+      //     .split(",") // olds 点下时父div的位置
+      //   var oldMouseX = oldeEent.clientX // 点下时鼠标的x坐标
+      //   var oldMouseY = oldeEent.clientY // 点下时鼠标的y位置
+      //   $(document).bind("mousemove", function(event) {
+      //     // x，y 鼠标拖动的距离
+      //     var x = oldMouseX - event.clientX
+      //     var y = oldMouseY - event.clientY
+      //     // newXY 父div 应当变更的-新坐标x，y
+      //     var newX = olds[4] - x
+      //     var newY = olds[5] - y
+      //     if (newX > 0) {
+      //       newX = 0
+      //     }
+      //     if (newY > 0) {
+      //       newY = 0
+      //     }
+      //     // 当坐标越界时，阻止他们继续改变坐标
+      //     var h = $(window).height() - 1080 * olds[0]
+      //     if (newY < h) {
+      //       newY = h
+      //     }
+      //     var w = $(window).width() - 1920 * olds[0]
+      //     if (newX < w) {
+      //       newX = w
+      //     }
+      //     $(".map-block").css(
+      //       "transform",
+      //       "matrix(" +
+      //         olds[0] +
+      //         ", 0, 0, " +
+      //         olds[3] +
+      //         ", " +
+      //         newX +
+      //         ", " +
+      //         newY +
+      //         ")"
+      //     )
+      //   })
+      //   // 鼠标松开以结束
+      //   $(document).bind("mouseup", function(event) {
+      //     $(document).unbind("mousemove")
+      //   })
+      // })
+
+      // 鼠标滚动以放大比例 并禁止鼠标滚动页面
+      var divTimes = 1
+      document.body.onmousewheel = function(e) {
+        divTimes -= e.deltaY / 1000
+        if (divTimes < 1) {
+          divTimes = 1
+        }
+        if (divTimes > 3) {
+          divTimes = 3
+        }
+        var x = $(".map-block").offset().left * (1 - e.deltaX / 1000) - e.clientX * 0.1
+        var y = $(".map-block").offset().top * (1 - e.deltaY / 1000)
+
+        // console.log(event.clientX, event.clientX)
+        $(".map-block").css(
+          "transform",
+          "matrix(" +
+            divTimes +
+            ", 0, 0, " +
+            divTimes +
+            ", " +
+            x +
+            ", " +
+            y +
+            ")"
+        )
+        return false
+      }
+      // 禁止鼠标滚动页面
+      document.body.onmousedown = function(e) {
+        if (e.button == 38 || e.button == 1 || e.button == 40) {
+          return false
+        }
+      }
+      // 禁止按键滚动页面
+      document.body.onkeydown = function(e) {
+        if (
+          e.keyCode == 37 ||
+          e.keyCode == 38 ||
+          e.keyCode == 39 ||
+          e.keyCode == 40
+        ) {
+          return false
+        }
+      }
+      // 定义可视div高度
+      var winHeight = $(window).height()
+      $("#map-screen").css("height", winHeight)
+      $(window).resize(function() {
+        winHeight = $(window).height()
+        $("#map-screen").css("height", winHeight)
+      })
+    </script>
+  </body>
+</html>
