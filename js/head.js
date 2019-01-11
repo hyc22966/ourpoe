@@ -59,3 +59,23 @@
       // $(".shops-del").click(function(){
       //   $(this).parents(".shops-sm-block").remove()
       // })
+      $(function () {
+        $(window).scroll(function(){
+            if ($(window).scrollTop()>100){
+                $(".fixed-btn").fadeIn(1500);
+            }
+            else
+            {
+                $(".fixed-btn").fadeOut(1500);
+            }
+        });
+      $(".go-top").click(function(){
+        // document.body.scrollTop = document.documentElement.scrollTop = 0;
+        $("html,body").animate(
+          {
+            scrollTop: 0
+          },500
+        );
+        return false;
+      })
+    });

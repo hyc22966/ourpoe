@@ -111,8 +111,8 @@ a:hover{
 }
 .dropdown-max {
   width: 100%;
-  border: 1px solid #504137;
-  border-left: none;
+  border: none;
+  border-bottom: 1px solid #504137;
   border-radius: 0;
   padding: 2rem 5%;
   margin: 0;
@@ -460,6 +460,41 @@ a:hover{
   outline: none;
 }
 /************************* footer ****************************/
+/* 回滚按钮 */
+.fixed-btn{
+  display: none;
+  position: fixed;
+  right: 1%;
+  bottom: 5%;
+  font-size: 26px;
+  z-index: 1040;
+}
+.fixed-btn .go-top{
+  display: inline-block;
+  width: 46px;
+  height: 56px;
+  font-size: inherit;
+  text-align: center;
+  background-color: transparent;
+}
+.fixed-btn .go-top img{
+  height: 100%;
+}
+.fixed-btn .go-top:hover img{
+  transition: .5s;
+  box-shadow: 0 0 2px #d09e37;
+}
+.fixed-btn a:after {
+  content: ".";
+  font-size: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.fixed-btn a i{
+  color: goldenrod;
+  vertical-align: middle;
+}
 .footer {
   background: #110a07;
 }

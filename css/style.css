@@ -39,11 +39,12 @@ body{
 .main-box video {
   position: absolute;
   top: 0;
-  left: auto;
+  left: 50%;
   min-width: 120rem;
   min-height: auto;
   height: auto;
   width: 100%;
+  transform: translate(-50%,0);
   /* 加滤镜
   -webkit-filter: grayscale(100%);
   filter:grayscale(100%); */

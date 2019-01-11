@@ -119,9 +119,8 @@
         position: relative;
       }
       .news-nav-out2 .nav-md-btn{
-        height: 3rem;
         max-width: 560px;
-        line-height: 3rem;
+        line-height: 1.5rem;
         color: #2a211d;
         text-align: center;
         background-color: #f0c84e;
@@ -130,7 +129,29 @@
         font-size: 1.5rem;
         font-weight: 500;
         cursor: pointer;
-    }
+        padding: .75rem 1rem;
+      }
+      .news-nav-out2 .nav-md-btn::before {
+        border-color: transparent transparent #211510;
+        border-style: solid;
+        border-width: 5px;
+        margin-top: -14px;
+      }
+      .news-nav-out2 .nav-md-btn::after {
+        border-color: #211510 transparent transparent;
+        border-style: solid;
+        border-width: 5px;
+        margin-top: 1px;
+      }
+      .news-nav-out2 .nav-md-btn::before,
+      .news-nav-out2 .nav-md-btn::after{
+        content: "";
+        height: 10px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        width: 10px;
+      }
       .news-nav-out2 .nav-tabs{
         border: none;
         max-width: 560px;
@@ -162,6 +183,7 @@
       .news-nav-out2 .nav-tabs li a:hover{
         color: white;
     }
+/* 1.10 over */
       /* tab-pane */
       .tab-pane {
         padding: 4% 0;
@@ -512,35 +534,35 @@
               </div>
             </div>
           </div>
-            <div class="d-md-flex w-100 justify-content-between">
-                <div class="class-news news-t-block card p3">
-                    <a href="javascript:void(0)">
-                  <img class="card-img-top" src="./img/build/news_3_14_04.jpg" alt="" />
-                  <div class="card-img-overlay">
-                    <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
-                    <p class="card-text">Some example text.</p>
-                  </div>
-                  </a>
+          <div class="d-md-flex w-100 justify-content-between">
+              <div class="class-news news-t-block card p3">
+                  <a href="javascript:void(0)">
+                <img class="card-img-top" src="./img/build/news_3_14_04.jpg" alt="" />
+                <div class="card-img-overlay">
+                  <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
+                  <p class="card-text">Some example text.</p>
                 </div>
-                <div class="class-news news-t-block card p3">
-                    <a href="javascript:void(0)">
-                  <img class="card-img-top" src="./img/build/news_3_14_05.jpg" alt="" />
-                  <div class="card-img-overlay">
-                    <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
-                    <p class="card-text">Some example text.</p>
-                  </div>
-                  </a>
+                </a>
+              </div>
+              <div class="class-news news-t-block card p3">
+                  <a href="javascript:void(0)">
+                <img class="card-img-top" src="./img/build/news_3_14_05.jpg" alt="" />
+                <div class="card-img-overlay">
+                  <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
+                  <p class="card-text">Some example text.</p>
                 </div>
-                <div class="class-news news-t-block card p3">
-                    <a href="javascript:void(0)">
-                  <img class="card-img-top" src="./img/build/news_3_14_06.jpg" alt="" />
-                  <div class="card-img-overlay">
-                    <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
-                    <p class="card-text">Some example text.</p>
-                  </div>
-                  </a>
+                </a>
+              </div>
+              <div class="class-news news-t-block card p3">
+                  <a href="javascript:void(0)">
+                <img class="card-img-top" src="./img/build/news_3_14_06.jpg" alt="" />
+                <div class="card-img-overlay">
+                  <h5>POE 3.4 Builds: Guardian Aura Support Build</h5>
+                  <p class="card-text">Some example text.</p>
                 </div>
-            </div>
+                </a>
+              </div>
+          </div>
           </div>
         <div class="clearfix" style="margin-bottom:8%"></div>
         <!-- 新闻及相关信息 -->
@@ -1075,6 +1097,9 @@
     <script>
       $(".nav-md-btn").click(function(){
         $(".news-nav-out2 .nav-tabs").toggle()
+      })
+      $(".news-nav-out2 .nav-tabs li a").click(function(){
+        $(".news-nav-out2 .nav-tabs").hide();
       })
     </script>
   </body>
