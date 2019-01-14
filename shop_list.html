@@ -33,6 +33,7 @@
     <!-- 引入样式文件 -->
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/n.css" />
+    <link rel="stylesheet" href="./css/mouse-ins.css" />
 
     <title>shop list</title>
     <style>
@@ -40,7 +41,6 @@
         appearance:none;  
         -moz-appearance:none;
         -webkit-appearance:none;
-        background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
       }
       select::-ms-expand { display: none; }
       body {
@@ -57,6 +57,7 @@
         font-size: 1.2rem
       }
       h1 {
+        color: #f1bc55;
         font-size: 4rem;
         text-shadow: 1px 2px 0px rgb(0, 0, 0, 0.5);
         margin-top: 2rem;
@@ -652,14 +653,14 @@
           <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Skill">Skill Gems</a></li>
         </ul>
         <!-- Tab panes -->
-          <div  class="tab-pane active" style="border-bottom: solid 1px #504137;margin-bottom: 2rem;">
+          <div  class="tab-pane active" style="border-bottom: solid 1px #504137;margin-bottom: 2rem; position: relative;">
             <div class="row">
               
               <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="shops-xs-block">
                   <div class="shops-xs-top">
                     <div class="shops-img">
-                          <div class="img-mid"><span></span><img src="./img/shop/poe_chaos.png" alt=""></div>
+                          <div class="img-mid ajax-img-ins"><span></span><img class="ajax-img-hover" src="./img/shop/poe_chaos.png" alt=""></div>
                     </div>
                     <div class="xs-p-div">
                       <p>$333.35</p>
@@ -680,7 +681,7 @@
                 <div class="shops-xs-block">
                   <div class="shops-xs-top">
                     <div class="shops-img">
-                          <div class="img-mid"><span></span><img src="./img/shop/poe_chaos.png" alt=""></div>
+                          <div class="img-mid ajax-img-ins"><span></span><img class="ajax-img-hover" src="./img/shop/poe_chaos.png" alt=""></div>
                     </div>
                     <div class="xs-p-div">
                       <p>$333.35</p>
@@ -700,7 +701,7 @@
                 <div class="shops-xs-block">
                   <div class="shops-xs-top">
                     <div class="shops-img">
-                          <div class="img-mid"><span></span><img src="./img/shop/poe_chaos.png" alt=""></div>
+                          <div class="img-mid ajax-img-ins"><span></span><img class="ajax-img-hover" src="./img/shop/poe_chaos.png" alt=""></div>
                     </div>
                     <div class="xs-p-div">
                       <p>$333.35</p>
@@ -720,7 +721,7 @@
                 <div class="shops-xs-block">
                   <div class="shops-xs-top">
                     <div class="shops-img">
-                          <div class="img-mid"><span></span><img src="./img/shop/poe_chaos.png" alt=""></div>
+                          <div class="img-mid ajax-img-ins"><span></span><img class="ajax-img-hover" src="./img/shop/poe_chaos.png" alt=""></div>
                     </div>
                     <div class="xs-p-div">
                       <p>$333.35</p>
@@ -1046,11 +1047,11 @@
           </div>
           <div id="Fragments" class=" tab-pane fade">
           </div>
-                    <!-- 下一页 -->
-                    <div class="w-100 mb-4 text-center">
-                        <a href="javascript:void(0)"><h5 class="next-page">>> NEXT PAGE</h5></a>
-                        <div class="clear-fix"></div>
-                      </div>
+          <!-- 下一页 -->
+          <div class="w-100 mb-4 text-center">
+            <a href="javascript:void(0)"><h5 class="next-page">>> NEXT PAGE</h5></a>
+            <div class="clear-fix"></div>
+          </div>
         <div class="other">
           <h4>What is Delivery Guarantee</h4>
           <div class="other-c">
@@ -1129,12 +1130,43 @@
 
     <!-- header.js -->
     <script src="./js/head.js"></script>
-    
-    <script src="./js/jquery-addShopping.js"></script>
-
     <!-- 商品数量调整 -->
     <script>
-      // 12-27 start
+
+// 鼠标move时 ajax请求数据
+    $(document).on('mouseover','.ajax-img-hover',function(event){
+      console.log(event);
+      posiX = $(this).parent().position().left;
+      posiY = $(this).parent().position().top;
+      var thisDiv = $(this);
+      // ajax 请求
+      // http://101.132.97.206:3000/artist/desc?id=6452
+      var artistId = 6452;
+      var htmlDate;
+      $.ajax({
+        type: 'get',
+        data: { id : artistId },
+        dataType: 'json',
+        url:"http://101.132.97.206:3000/artist/desc",
+        success:function(result){
+          // console.log(result);
+          htmlDate = `
+            <div class="inventory-data text-center" style="position-left:${posiX};position-top:${posiY};">
+              <h2 class="inData-title color-uniques">Indigon Hubris Circlet</h2>
+              <div class="inData-content color-uniques">
+                <p class="color-blue">Quality : <span>+20%</span> Energy Shield : <span>225</span></p>
+                <p class="color-green">${result.briefDesc}</p>
+              </div>
+            </div>
+          `;
+          // console.log($(event))
+          // console.log($(event).after(htmlDate))
+          thisDiv.after(htmlDate);
+        }
+      });
+      // console.log(htmlDate)
+    })
+      
       $(".input-alert").click(function(){
         $(".input-alert").css("display","none")
       })
@@ -1152,7 +1184,7 @@
       $(".clo").click(function(){
         $(".input-alert").css("display","none")
       })
-      // 12-27 over
+    
 
       $(document).ready(function() {
         $("button").on("click", function() {

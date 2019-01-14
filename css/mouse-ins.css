@@ -33,22 +33,29 @@
             /* 预设颜色 */
           .color-blue {
             color: #588ed5;
+            border-color: #588ed5;
           }
           .color-red {
             color: #c73243;
+            border-color: #c73243;
           }
           .color-green {
             color: #3fba27;
+            border-color: #3fba27;
           }
           .color-violet{
             color: #8e89d9;
+            border-color: #8e89d9;
           }
           .color-uniques{
             color: #a46944;
+            border-color: #a46944;
           }
           .color-white{
             color: #d4d4d4;
+            border-color: #d4d4d4;
           }
           .color-yellow{
             color: #e2e265;
+            border-color: #e2e265;
           }

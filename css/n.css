@@ -353,7 +353,7 @@
   }
         /* 增减按钮 */
   .shops-num{
-      /* min-width: 150px; */
+      min-width: 150px;
       font-size: 1.875rem ;
       padding: 0 3%;
   }
@@ -842,4 +842,7 @@
       top:-2rem;
       right: 0;
     }
+    .shops-num{
+        min-width: auto;
+      }
   }

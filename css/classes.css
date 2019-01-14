@@ -51,15 +51,26 @@ a:hover {
   line-height: 160%;
   margin: 3% 0 2%;
 }
+/* 技能信息 */
+.class-passive-out{
+  width: 100%;
+  margin: 0;
+}
+.class-passive-out >div{
+  padding: 0;
+}
+.class-passive-out > :last-child li img{
+  height: 70%;
+  border-left: 0;
+}
 .class-passive {
   list-style: none;
   border: #32261e 1px solid;
-  -moz-column-gap: 1px; /* Firefox */
-  -webkit-column-gap: 1px; /* Safari and Chrome */
+  margin: 0;
+  padding: 0;
+  /* columns: 2;
   column-gap: 1px;
-  -moz-column-rule: 4px outset #32261e; /* Firefox */
-  -webkit-column-rule: 4px outset #32261e; /* Safari and Chrome */
-  column-rule: 1px outset #32261e;
+  column-rule: 1px outset #32261e; */
 }
 .class-passive li {
   height: 4.4rem;
@@ -68,6 +79,7 @@ a:hover {
   color: #b0a085;
   cursor: pointer;
   overflow: hidden;
+  padding: 0 1.25rem;
 }
 .class-passive li:hover {
   color: rgb(243, 193, 107);
@@ -75,7 +87,7 @@ a:hover {
 }
 .class-passive li img {
   vertical-align: middle;
-  height: 80%;
+  height: 95%;
   padding: 0 2%;
 }
 .class-passive a{
@@ -167,11 +179,6 @@ a:hover {
   border: #743e21 1px solid;
   margin: 0 auto;
   box-shadow:9px 8px 13px 0px rgba(15, 11, 10, 0.6);
-}
-/* 技能信息 */
-.class-passive {
-  margin: 0;
-  columns: 2;
 }
 /* 职业相关新闻 */
 .class-builds {
@@ -343,9 +350,9 @@ a:hover {
   }
 }
 @media screen and (max-width: 992px) {
-  .class-passive {
+  /* .class-passive {
     columns: 1;
-  }
+  } */
 }
 
 @media screen and (max-width: 850px) {

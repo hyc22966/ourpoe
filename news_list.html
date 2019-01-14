@@ -183,7 +183,6 @@
       .news-nav-out2 .nav-tabs li a:hover{
         color: white;
     }
-/* 1.10 over */
       /* tab-pane */
       .tab-pane {
         padding: 4% 0;
@@ -305,10 +304,6 @@
           width: 15rem;
           height: 2rem;
           line-height: 1.8rem;
-        }
-        .px-7{
-          padding-left: 1rem;
-          padding-right:4%;
         }
         .tab-pane .col-md-6{
           padding-left: 1%;
@@ -1095,11 +1090,14 @@
     <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script>
-      $(".nav-md-btn").click(function(){
-        $(".news-nav-out2 .nav-tabs").toggle()
-      })
-      $(".news-nav-out2 .nav-tabs li a").click(function(){
-        $(".news-nav-out2 .nav-tabs").hide();
+      $(function(){
+        $(".nav-md-btn").click(function(){
+          $(".news-nav-out2 .nav-tabs").toggle()
+        })
+        $(".news-nav-out2 .nav-tabs li a").click(function(){
+          $(".nav-md-btn").text($(this).text())
+          $(".news-nav-out2 .nav-tabs").hide();
+        })
       })
     </script>
   </body>
